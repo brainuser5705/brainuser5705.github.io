@@ -1,0 +1,67 @@
+---
+---
+
+$background: #1a1a1a;
+$base: #d6d6d6;
+$link-base: #66A9F0;
+$link-hover: #0074F0;
+
+$margin-size: 1em;
+
+html {
+
+    /* Styling */
+    font-family: "Fira Code", monospace;
+    background-color: $background;
+    color: $base;
+
+    /* Alignment, Spacing*/
+    text-align: center;
+    margin: $margin-size; // should be adjusted for the screen width..
+
+    /* Components */
+    a {
+        color: $link-base;
+
+        &:hover{
+            color: $link-hover;
+        }
+    }
+
+    main {
+        text-align: initial;
+        margin: auto;
+        max-width: 500px;
+    }
+}
+
+header {
+
+    text-align: center;
+
+    #default-title{
+
+        font-size: 1.5em;
+        font-weight: bold;
+        
+        margin: $margin-size;
+    
+        a {
+            text-decoration: none;
+        }
+    
+    }
+    
+    #default-nav{
+    
+        font-size: 1.25em;
+        margin: $margin-size;
+    
+        a {
+            text-decoration: underline;
+            margin: $margin-size;
+        }
+    
+    }
+}
+

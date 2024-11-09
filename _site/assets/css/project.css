@@ -1,0 +1,21 @@
+.project-section {
+  margin: 2em 0;
+}
+
+.project-heading {
+  font-size: 2em;
+}
+
+.project-item .name {
+  font-size: 1.2em;
+}
+.project-item .description {
+  font-style: italic;
+}
+.project-item .tag {
+  color: #a6a6a6;
+  font-style: italic;
+  font-size: 0.7em;
+}
+
+/*# sourceMappingURL=project.css.map */

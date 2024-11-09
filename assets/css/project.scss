@@ -1,0 +1,31 @@
+---
+---
+
+$tag-color: #a6a6a6;
+
+.project-section{
+    margin: 2em 0;
+}
+
+.project-heading{
+    font-size: 2em;
+}
+
+.project-item{
+    
+    .name{
+        font-size: 1.2em;
+    }
+
+    .description{
+        font-style: italic;
+    }
+
+    .tag{
+        color: $tag-color;
+        font-style: italic;
+        font-size: 0.7em;
+        
+    }
+
+}

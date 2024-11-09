@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["about.scss"],"names":[],"mappings":"AAAA;EACI;;AACA;EACI","sourcesContent":["#about-selfie{\n    text-align: center;\n    img {\n        max-width: 250px;\n    }\n}"],"file":"about.css"}

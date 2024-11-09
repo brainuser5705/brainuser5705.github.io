@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tech -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Sytlesheets -->
+        <link rel="stylesheet" href="/assets/css/default.css">
+        
+        
+        <link rel="stylesheet" href="/assets/css/project-page.css">
+        
+
+        <!-- Font style -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inclusive+Sans&family=Workbench&display=swap" rel="stylesheet">
+
+        <title>Personal Website</title>
+    </head>
+    <body>
+        <header>
+            <div id="default-title">
+                <a href="/" >Hi it's me, Ashley.</a>
+            </div>
+            <nav id="default-nav">
+                <a href="/projects.html">Projects</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </header>
+        <main>
+            <div class="project-heading">
+    Personal Website
+    <hr>
+</div>
+
+<div>
+    <p>Over the past year, I have been developing my personal website and gone through several iterations while I experimented with different web development technologies. Here is a visual timeline of the landing page of my website. I will also include some notes about the features, the languages/technologies I used, and the general development process for each version.</p>
+
+<hr />
+
+<h2 id="v1-github-pages-static-html-and-css">(V1) <a href="https://brainuser5705.github.io/website/">Github Pages Static HTML and CSS</a></h2>
+
+<p><img src="https://i.imgur.com/QCN9UMQ.png" alt="" /></p>
+
+<p><strong>Languages/Technologies/Tools</strong></p>
+<ul>
+  <li>HTML/CSS</li>
+  <li>Github Pages</li>
+</ul>
+
+<p><strong>Features</strong></p>
+<ul>
+  <li>A static site with very crude HTML and CSS</li>
+  <li>Features a blog page, but I never updated it (at this time, I wasn’t aware of Jekyll)</li>
+  <li>Largely inspired by <a href="https://bgreco.net">bgreco</a>’s page</li>
+</ul>
+
+<p><strong>Development Process</strong><br />
+Nothing special, it’s front end HTML and CSS.</p>
+
+<hr />
+
+<h2 id="v2-django-web-application">(V2) <a href="https://brainuser5705-website.herokuapp.com/">Django Web Application</a></h2>
+
+<p><img src="https://i.imgur.com/OugkFVs.png" alt="" /></p>
+
+<p><strong>Languages/Technologies</strong></p>
+<ul>
+  <li>HTML/CSS, Python</li>
+  <li>Django framework</li>
+  <li>Heroku (for hosting) with PostgreSQL addon</li>
+</ul>
+
+<p><strong>Features</strong></p>
+<ul>
+  <li>Status updates and updatable personal stats</li>
+  <li>Includes a database where I can store all the data</li>
+  <li>Admin page for easy data insertion (posting status updates, links, etc.)</li>
+  <li>More refined frontend design</li>
+</ul>
+
+<p><strong>Development Process</strong><br />
+I had experience with the Django framework for a now defuncted project and wanted to use a database to store my site’s content. I worked on this for about a month or so.</p>
+
+<hr />
+
+<h2 id="v3-lamp-stack">(V3) <a href="https://ashleyliew-prod.herokuapp.com/">LAMP stack</a></h2>
+
+<p><img src="https://i.imgur.com/dxjEZNf.png" alt="" /></p>
+
+<p><strong>Languages/Technologies</strong></p>
+<ul>
+  <li>HTML/CSS, PHP</li>
+  <li>Heroku with PostgreSQL</li>
+</ul>
+
+<p><strong>Features</strong></p>
+<ul>
+  <li>Formatted status updates and can support links, images</li>
+  <li>Automated processes for data insertion (had to remove this after hosting with Heroku)</li>
+  <li>Own domain (removed for new version)</li>
+</ul>
+
+<p><strong>Development Process</strong><br />
+My intentions of creating this version was to create a website “from scratch”, using pure HTML/CSS and PHP. I came across the LAMP technology stack and started researching. Before starting, I had to learn PHP and re-learn SQL. I used XAMPP as a development environment with its built-in Apache and MariaDB. After that, I tried hosting it on my own Linux machine, but switched to Heroku. With Heroku hosting, I had to substantially change the backend design of my website including reworking file upload processes intended for my projects and blogs. Here is the <a href="https://docs.google.com/document/d/1SA3ubiG70d9M1Hqk-DVgXof6wn9dMNGebQ_Oc5kBN2c/edit?usp=sharing">dev log</a> that I kept.</p>
+
+<hr />
+
+<h2 id="v4-jekyll-site">(V4) Jekyll Site</h2>
+
+<p><img src="https://i.imgur.com/hF062eS.png" alt="" /></p>
+
+<p><strong>Languages/Technologies</strong></p>
+<ul>
+  <li>Jekyll</li>
+  <li>Github Pages</li>
+</ul>
+
+<p><strong>Features</strong></p>
+<ul>
+  <li>Using Jekyll templates instead of creating from scratch</li>
+  <li>Jekyll blogging system</li>
+  <li>Large of use of Markdown for writing (as of now)</li>
+  <li>No backend or database</li>
+</ul>
+
+<p><strong>Development Process</strong><br />
+The backend of the previous version was very insecure and inefficient. After multiple tweaks and fixes, it ended up like a static site that didn’t need a database at all. I wanted to use Jekyll’s “blog awareness” feature, clean file structure and easy workflow (at least compared to my LAMP stack), so I switched over. After a few hours of research and a full night of rewriting content, the site is up and hosting with Github Pages. Majority of the activity of my website lies in <a href="https://status.ashleyliew.com">status updates</a>, so to keep it I modified the LAMP stack to only be for status updates. As for blogging, it will be done on this site with Jekyll.</p>
+
+<hr />
+
+<h2 id="v5-current-version-jekyll-revamp">(V5, <em>Current Version</em>) Jekyll Revamp</h2>
+
+<p><img src="https://i.imgur.com/HT5oMs4.png" alt="" /></p>
+
+<p><strong>Languages/Technologies</strong></p>
+<ul>
+  <li>Jekyll</li>
+  <li>Github Pages</li>
+</ul>
+
+<p><strong>Features</strong></p>
+<ul>
+  <li>Frontend redesign</li>
+  <li>Cleaner project structure (projects collection)</li>
+  <li>Minimalistic, project focused</li>
+</ul>
+
+<p><strong>Development Process</strong><br />
+The old version was very messy; I made it without any knowledge on how static site generators like Jekyll work. So I finally read up on the documentation and followed the step-by-step tutorial. I was unhappy with how messy the previous site design was as well, so I stripped it down to the main focus of my site which is to be hub for my projects. It now only has a list of the projects on the landing page and a simple about page.</p>
+
+</div>
+        </main>
+    </body>
+</html>

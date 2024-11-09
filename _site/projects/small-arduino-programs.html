@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tech -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Sytlesheets -->
+        <link rel="stylesheet" href="/assets/css/default.css">
+        
+        
+        <link rel="stylesheet" href="/assets/css/project-page.css">
+        
+
+        <!-- Font style -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inclusive+Sans&family=Workbench&display=swap" rel="stylesheet">
+
+        <title>Small Arduino Programs</title>
+    </head>
+    <body>
+        <header>
+            <div id="default-title">
+                <a href="/" >Hi it's me, Ashley.</a>
+            </div>
+            <nav id="default-nav">
+                <a href="/projects.html">Projects</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </header>
+        <main>
+            <div class="project-heading">
+    small arduino programs
+    <hr>
+</div>
+
+<div>
+    <p>These are small Arduino projects to introduce me to basic electrical concepts.</p>
+
+<h1 id="simon-says">Simon Says</h1>
+
+<iframe src="https://www.youtube.com/embed/M-Pe4tOBU7M?si=T-x4ymdAYy-eqiQi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<h2 id="features">Features</h2>
+<ul>
+  <li>“touch sensors” with piezo transducers</li>
+  <li>LCD</li>
+</ul>
+
+<h2 id="development-notes">Development Notes</h2>
+<ul>
+  <li><a href="https://www.digikey.com/en/schemeit/project/simon-says-51d0543eb37b4b4bafd7744fbdb79bc4">Circuit diagram (excluding LCD)</a></li>
+  <li>Used <a href="https://github.com/davetcc/LiquidCrystalIO"><code class="language-plaintext highlighter-rouge">LiquidCrystalIO</code> library</a> by Adafruit
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;LiquidCrystalIO.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;IoAbstractionWire.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;Wire.h&gt;</span><span class="cp">
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="resourcestutorials-used">Resources/Tutorials Used</h2>
+<ul>
+  <li><a href="https://docs.arduino.cc/built-in-examples/sensors/Knock/">How to use a piezo transducer as a touch sensor</a></li>
+  <li><a href="https://lastminuteengineers.com/i2c-lcd-arduino-tutorial/">Basic workings of LCD display with I2C adapter</a></li>
+</ul>
+
+<hr />
+
+<h1 id="automatic-dog-feeder">Automatic Dog Feeder</h1>
+
+<h2 id="prototype-1">Prototype 1</h2>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3-qOSz9pvas?si=J34xJEUi--Gsj9in" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<div class="pic">
+<img src="https://i.imgur.com/I6re0rQ.jpeg" />
+Clockwise: 1) Funnel design for box, 2) Pockets for trapped kibble leading to jam when closing, 3) Internal circutry and wiring
+</div>
+
+<h2 id="github"><a href="https://github.com/brainuser5705/automatic-dog-feeder">Github</a></h2>
+
+<h2 id="features-1">Features</h2>
+<ul>
+  <li>3 triggers: Bluetooth, physical button, scheduled (in code)</li>
+</ul>
+
+<h2 id="development-notes-1">Development Notes</h2>
+<ul>
+  <li>Arduino board: <a href="https://docs.arduino.cc/hardware/nano-33-iot/#tech-specs">Nano 33 IOT</a>
+    <ul>
+      <li>Since I used a board with the header pins setup for breadboard use, using the <a href="https://docs.arduino.cc/resources/pinouts/ABX00027-full-pinout.pdf">pinout diagram</a> was helpful to see where I needed to put the connections</li>
+    </ul>
+  </li>
+  <li>Code for the <strong>Bluetooth feature</strong> sampled from the <a href="https://docs.arduino.cc/tutorials/nano-33-iot/bluetooth/#bluetooth-low-energy-and-bluetooth">offical Arduino tutorial</a>
+    <ul>
+      <li>Service is the Arduino with the servo activation boolean (<code class="language-plaintext highlighter-rouge">0</code> for closed, anything else for open) as the characteristic</li>
+    </ul>
+  </li>
+  <li>Code for <strong>automatic time activation feature</strong> sampled from <a href="https://docs.arduino.cc/tutorials/nano-33-iot/iot-cloud/#goals">offical Arduino tutorial</a> about the internal RTC of the board
+    <ul>
+      <li><a href="https://forum.arduino.cc/t/wanting-to-perform-actions-during-certain-times-of-day-how-does-one-code-this/452668/5?u=codeuser5705">Thread</a> that led me to the idea of using RTC</li>
+      <li>To keep the RTC in sync with real-world time, the code connected via WiFi to an NTP server and updates the RTC - idea taken from this <a href="https://forum.arduino.cc/t/arduino-rtc-does-not-stay-in-sync-despite-use-of-arduinocloud-getlocaltime/1204968/6?u=codeuser5705">thread</a>, <a href="https://github.com/arduino-libraries/NTPClient">library with examples</a>, <a href="https://nerdhut.de/2021/12/15/arduino-esp32-esp8266-ntp/">tutorial article for Nano 33 IOT</a>
+        <ul>
+          <li>It uses the <a href="https://www.arduino.cc/reference/en/libraries/rtczero/"><code class="language-plaintext highlighter-rouge">RTCZero</code> library</a>’s <code class="language-plaintext highlighter-rouge">set*</code> methods</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://docs.arduino.cc/learn/electronics/servo-motors/">Connecting servo motors</a>
+    <ul>
+      <li>Orange signal pin must wired to a <em>PWM</em> pin</li>
+      <li>Used the <code class="language-plaintext highlighter-rouge">Sweep</code> example with <code class="language-plaintext highlighter-rouge">for</code> loops for the open/close motion</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h1 id="links-to-useful-tutorialsdocumentation-for-arduino-specific-projects">Links to Useful Tutorials/Documentation for Arduino-specific projects</h1>
+<ul>
+  <li><a href="https://docs.arduino.cc/built-in-examples/strings/StringAdditionOperator/">String addition</a> - Arduino does not use standard string concatentation</li>
+  <li><a href="https://docs.arduino.cc/built-in-examples/digital/Button/">Hooking up a button</a>
+    <ul>
+      <li>Can get rid of the pull-up (1-&gt;0) or pull-down(0-&gt;1) resistor with <a href="https://docs.arduino.cc/tutorials/generic/digital-input-pullup/"><code class="language-plaintext highlighter-rouge">INPUT_PULLUP</code> and <code class="language-plaintext highlighter-rouge">INPUT_PULLDOWN</code></a></li>
+    </ul>
+  </li>
+  <li><a href="https://forum.arduino.cc/t/can-i-power-my-arduino-nano-via-usb-port-with-charger-with-5-2-v-and-2-4a-power-adapter/906838">Powering up an Arduino board</a></li>
+  <li><a href="https://forum.arduino.cc/t/whats-the-difference-between-operating-voltage-and-input-voltage/96227">Operating voltage vs input voltage</a></li>
+</ul>
+
+</div>
+        </main>
+    </body>
+</html>

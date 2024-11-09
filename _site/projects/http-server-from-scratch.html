@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tech -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Sytlesheets -->
+        <link rel="stylesheet" href="/assets/css/default.css">
+        
+        
+        <link rel="stylesheet" href="/assets/css/project-page.css">
+        
+
+        <!-- Font style -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inclusive+Sans&family=Workbench&display=swap" rel="stylesheet">
+
+        <title>Http Server From Scratch</title>
+    </head>
+    <body>
+        <header>
+            <div id="default-title">
+                <a href="/" >Hi it's me, Ashley.</a>
+            </div>
+            <nav id="default-nav">
+                <a href="/projects.html">Projects</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </header>
+        <main>
+            <div class="project-heading">
+    http server from scratch
+    <hr>
+</div>
+
+<div>
+    <h1 id="log">Log</h1>
+
+<p>Each log links to a page for each “subproject” building up to the end. They include links to documentation and general things learned during that time.</p>
+
+<ul>
+
+</ul>
+
+<h2 id="targets">Targets</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Bind server to IP address (<em>achieved 3/6/24</em>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Implement HTTP Protocol</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Implement concurrency to allow multiple connections</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Research security risks and implement safeguards</li>
+</ul>
+
+<h1 id="about">About</h1>
+
+<p>My current project is to build a HTTP server from scratch (read more below about what I deemed as “from stratch”).</p>
+
+<p>I’m not entirely sure how the end “product” will look. Right now I believe I should be aiming for a “localhost dev environment”, sort of like when you would build and serve a website in development on your computer before you host it on an actual server. After that, the server would be able to connect with clients across the Internet i.e. another computer.</p>
+
+<h1 id="what-do-i-mean-from-scratch">What do I mean “from scratch”?</h1>
+
+<p>As in I cannot simply search “how to make http server in C” cause that would be too easy. So no tutorials. Most of my research should be sourced from documentation (e.g. RFCs, <code class="language-plaintext highlighter-rouge">man</code> pages).</p>
+
+<p>There is a grey area when it comes to <a href="https://beej.us/guide/bgnet/html/split/index.html">textbooks</a> or <a href="https://www.ibm.com/docs/en/i/7.5?topic=programming-how-sockets-work">indirect documentation</a>. These sources generally contain consolidated information about a concept, followed by examples to put those concepts into practice. I will be avoiding any code samples from those sources (at least for now).</p>
+
+<p>Debugging should mainly come from reading documentation to figure out flaws in logic/usage. But I will allow myself to use StackOverflow.</p>
+
+<p>So it’s not an exact defintion of what it means to build from scratch, but the baseline should be <strong>no tutorials</strong>.</p>
+
+</div>
+        </main>
+    </body>
+</html>

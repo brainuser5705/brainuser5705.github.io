@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tech -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Sytlesheets -->
+        <link rel="stylesheet" href="/assets/css/default.css">
+        {% for style in page.styles %}
+        <link rel="stylesheet" href="/assets/css/{{ style }}.css">
+        {% endfor %}
+        {% for style in layout.styles %}
+        <link rel="stylesheet" href="/assets/css/{{ style }}.css">
+        {% endfor %}
+
+        <!-- Font style -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inclusive+Sans&family=Workbench&display=swap" rel="stylesheet">
+
+        <title>{{ page.title }}</title>
+    </head>
+    <body>
+        <header>
+            <div id="default-title">
+                <a href="/" >Hi it's me, Ashley.</a>
+            </div>
+            <nav id="default-nav">
+                <a href="/projects.html">Projects</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </header>
+        <main>
+            {{ content }}
+        </main>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+---
+title: Projects
+styles: project
+---
+
+<div class="project-heading">Featured Projects</div>
+Most recent projects worthy of sharing. Ordered by date started.
+
+<div class="project-section">
+    {% assign projects = site.projects | sort: "time" | reverse %}
+    {% for project in projects %}
+    {% unless project.hackathon %}
+    <div class="project-item">
+        <a class="name" 
+            href="{{ project.url }}">{{ project.name }}</a>
+        <div class="description">{{ project.description }}</div>
+        <!-- <div class="project-time">{{ project.time }}</div> -->
+        <div>
+            {% for tag in project.tags %}
+                <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        <hr>
+    </div>
+    {% endunless %}
+    {% endfor %}
+</div>
+
+<div class="project-heading">Hackathon Projects</div>
+Featured projects made at Hackathons
+
+<div class="project-section">
+    {% assign hack_projects = site.projects | where_exp:"project", "project.hackathon" | sort: "time" | reverse %}
+    {% for hack in hack_projects %}
+    <div class="project-item">
+        {% if hack.extern %}
+        {% assign url = hack.extern %}
+        {% else %}
+        {% assign url = hack.url %}
+        {% endif %}
+        <a class="name" href="{{ url }}">{{ hack.name }}</a>
+        <div class="project-time">@ {{ hack.hackathon }}</div>
+        <div class="description">{{ hack.description }}</div>
+        <div>
+            {% for tag in hack.tags %}
+                <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        <hr>
+    </div>
+    {% endfor %}
+</div>
+
+For a list of all the projects I worked on, check out my Github (in the about 
+page).
+    
+</div>

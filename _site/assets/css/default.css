@@ -1,0 +1,43 @@
+html {
+  /* Styling */
+  font-family: "Fira Code", monospace;
+  background-color: #1a1a1a;
+  color: #d6d6d6;
+  /* Alignment, Spacing*/
+  text-align: center;
+  margin: 1em;
+  /* Components */
+}
+html a {
+  color: #66A9F0;
+}
+html a:hover {
+  color: #0074F0;
+}
+html main {
+  text-align: initial;
+  margin: auto;
+  max-width: 500px;
+}
+
+header {
+  text-align: center;
+}
+header #default-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 1em;
+}
+header #default-title a {
+  text-decoration: none;
+}
+header #default-nav {
+  font-size: 1.25em;
+  margin: 1em;
+}
+header #default-nav a {
+  text-decoration: underline;
+  margin: 1em;
+}
+
+/*# sourceMappingURL=default.css.map */
