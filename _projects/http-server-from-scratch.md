@@ -1,28 +1,11 @@
 ---
-name: http server from scratch
+name: http server from scratch (in-progress)
 description: logging my process
 time: 2024-03
 tags: c
 ---
 
-# Log
-
-Each log links to a page for each "subproject" building up to the end. They include links to documentation and general things learned during that time.
-
-<ul>
-{% for page in current %}
-    <li>
-    {{ page.time }} - <a href="{{ page.url }}">{{ page.name }}</a>
-    </li>
-{% endfor %}
-</ul>
-
-## Targets
-
-- [X] Bind server to IP address (*achieved 3/6/24*)
-- [ ] Implement HTTP Protocol
-- [ ] Implement concurrency to allow multiple connections
-- [ ] Research security risks and implement safeguards
+<iframe src="https://www.youtube.com/embed/WWow1Upib5Y?si=8wf0qsqqSBayHeGm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # About
 

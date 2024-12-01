@@ -1,20 +1,19 @@
 ---
 ---
 
-<div style="text-align: center;">
-    <img src="/assets/images/wip.gif">
-</div>
+Welcome to my little corner on the Internet!
 
-Hello! I am currently working on a new website design!
+---
 
-New features include:
+I wrote this site to showcase some projects that I have been working on. Here's
+one of them.
 
-- Brand new frontend design
-    - Interactive components
-    - Modern, sleek color scheme
-- Personalized backend to streamline new project uploads
-    - In-site Markdown editor
-    - Admin panel
-- Robust tech stack
+**Spotify Music Visualization** (Early 2024)
 
-**In the meantime, check out my projects and read more about me!**
+<iframe src="https://www.youtube.com/embed/PJYTOhqbBuM?si=87K3nGgVt0mbZpzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+And more to come.
+
+---
+
+Check out my other projects and read a bit about me!

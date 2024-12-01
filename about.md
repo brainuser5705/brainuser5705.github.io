@@ -12,23 +12,25 @@ sustenance during those bleak times.
 ### Some quick facts:
 - Computer science major at Rochester Institute of Technology
 - From Brooklyn, NYC
-- See life as a [running list of projects](http://simp.ly/p/b9b4LV) and hobbies 
+- Working on [running list of projects](http://simp.ly/p/b9b4LV) and hobbies 
 to try
-- Current projects/hobbies: developing this site, learning Korean, self-care
+- Current projects/hobbies: improving technical knowledge and abilities (DS&A,
+frontend web development), studying Korean, figuring out how to live life
 
 ### Blog:
 
 Read my blog [(currently on Medium)](https://medium.com/@serviceuser5705)! I 
-tend to have a lot of thoughts and like to document them. I plan to start many 
-new projects as I continue through life and write down my progress and what I 
-learn on my blog. Maybe it's more of a brain-dump than a blog...cause I'm
-brainuser5705.
+tend to think too much about too many things for too long and then document what
+new "insights" I gained. Also life updates, documentation for my projects and 
+learning experiences. If you're into technical tutorials or philosophical life 
+ramblings, you might find something interesting to read.
 
 ### Socials:
 - [Github](https://github.com/brainuser5705)
 - [YouTube](https://www.youtube.com/@brainuser5705)
 - [Instagram](https://www.instagram.com/brainuser5705/)
 - [LinkedIn](https://www.linkedin.com/in/ashley-liew-ab1124221/)
+- [Medium](https://medium.com/@serviceuser5705)
 
 ### Website Specs:
 - Hosting: Github Pages
