@@ -12,18 +12,16 @@ sustenance during those bleak times.
 ### Some quick facts:
 - Computer science major at Rochester Institute of Technology
 - From Brooklyn, NYC
-- Working on [running list of projects](http://simp.ly/p/b9b4LV) and hobbies 
-to try
-- Current projects/hobbies: improving technical knowledge and abilities (DS&A,
-frontend web development), studying Korean, figuring out how to live life
+- Interests these days:
+    - Learning Korean
+    - Learning more about CS, programming, linguistics
+    - Getting through school ;;
 
 ### Blog:
 
-Read my blog [(currently on Medium)](https://medium.com/@serviceuser5705)! I 
-tend to think too much about too many things for too long and then document what
-new "insights" I gained. Also life updates, documentation for my projects and 
-learning experiences. If you're into technical tutorials or philosophical life 
-ramblings, you might find something interesting to read.
+[(Currently on Medium)](https://medium.com/@serviceuser5705)! Philosophical ramblings,
+project documentation, language learning updates, anything thing I feel like
+writing about and sharing.
 
 ### Socials:
 - [Github](https://github.com/brainuser5705)
