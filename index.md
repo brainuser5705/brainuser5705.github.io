@@ -2,20 +2,18 @@
 styles: about
 ---
 
-Hi. Cheers to Cup Noodles&reg; <sub>(not sponsored)</sub> for providing me with 
-sustenance during those bleak times.
+Hello! I am Ashley.
 
 <div id="about-selfie">
     <img src="/assets/images/selfie.jpg">
 </div>
 
-### Some quick facts:
-- Computer science major at Rochester Institute of Technology
+### Some quick facts about me:
+- CS major at RIT
 - From Brooklyn, NYC
 - Interests these days:
-    - Learning Korean
-    - Learning more about CS, programming, linguistics
-    - Getting through school ;;
+    - Learning Korean, linguistics, languages...
+    - Getting through school ;_;
 
 ### Blog:
 
