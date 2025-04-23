@@ -2,7 +2,8 @@
 ---
 
 $background: #1a1a1a;
-$base: #d6d6d6;
+$base: white;
+$base-hover: rgb(215, 214, 214);
 $link-base: #66A9F0;
 $link-hover: #0074F0;
 
@@ -31,35 +32,40 @@ html {
     main {
         text-align: initial;
         margin: auto;
-        max-width: 500px;
+        max-width: 600px;
     }
+}
+
+#default-title{
+
+    font-size: 3em;
+    font-weight: bold;
+    
+    margin: $margin-size;
+
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            color: $base-hover;
+        }
+    }
+
 }
 
 header {
 
     text-align: center;
-
-    #default-title{
-
-        font-size: 1.5em;
-        font-weight: bold;
-        
-        margin: $margin-size;
-    
-        a {
-            text-decoration: none;
-        }
-    
-    }
     
     #default-nav{
     
-        font-size: 1.25em;
+        font-size: 1.5em;
         margin: $margin-size;
     
         a {
             text-decoration: underline;
             margin: $margin-size;
+            display: block;
         }
     
     }

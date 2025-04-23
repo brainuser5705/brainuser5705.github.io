@@ -2,7 +2,7 @@
 name: Spotify Discography Breakdown
 description: MERN web application to see the trends of your favorite artist's songs using Spotify analysis features
 time: 2023-07
-tags: nodejs mongodb react expressjs d3 spotify-api
+tags: nodejs mongodb react expressjs d3
 ---
 
 # Demo videos

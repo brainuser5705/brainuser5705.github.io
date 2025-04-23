@@ -1,7 +1,7 @@
 ---
 name: small arduino programs
 description: simons says, automatic dog feeder
-tags: arduino basic-electronics
+tags: arduino
 time: 2024-02
 ---
 

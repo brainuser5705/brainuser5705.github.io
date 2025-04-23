@@ -2,7 +2,7 @@ html {
   /* Styling */
   font-family: "Fira Code", monospace;
   background-color: #1a1a1a;
-  color: #d6d6d6;
+  color: white;
   /* Alignment, Spacing*/
   text-align: center;
   margin: 1em;
@@ -17,27 +17,33 @@ html a:hover {
 html main {
   text-align: initial;
   margin: auto;
-  max-width: 500px;
+  max-width: 600px;
+}
+
+#default-title {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 1em;
+}
+#default-title a {
+  color: white;
+  text-decoration: none;
+}
+#default-title a:hover {
+  color: rgb(215, 214, 214);
 }
 
 header {
   text-align: center;
 }
-header #default-title {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin: 1em;
-}
-header #default-title a {
-  text-decoration: none;
-}
 header #default-nav {
-  font-size: 1.25em;
+  font-size: 1.5em;
   margin: 1em;
 }
 header #default-nav a {
   text-decoration: underline;
   margin: 1em;
+  display: block;
 }
 
 iframe {

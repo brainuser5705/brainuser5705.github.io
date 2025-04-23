@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["about.scss"],"names":[],"mappings":"AAAA;EACI;;AACA;EACI","sourcesContent":["#about-selfie{\n    text-align: center;\n    img {\n        max-width: 250px;\n    }\n}"],"file":"about.css"}
+{"version":3,"sourceRoot":"","sources":["about.scss"],"names":[],"mappings":"AAAA;EACI;;AACA;EACI;;;AAKJ;EACI","sourcesContent":["#about-selfie{\n    text-align: center;\n    img {\n        max-width: 250px;\n    }\n}\n\nhtml {\n    main {\n        max-width: 500px;\n    }\n}"],"file":"about.css"}

@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["other-page.scss"],"names":[],"mappings":"AAAA;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI","sourcesContent":["main {\n    max-width: 800px !important;\n}\n\na {\n    text-decoration: none;\n}\n\nimg {\n    max-width: 500px;\n}\n\n.heading{\n    font-size: 2em;\n}"],"file":"other-page.css"}

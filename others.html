@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+
+<ul>
+    {% for other in site.others %}
+        <li>
+            <a href="{{ other.url }}"><b>{{ other.title }}</b></a> - {{ other.description }}
+        </li>
+    {% endfor %}
+</ul>
