@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tech -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Sytlesheets -->
+        <link rel="stylesheet" href="/assets/css/default.css">
+        
+        
+        <link rel="stylesheet" href="/assets/css/project-page.css">
+        
+
+        <!-- Font style -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inclusive+Sans&family=Workbench&display=swap" rel="stylesheet">
+
+        <title>Amgi</title>
+    </head>
+    <body>
+        <header>
+            <div id="default-title">
+                <a href="/" >Hi it's me, Ashley.</a>
+            </div>
+            <nav id="default-nav">
+                <a href="/projects.html">Projects</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </header>
+        <main>
+            <div class="project-heading">
+    암기
+    <hr>
+</div>
+
+<div>
+    <h1 id="amki">amki</h1>
+<p>Chrome extension integrated with Anki spaced repetition app, specialized for Korean</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NQimC9HP4yE?si=7RkifT6SWLiQQquQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+<h2 id="description">Description</h2>
+
+<p>암기 (Amgi) is a Chrome extension that integrates with the <a href="https://apps.ankiweb.net/">Anki flashcard software</a>. It uses an add-on called <a href="https://git.sr.ht/~foosoft/anki-connect#note-actions">Anki-Connect</a> that exposes a localhost server whenever Anki is running.</p>
+
+<p>When a user highlights a word that they wish to add to Anki, 암기 will:</p>
+<ul>
+  <li>fetch the appropriate audio file and definition from Papago Naver <em>(Google Translate but for the Korean language)</em></li>
+  <li>create the new card using Anki-Connect</li>
+</ul>
+
+<p>Altogether, the extension makes adding new vocabulary to Anki much easier and faster. Now I can focus on studying Korean!</p>
+
+<h2 id="usage-and-technical-details">Usage and Technical Details</h2>
+
+<p>The user <strong>must</strong> have a local installation of Anki with the Anki-Connect add-on. It must also be launched and running in order to use the extension.</p>
+
+<h2 id="tech-stack">Tech “Stack”</h2>
+<ul>
+  <li>Chrome Extension APIs (webRequest, storage, fetch)</li>
+  <li>Anki-Connect add-on</li>
+  <li>pure Javascript</li>
+</ul>
+
+<hr />
+
+<h2 id="backstory">Backstory</h2>
+
+<p>I am currently learning Korean and make vocabulary flashcards with the <a href="https://apps.ankiweb.net/">Anki flashcard software</a>. The problem is that making new cards is a very tedious process (need to input word, find the definition, download audio file, etc.) So I thought, why don’t I <strong>automate</strong> it?</p>
+
+<h2 id="future-features-and-improvements">Future Features and Improvements</h2>
+
+<ul>
+  <li><strong>Customized card creation</strong>: Anki is highly customizable and allows for multiple types of flashcards with their own custom fields. We can extend this customization to the extension. For instance, the user can set up what fields they want to automate populate.</li>
+  <li><strong>More stable audio source</strong>: Audio and definition is currently scraped from Papago Naver. It would be more robust to find an API or dictionary files to supply these values.</li>
+  <li><strong>Integration with LLM for grammar/vocab exercises generation</strong>: Words from Anki can be fetched and used in a prompt to pass to a LLM asking to generate grammar/vocab exercises.</li>
+  <li><strong>Better approach than using setTimeOut</strong>: Use asynchronous Promises!</li>
+</ul>
+
+</div>
+        </main>
+    </body>
+</html>
