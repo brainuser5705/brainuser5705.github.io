@@ -9,7 +9,7 @@ description: diary of learning Korean
 
 Spent basically the entire day learning how to decipher IPA symbols. I think I got the basics down for consonants and vowels in terms of how the charts work. It's pretty awesome how linguists were able to compile all of this, but holy cow did they go ham. Just the amount of terminology and possible combinations and categories is mind-boggling.
 
-- Consonants: voiced, place (what passive/active articulars are touching what), manner (how is the sound made)
+- Consonants: voiced, place (what passive/active articulators are touching what), manner (how is the sound made)
 - Vowels: height, rounded, front/back
 
 Found a lot of resources, the ones that helped me the most:
@@ -25,17 +25,17 @@ Next is to repeat it a bunch of times until it's ingrained in my memory. I also 
 ---
 
 I've been learning on and off now for about a year. Did some Billy Go videos - learned Hangul, basic phrases, vocab and grammar. Then stopped to take a more independent approach with Anki + ChatGPT. Then stopped completely. Then did some periodic readings of TTMIK's Korean reading books. In my most recent "consistent" block, I have been:
-[ ] doing 3-5 new words on Anki
-    [ ] currently separated words by verbs and nouns
-    [ ] cards have informal conjugation (요), sample sentences paired with pictures, pronunciation
-[ ] reading through a webtoon
-    [ ] copying the sentences and asking ChatGPT to explain the grammar
-[ ] watching videos sometimes
+- [ ] doing 3-5 new words on Anki
+    - [ ] currently separated words by verbs and nouns
+    - [ ] cards have informal conjugation (요), sample sentences paired with pictures, pronunciation
+- [ ] reading through a webtoon
+    - [ ] copying the sentences and asking ChatGPT to explain the grammar
+- [ ] watching videos sometimes
 
 I've started reading **Fluent Forever** by Gabriel Wyner and it has some great tips about how to make the most of your language learning. Some things I will start doing once I have more time:
-[ ] revamp my Anki cards
-    [ ] reduce the number of sentences
-    [ ] make sure I have some personal connection to it
-    [ ] fix the layout
-    [ ] establish a good schedule for making Anki cards
-[ ] IPA for Korean
+- [ ] revamp my Anki cards
+    - [ ] reduce the number of sentences
+    - [ ] make sure I have some personal connection to it
+    - [ ] fix the layout
+    - [ ] establish a good schedule for making Anki cards
+- [ ] IPA for Korean
