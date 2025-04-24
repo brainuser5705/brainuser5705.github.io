@@ -15,12 +15,13 @@ Spent basically the entire day learning how to decipher IPA symbols. I think I g
 Found a lot of resources, the ones that helped me the most:
 - [IPA chart for knowing how to pronounce the symbols](https://www.internationalphoneticassociation.org/IPAcharts/inter_chart_2018/IPA_2018.html)
 - [actual Korean phonetics](https://hangul.fun/)
+- [vowel chart for Korean](https://i.sstatic.net/HUG0k.png)
 
 Still need to practice (with actual words) but now that I understand how they actually work physically, it's a lot easier to make the sound instead of imitating by ear. Which I think is a big win.
 
 Next is to repeat it a bunch of times until it's ingrained in my memory. I also found an Anki deck of minimal pairs so that'll help my listening more to. But it is in practice (aka the real world) that will truly test me...
 
-> A bit of an aside...my very first introduction to Hangul was this [comic](https://www.ryanestrada.com/learntoreadkoreanin15minutes/). It is great for visual mnemonics but eventually I ended equating the English pronunication of the letters to Hangul. It also doesn't explain the difference between regular, aspirated and tense consonants that well, which I think is the hardest part about Korean phonetics for English speakers. So for newcomers, definitely use it in the beginning but once you got it down, switch over to IPA.
+> A bit of an aside...my very first introduction to Hangul was this [comic](https://www.ryanestrada.com/learntoreadkoreanin15minutes/). It is great for visual mnemonics but eventually I ended equating the English pronunication of the letters to Hangul. It also doesn't explain the difference between regular (ㄱ), aspirated (ㅋ) and tense consonants (ㄲ) that well, which I think is the hardest part about Korean phonetics for English speakers. So for newcomers, definitely use it in the beginning but once you got it down, switch over to IPA.
 
 ---
 
