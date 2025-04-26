@@ -5,6 +5,16 @@ description: diary of learning Korean
 
 # April 2025
 
+## 25 - Some more deep diving in to IPA
+
+Read a bit more about Korean phonology on Wikipedia and found some interesting facts that would help with the pronunicaiton. Note I am not using the correct linguistic terms for this.
+
+1. For the Hangul syllable blocks that are comprised of two *consonant clusters* at the bottom final section e.g. 앉, there are actually [phonetic rules](https://en.wikipedia.org/wiki/Korean_phonology#:~:text=in%20final%20position.-,Sequence,-%E3%84%B3%0Ags) for what it would sound like.
+    - For clusters with a ㅎ on the right side, it is sometimes "carried" over to the next syllable. This is called *elided* consonants?
+2. There have been changes to Korean phonology through the decades, notably that 애($\epsilon$) and 에(e)not have no phonetic difference.
+
+Also because I have no sense of responsbility for my academics, I spent a good chunk of time fixing up my Anki cards. They're cleaner now, and I found a neat add-on that resizes the pictures when I paste them. So no more ugly cards! Now if I would just study them...
+
 ## 23 - Fluent Forever and IPA!
 
 Spent basically the entire day learning how to decipher IPA symbols. I think I got the basics down for consonants and vowels in terms of how the charts work. It's pretty awesome how linguists were able to compile all of this, but holy cow did they go ham. Just the amount of terminology and possible combinations and categories is mind-boggling.
@@ -26,17 +36,19 @@ Next is to repeat it a bunch of times until it's ingrained in my memory. I also 
 ---
 
 I've been learning on and off now for about a year. Did some Billy Go videos - learned Hangul, basic phrases, vocab and grammar. Then stopped to take a more independent approach with Anki + ChatGPT. Then stopped completely. Then did some periodic readings of TTMIK's Korean reading books. In my most recent "consistent" block, I have been:
-- [ ] doing 3-5 new words on Anki
-    - [ ] currently separated words by verbs and nouns
-    - [ ] cards have informal conjugation (요), sample sentences paired with pictures, pronunciation
-- [ ] reading through a webtoon
-    - [ ] copying the sentences and asking ChatGPT to explain the grammar
-- [ ] watching videos sometimes
+- doing 3-5 new words on Anki
+    - currently separated words by verbs and nouns
+    - cards have informal conjugation (요), sample sentences paired with pictures, pronunciation
+- reading through a webtoon
+    - copying the sentences and asking ChatGPT to explain the grammar
+- watching videos sometimes
 
 I've started reading **Fluent Forever** by Gabriel Wyner and it has some great tips about how to make the most of your language learning. Some things I will start doing once I have more time:
-- [ ] revamp my Anki cards
-    - [ ] reduce the number of sentences
+- [X] revamp my Anki cards
+    - [X] reduce the number of sentences
     - [ ] make sure I have some personal connection to it
-    - [ ] fix the layout
+    - [X] fix the layout
     - [ ] establish a good schedule for making Anki cards
-- [ ] IPA for Korean
+- [X] IPA for Korean
+- [ ] Establish schedule to consume Korean content
+- [ ] Schedule for studying the grammar
