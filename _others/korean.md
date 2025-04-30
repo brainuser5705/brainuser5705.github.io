@@ -5,13 +5,25 @@ description: diary of learning Korean
 
 # April 2025
 
+## 29 - End of the semester Brief update
+
+Took a long break from Anki, but getting back into it now (I have 50+ reviews stacked up).
+
+The way that I set up my Anki cards is to display the picture first, along with a cloze for the word underneath. The problem is finding a good image. Sometimes I have a certain image in mind that I want to put it (Fluent Forever's personal connection vocab memorization hack) but other times, I search up the word. Google Images is decent for most words, I also found [Freepik](kr.freepik.com) alright too.
+
+Also now that the semester is pretty much over, I have a lot a lot a lot of incentive to really dig deep into this Korean learning journey so I'm looking to start integrating grammar and daily input.
+
+There are many philosophies out there about language learning. Because I have pretty high social anxiety (getting better though!), I prefer not to talk so much especially if I know like 1% of the language right now. So the camp of only input, no output fits me well. It's definitely a bit hard to find **enjoyable** comprehensbile input. I also find that my attention span is zero so I can't even watch a video longer than a TikTok. I'm going on a ~20 day "detox" from social media (YouTube included) to fix my bad habits, so I will use this time to focus mainly on grammar. There's the Korean Grammar for Beginners book that is really good; I'll read through some chapters and make cards for them. That way when I start doing the input, I will have some foundations to build upon.
+
+I'm pretty excited to get the momentum going, 화이팅! 난 할 수 있어!
+
 ## 25 - Some more deep diving in to IPA
 
 Read a bit more about Korean phonology on Wikipedia and found some interesting facts that would help with the pronunicaiton. Note I am not using the correct linguistic terms for this.
 
 1. For the Hangul syllable blocks that are comprised of two *consonant clusters* at the bottom final section e.g. 앉, there are actually [phonetic rules](https://en.wikipedia.org/wiki/Korean_phonology#:~:text=in%20final%20position.-,Sequence,-%E3%84%B3%0Ags) for what it would sound like.
     - For clusters with a ㅎ on the right side, it is sometimes "carried" over to the next syllable. This is called *elided* consonants?
-2. There have been changes to Korean phonology through the decades, notably that 애($\epsilon$) and 에(e)not have no phonetic difference.
+2. There have been changes to Korean phonology through the decades, notably that 애(ɛ) and 에(e) not have no phonetic difference.
 
 Also because I have no sense of responsbility for my academics, I spent a good chunk of time fixing up my Anki cards. They're cleaner now, and I found a neat add-on that resizes the pictures when I paste them. So no more ugly cards! Now if I would just study them...
 
