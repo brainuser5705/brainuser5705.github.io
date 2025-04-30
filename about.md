@@ -7,11 +7,11 @@ styles: about
 </div> -->
 
 ### Some quick facts about me:
-- CS major at RIT
+- *was* a CS major at RIT
 - From Brooklyn, NYC
 - Interests these days:
     - Learning Korean
-    - Getting through school ;_;
+    - Exploring life after college
 
 ---
 
