@@ -3,6 +3,18 @@ title: Korean Log
 description: diary of learning Korean
 ---
 
+# May 2025
+
+Done with finals (and university). Cut the max reviews to 20 cards but 50 per deck is too intense getting back into it.
+
+In the last update, I said I want to start integrating grammar and more input. I am reading a book called *Fluent Forever* which provides some exercises and general language learning pedadogical info and I'm going to try them out.
+
+- Grammar flash cards - make flashcards from the Korean Beginner textbook
+- Read the webtoon - like half a chapter a day, add new words and flashcards to Anki
+- Continue doing Anki since it's the "fastest" way to learn new Korean
+
+I'm going to stick with input for now.
+
 # April 2025
 
 ## 29 - End of the semester Brief update
@@ -15,7 +27,7 @@ Also now that the semester is pretty much over, I have a lot a lot a lot of ince
 
 There are many philosophies out there about language learning. Because I have pretty high social anxiety (getting better though!), I prefer not to talk so much especially if I know like 1% of the language right now. So the camp of only input, no output fits me well. It's definitely a bit hard to find **enjoyable** comprehensbile input. I also find that my attention span is zero so I can't even watch a video longer than a TikTok. I'm going on a ~20 day "detox" from social media (YouTube included) to fix my bad habits, so I will use this time to focus mainly on grammar. There's the Korean Grammar for Beginners book that is really good; I'll read through some chapters and make cards for them. That way when I start doing the input, I will have some foundations to build upon.
 
-I'm pretty excited to get the momentum going, 화이팅! 난 할 수 있어!
+I'm pretty excited to get the momentum going.
 
 ## 25 - Some more deep diving in to IPA
 
