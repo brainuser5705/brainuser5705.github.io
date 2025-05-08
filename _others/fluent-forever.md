@@ -1,5 +1,5 @@
 ---
-title: Book Notes: Fluent Forever
+title: Book Notes - Fluent Forever
 decription: some anki tips and tricks
 ---
 
