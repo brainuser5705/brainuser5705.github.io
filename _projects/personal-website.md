@@ -1,7 +1,7 @@
 ---
 name: Personal Website
 description: Development timeline of my personal website
-time: 2021~05
+time: 2021-05
 tags: html/css php jekyll
 permalink: /personal-website
 ---  

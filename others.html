@@ -7,7 +7,7 @@ layout: default
     {% assign others = site.others | sort: "order" %}
     {% for other in others %}
         <li>
-            <a href="{{ other.url }}"><b>{{ other.title }}</b></a> - {{ other.description }}
+            <a href="{{ other.url }}"><b>{{ other.title }}</b></a> {% if other.description %} - {% endif %} {{ other.description }}
         </li>
     {% endfor %}
 </ul>

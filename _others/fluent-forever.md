@@ -1,6 +1,5 @@
 ---
 title: Fluent Forever Book Notes
-description: learning how to learn a language with anki
 order: 2
 ---
 

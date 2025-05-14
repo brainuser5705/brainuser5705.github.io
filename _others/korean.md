@@ -2,9 +2,14 @@
 title: Korean Log
 description: diary of learning Korean
 order: 1
+styles: update
 ---
 
 # May 2025
+
+## 14 - Looking for ways to optimize...
+
+I'm working on Anki now and it really seems like I cannot remember certain words even after seeing them 10+ times. It's always a matter of not knowing one of the characters that make up the word (e.g. 지_다 -> 지우다), or similar words with similar spelling (e.g. 뜨겁다 vs 따뜻하다). I think one factor would be inconsistency in studying. I'm going to study for one month straight everyday (one sitting everyday) and see if that fixes things. If not, then I'll probably start employing some of the templates that Fluent Forever suggested, maybe make specific hard-to-remember words analog, or some other technique. I also think I should start studying in reverse order. So far, I've only been studying with the picture and example sentence in the front. What if I try to "generate" the picture?
 
 ## 8 - Resources
 
@@ -26,7 +31,6 @@ Throughout my year of "dabbling" in Korean, I found several resources and sites.
 - [Beginner phrases, fill in the blank](https://drive.google.com/drive/folders/1qp8Lw6KfuZKKuB1KcoKjldajmUF01k9N
 - )
 
-
 ## 8 - Time to lock in
 
 Done with finals (and university). Cut the max reviews to 20 cards but 50 per deck is too intense getting back into it.
@@ -38,6 +42,8 @@ In the last update, I said I want to start integrating grammar and more input. I
 - Continue doing Anki since it's the "fastest" way to learn new Korean
 
 I'm going to stick with input for now.
+
+---
 
 # April 2025
 
@@ -82,6 +88,8 @@ Next is to repeat it a bunch of times until it's ingrained in my memory. I also 
 > A bit of an aside...my very first introduction to Hangul was this [comic](https://www.ryanestrada.com/learntoreadkoreanin15minutes/). It is great for visual mnemonics but eventually I ended equating the English pronunication of the letters to Hangul. It also doesn't explain the difference between regular (ㄱ), aspirated (ㅋ) and tense consonants (ㄲ) that well, which I think is the hardest part about Korean phonetics for English speakers. So for newcomers, definitely use it in the beginning but once you got it down, switch over to IPA.
 
 ---
+
+# Background
 
 I've been learning on and off now for about a year. Did some Billy Go videos - learned Hangul, basic phrases, vocab and grammar. Then stopped to take a more independent approach with Anki + ChatGPT. Then stopped completely. Then did some periodic readings of TTMIK's Korean reading books. In my most recent "consistent" block, I have been:
 - doing 3-5 new words on Anki
