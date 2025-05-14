@@ -1,9 +1,33 @@
 ---
 title: Korean Log
 description: diary of learning Korean
+order: 1
 ---
 
 # May 2025
+
+## 8 - Resources
+
+Throughout my year of "dabbling" in Korean, I found several resources and sites. So this is for the future when I know more, or for reference:
+
+- https://todaikorean.com/home?hl=en
+- https://kids.donga.com/
+- https://kid.chosun.com/
+- https://retrolearnskorean.blogspot.com/
+- https://unyounglearnskorean.tumblr.com/post/100930792028/childrens-books-in-korean
+- https://vk.com/wall338750403_148
+- http://www.epik.go.kr/index.do
+- https://ridibooks.com/category/free-books/100
+- http://xn--hu1b40go5ck8x.com/
+- [Intermediate Anthology](https://psv4.userapi.com/s/v1/d/HLYuVnqkrUxTrn5cedjMBM4VoQFLmI2_KUgZA1DEqEulPx2qqjGyrrpWT6BLKn1OLYEF_SX1MYc2lagwZty4L0cU_Wl7d1Ng5VaEC1jp8iW3EWex/The_Intermediate_Anthology.pdf)
+- [Once Upon A Time In Korea](https://psv4.userapi.com/s/v1/d/ai9Uwt4TCuzyMVLPc2UJ5GvDuf5JyGhzBgCZHzjbXL2U1zNpCRrIVKE_kwfzgra6vb7jwmR1q3xsO3b9GhKal6pvBvDi6qP4RtjwYzzX4_hGQQHW/Once_Upon_a_Time_in_Korea.pdf)
+- https://learning-korean.com/DL/TOPIK-I-1671.pdf
+- [TOPIK practice test](https://drive.google.com/drive/folders/1s6pjS8FS9fMJE3qSNXa3Mid2Yt9w4L4p)
+- [Beginner phrases, fill in the blank](https://drive.google.com/drive/folders/1qp8Lw6KfuZKKuB1KcoKjldajmUF01k9N
+- )
+
+
+## 8 - Time to lock in
 
 Done with finals (and university). Cut the max reviews to 20 cards but 50 per deck is too intense getting back into it.
 

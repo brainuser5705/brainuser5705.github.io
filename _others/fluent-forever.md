@@ -1,6 +1,7 @@
 ---
-title: Book Notes - Fluent Forever
-decription: some anki tips and tricks
+title: Fluent Forever Book Notes
+description: learning how to learn a language with anki
+order: 2
 ---
 
 # Chapter 3: Sound Play
@@ -80,9 +81,13 @@ What is the most effective way to learn words?
     - new words
     - new word forms
     - new word order
-![alt text](imgs/image.png)
+
+![alt text](imgs/fluent-forever-1.png)
+
 - For new grammar forms (e.g. declension charts), we can create our own sentences.
-![alt text](image.png)
+
+![alt text](imgs/fluent-forever-2.png)
+
 - Pick a Thing technique using mnemonics to remember:
     - Don't pick anything until a problem.
     - Pick a thing (arbitrary, associated with the first word, associated with the abstract concept)
