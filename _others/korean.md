@@ -7,6 +7,12 @@ styles: update
 
 # May 2025
 
+## 16 - Not much of an update, more so a personal note to self
+
+Right now studying is pretty chill and straight forward. Do my Anki decks, get some grammar examples from the textbook, read webtoons (which I haven't got back into yet...) but I'm sparing my listening and writing a lot. One of the reasons is because those two are the hardest and I know it will take a considerable amount of energy from me. The only way is just to push, so I'll leave that after my 30 days of Anki.
+
+Otherwise it's all slowly but surely...
+
 ## 14 - Looking for ways to optimize...
 
 I'm working on Anki now and it really seems like I cannot remember certain words even after seeing them 10+ times. It's always a matter of not knowing one of the characters that make up the word (e.g. 지_다 -> 지우다), or similar words with similar spelling (e.g. 뜨겁다 vs 따뜻하다). I think one factor would be inconsistency in studying. I'm going to study for one month straight everyday (one sitting everyday) and see if that fixes things. If not, then I'll probably start employing some of the templates that Fluent Forever suggested, maybe make specific hard-to-remember words analog, or some other technique. I also think I should start studying in reverse order. So far, I've only been studying with the picture and example sentence in the front. What if I try to "generate" the picture?
