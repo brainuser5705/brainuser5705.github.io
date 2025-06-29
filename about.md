@@ -17,7 +17,7 @@ styles: about
 
 ### Blog:
 
-[Currently on Medium](https://medium.com/@serviceuser5705)! Philosophical ramblings,
+[Currently on Medium](https://medium.com/@serviceuser5705)! Ramblings,
 project documentation, language learning updates, anything thing I feel like
 writing about and sharing.
 

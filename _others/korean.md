@@ -5,7 +5,19 @@ order: 1
 styles: update
 ---
 
+# June 2025
+
+## 28 - MASSIVE UPDATEEEEE
+
+Guess wat? I actually didn't do anything I said I would lolol - I took a long vacation and did Anki for a few days, then just dropped everything eventually.
+
+I'm back now.
+
 # May 2025
+
+## 16 - You know what, let's just go all in
+
+I'm changing my mind. Let's just do full immersion. I was thinking...at what point of my life am I going to have the most free time than now? Probably never. So why don't I give it a shot. It's not going to be 100% Korean of course, but I'm going to dedicate a considerable amount of time (like ~4-5 hours a day) studying using the activities I listed in previous entries and adding some listening practice with Cloze Master.
 
 ## 16 - Not much of an update, more so a personal note to self
 
