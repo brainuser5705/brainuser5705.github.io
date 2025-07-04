@@ -1,9 +1,22 @@
 ---
-title: Korean Log
-description: diary of learning Korean
+title: Learning Korean
+description: updates, approaches, resources
 order: 1
 styles: update
 ---
+
+# July 2025
+
+# 4 - Celebrating America's birthday with a korean log update
+
+My previous approach was very flashcard-heavy. I was using the pre-made deck from the creator of the Korean Fluency blog (plus my own modifications) and it worked pretty well. All I had to do with study the cards of the day and I would be "making progress". Well, my long term memory is 💩 so I found that I was reviewing the same cards over and over again, especially after long breaks. I could not recall cards that were supposedly "mastered".
+
+The new approach is to focus on listening comprehension (with no subtitles) and picking up the vocabulary alongside. I am listening to **Choisuu's Beginner podcast episodes** and they are great. The pace is slow, sentences complex but only with 1-2 new grammar points in each, key vocabulary words repeated often. Since I already have the basic grammar down, so far the podcast hasn't been hard to understand.
+
+I am still making flashcards. First I listen, shadow and write down the line in my notebook (kind of tedious so looking to change this). Then I go on Audacity and extract the lines/phrases that I think are good for reviewing.
+
+It's a slower approach in that I won't be learning new vocab frequently. Also my brain shuts down after 3-4 pages of the dialogue so I can't "grind" it. But I definitely feel my listening is getting better and it's more productive in the long run since I am hitting listening, vocabulary, grammar and repetition at the same time.
+
 
 # June 2025
 
