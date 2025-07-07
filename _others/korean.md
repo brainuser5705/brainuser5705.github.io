@@ -7,15 +7,23 @@ styles: update
 
 # July 2025
 
+# 7 - A snapshot of the setup
+
+![alt text](imgs/korean_study_setup.png)
+
+Been pretty slow. I was writing down the lines as I went and then going back to make the flashcards, but it was getting kind of annoying to do so right now I am just listening to the audio and looking at the transcript to see if I got the words right.
+
+Since there isn't necessarily an outline of vocabulary and grammar to study, I have been pretty selective with the snippets. Only if I know I won't remember it or if I want to train my ears more to recognize that word/grammar, will I add it to Anki.
+
 # 4 - Celebrating America's birthday with a korean log update
 
 My previous approach was very flashcard-heavy. I was using the pre-made deck from the creator of the Korean Fluency blog (plus my own modifications) and it worked pretty well. All I had to do with study the cards of the day and I would be "making progress". Well, my long term memory is 💩 so I found that I was reviewing the same cards over and over again, especially after long breaks. I could not recall cards that were supposedly "mastered".
 
-The new approach is to focus on listening comprehension (with no subtitles) and picking up the vocabulary alongside. I am listening to **Choisuu's Beginner podcast episodes** and they are great. The pace is slow, sentences complex but only with 1-2 new grammar points in each, key vocabulary words repeated often. Since I already have the basic grammar down, so far the podcast hasn't been hard to understand.
+The new approach is to focus on listening comprehension (with no subtitles) and picking up the vocabulary alongside. I am listening to **ChoiSusu's Beginner podcast episodes** and they are great. The pace is slow, sentences complex but only with 1-2 new grammar points in each, key vocabulary words repeated often. Since I already have the basic grammar down, so far the podcast hasn't been hard to understand.
 
 I am still making flashcards. First I listen, shadow and write down the line in my notebook (kind of tedious so looking to change this). Then I go on Audacity and extract the lines/phrases that I think are good for reviewing.
 
-It's a slower approach in that I won't be learning new vocab frequently. Also my brain shuts down after 3-4 pages of the dialogue so I can't "grind" it. But I definitely feel my listening is getting better and it's more productive in the long run since I am hitting listening, vocabulary, grammar and repetition at the same time.
+It's a slower approach in that I won't be learning new vocab frequently. Also my brain shuts down after 3-4 pages of the dialogue so I can't really "lock in". But I definitely feel my listening is getting better and it's more productive in the long run since I am hitting listening, vocabulary, grammar and repetition at the same time.
 
 
 # June 2025
