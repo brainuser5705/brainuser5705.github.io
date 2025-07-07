@@ -7,7 +7,7 @@ styles: update
 
 # July 2025
 
-# 7 - A snapshot of the setup
+## 7 - A snapshot of the setup
 
 ![alt text](imgs/korean_study_setup.png)
 
@@ -15,7 +15,7 @@ Been pretty slow. I was writing down the lines as I went and then going back to 
 
 Since there isn't necessarily an outline of vocabulary and grammar to study, I have been pretty selective with the snippets. Only if I know I won't remember it or if I want to train my ears more to recognize that word/grammar, will I add it to Anki.
 
-# 4 - Celebrating America's birthday with a korean log update
+## 4 - Celebrating America's birthday with a korean log update
 
 My previous approach was very flashcard-heavy. I was using the pre-made deck from the creator of the Korean Fluency blog (plus my own modifications) and it worked pretty well. All I had to do with study the cards of the day and I would be "making progress". Well, my long term memory is 💩 so I found that I was reviewing the same cards over and over again, especially after long breaks. I could not recall cards that were supposedly "mastered".
 
