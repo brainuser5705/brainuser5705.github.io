@@ -18,9 +18,7 @@ styles: about
 ### Socials:
 - [Github](https://github.com/brainuser5705)
 - [YouTube](https://www.youtube.com/@brainuser5705)
-- [Instagram](https://www.instagram.com/brainuser5705/)
 - [LinkedIn](https://www.linkedin.com/in/ashley-liew-ab1124221/)
-- [Medium](https://medium.com/@serviceuser5705)
 
 ---
 
