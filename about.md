@@ -19,6 +19,7 @@ styles: about
 - [Github](https://github.com/brainuser5705)
 - [YouTube](https://www.youtube.com/@brainuser5705)
 - [LinkedIn](https://www.linkedin.com/in/ashley-liew-ab1124221/)
+- [StoryGraph](https://app.thestorygraph.com/profile/brainuser5705)
 
 ---
 
