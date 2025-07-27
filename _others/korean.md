@@ -7,6 +7,12 @@ styles: update
 
 # July 2025
 
+## 27 - How to remember words
+
+![alt text](imgs/image.png)
+
+The word to remember: 가르치. In other words, God and lychee. Totally pure luck that someone made this image already.
+
 ## 7 - A snapshot of the setup
 
 ![alt text](imgs/korean_study_setup.png)
