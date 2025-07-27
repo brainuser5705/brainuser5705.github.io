@@ -6,5 +6,5 @@ tag: astro strapi jamstack
 extern: https://rainyatelier.netfliy.app
 ---
 
-Go to [https://rainyatelier.netfliy.app](https://rainyatelier.netfliy.app).
+Go to [https://rainyatelier.netlify.app](https://rainyatelier.netlify.app).
 
