@@ -7,6 +7,12 @@ styles: update
 
 # July 2025
 
+## 29 - A simple tracker
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhnz20njajsi_1fAmHO4MRlrepxAPtOqINZVQHuRO3rI3hF1Tkf49_d85Ea3hF4DI4kPGTzwdE2BGX/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
+[Link to webpage version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQhnz20njajsi_1fAmHO4MRlrepxAPtOqINZVQHuRO3rI3hF1Tkf49_d85Ea3hF4DI4kPGTzwdE2BGX/pubhtml?gid=0&single=true)
+
 ## 27 - How to remember words
 
 ![alt text](imgs/image.png)
