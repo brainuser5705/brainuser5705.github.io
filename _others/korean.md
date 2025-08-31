@@ -5,6 +5,18 @@ order: 1
 styles: update
 ---
 
+# August 2025
+
+## 31 - Consistent...but no progress
+
+![alt text](imgs/streak.png)
+
+Definitely not using the new job as an excuse, I haven't had any motivation to study Korean. But to get the bare minimum done each day, I have been studying the daily cards due on Anki. And today I completed the longest streak I had, 24 days!
+
+But it doesn't really call for any celebrations because in all honesty, my Korean has not improved at all. Similar to the problem I had before, there are a lot of cards I cannot remember for the life of me.
+
+Perhaps I need more context, dedicate more time to study, immerse more...just do more in general. So I'm gonna take some time to reflect and write down my new "routine" in the next update.
+
 # July 2025
 
 ## 29 - A simple tracker

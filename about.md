@@ -11,7 +11,6 @@ styles: about
 - From Brooklyn, NY
 - Interests these days:
     - Learning Korean
-    - Exploring life after college
 
 ---
 
