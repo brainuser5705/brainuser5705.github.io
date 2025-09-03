@@ -5,15 +5,27 @@ order: 1
 styles: update
 ---
 
+# September 2025
+
+## 3 - Laziness
+
+Anki is just too easy to fallback on! I've been learning the same 20-30 words for pretty much a month now. These words were taken mostly from Choisusu's podcast and the Korean for Intermediates (not really intermediate level tho) book. Since I only use one context sentence, it's relatively easy to remember which word goes with which sentence. If I were to able try to use it in a sentence, miserable failure will follow.
+
+I should output more, use the words that I learn. Because that makes it easier to remember, and I am also practicing stringing the words into actual sentences. Plus it's a new activity to make things more fun.
+
+The problem is that I am way too lazy to do that. 30 Anki cards a day already suck what remaining energy I have left.
+
+There's actually so much more I should be doing if I want to improve beyond building a vocab of 30 words per month...
+
 # August 2025
 
 ## 31 - Consistent...but no progress
 
 ![alt text](imgs/streak.png)
 
-Definitely not using the new job as an excuse, I haven't had any motivation to study Korean. But to get the bare minimum done each day, I have been studying the daily cards due on Anki. And today I completed the longest streak I had, 24 days!
+Since I got the new job (definitely not using it as an excuse...), I haven't had any motivation to study Korean that much. But to get the bare minimum done each day, I have been studying the daily cards due on Anki. And today I completed the longest streak I had, 24 days!
 
-But it doesn't really call for any celebrations because in all honesty, my Korean has not improved at all. Similar to the problem I had before, there are a lot of cards I cannot remember for the life of me.
+It doesn't really call for any celebrations because in all honesty, my Korean has not improved at all. Similar to the problem I had before, there are a lot of cards I cannot remember for the life of me. And actually one of those days, I just studied one card to keep it up...so does that really count as studying?
 
 Perhaps I need more context, dedicate more time to study, immerse more...just do more in general. So I'm gonna take some time to reflect and write down my new "routine" in the next update.
 
