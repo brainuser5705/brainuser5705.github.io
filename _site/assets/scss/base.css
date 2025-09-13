@@ -1,0 +1,40 @@
+/* Variables */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  width: 30%;
+  height: 100%;
+  margin: 0;
+  float: left;
+  background-color: #F0B858;
+}
+header #base-title {
+  color: #C58E2F;
+}
+header #base-description {
+  color: #FFFFFF;
+}
+header #base-info svg {
+  width: 50px;
+}
+header #base-info div {
+  display: none;
+}
+main {
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+main nav ul {
+  list-style-type: none;
+  margin: 0;
+  text-align: right;
+}
+main nav ul li {
+  padding: 1em;
+}
+
+/*# sourceMappingURL=base.css.map */

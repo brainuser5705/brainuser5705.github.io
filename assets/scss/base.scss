@@ -1,0 +1,75 @@
+---
+---
+
+/* Variables */
+$base-color: #000000;
+$side-background: #F0B858;
+$side-foreground: #C58E2F;
+// $main-background:;
+// $main-foreground:;
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+header {
+
+    // dimensions
+    width: 30%;
+    height: 100%;
+    margin: 0;
+
+    // layout
+    float: left;
+
+    background-color: $side-background;
+    
+    #base-icon {
+
+    }
+
+    #base-title {
+        color: $side-foreground;
+    }
+
+    #base-description {
+        color: #FFFFFF;
+    }
+
+    #base-info {
+        svg {
+            width: 50px;
+        }
+        div {
+            display: none;
+        }
+    }
+
+    #base-signature {
+
+    }
+
+}
+
+main {
+
+    position: absolute;
+    right: 0;
+    top: 30%;
+
+    nav {
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            text-align: right;
+            li {
+                padding: 1em;
+            }
+        }
+    }
+    
+
+}
+
