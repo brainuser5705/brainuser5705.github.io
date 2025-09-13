@@ -8,65 +8,103 @@ $side-foreground: #C58E2F;
 // $main-background:;
 // $main-foreground:;
 
+// <weight>: Use a value from 100 to 800
+// <uniquifier>: Use a unique and descriptive class name
+
+// .jetbrains-mono-<uniquifier> {
+//     font-family: "JetBrains Mono", monospace;
+//     font-optical-sizing: auto;
+//     font-weight: <weight>;
+//     font-style: normal;
+// }
+
 html, body {
     height: 100%;
     margin: 0;
+    font-family: "JetBrains Mono", monospace;
 }
 
 header {
 
+    background-color: $side-background;
+
     // dimensions
     width: 30%;
     height: 100%;
+
+    // margin, padding does not expand it
+    box-sizing: border-box;
+    
     margin: 0;
+    padding: 0 2em;
+    padding-top: 3em;
 
     // layout
     float: left;
-
-    background-color: $side-background;
     
     #base-icon {
-
+        width: 100px;
     }
 
     #base-title {
         color: $side-foreground;
+        font-size: 2em;
+        font-weight: 800;
+        padding: 1em 0;
     }
 
     #base-description {
         color: #FFFFFF;
+        font-weight: 100;
+        font-style: italic;
     }
 
     #base-info {
         svg {
+            position: absolute;
+            bottom: 1em;
             width: 50px;
         }
+
+        #base-info-dark {
+
+        }
+
+        #base-info-light{
+            display: none;
+        }
+
         div {
             display: none;
         }
     }
 
-    #base-signature {
+    // #base-signature {
 
-    }
+    // }
 
 }
 
 main {
 
     position: absolute;
-    right: 0;
-    top: 30%;
+    right: 2em;
+    top: 20%;
 
     nav {
 
         ul {
+
             list-style-type: none;
             margin: 0;
             text-align: right;
+
             li {
+                font-weight: 800;
+                font-size: 2em;
                 padding: 1em;
             }
+
         }
     }
     

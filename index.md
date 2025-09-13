@@ -1,10 +1,11 @@
 ---
 # Base layout
+base-icon-filename: poochie.png
 base-title: Hi, it's Ashley!
 base-info: "<ul><li>Framework: <i>Jekyll</i></li>
     <li>Font: <i>JetBrains Mono</i></li>
     <li>Hosting: <i>Github Pages</i></li></ul>"
-base-description: I’m from Brooklyn, studied CS at RIT in Rochester, and working in Orlando! This website has been my little dump of projects, blogs, and other stuff that I’m working on since 2021. Thank you for checking it out!
+base-description: I’m from Brooklyn, studied CS at RIT in Rochester, and currently working in Orlando! This website is my little dump of projects and other stuff.
 ---
 
 <nav>
