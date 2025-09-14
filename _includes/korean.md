@@ -1,27 +1,15 @@
----
-title: Learning Korean
-description: updates, approaches, resources
-order: 1
-styles: update
----
-
-# September 2025
-
-## 3 - Laziness
-
+# 2025년 9월 3일 
+## Laziness
 Anki is just too easy to fallback on! I've been learning the same 20-30 words for pretty much a month now. These words were taken mostly from Choisusu's podcast and the Korean for Intermediates (not really intermediate level tho) book. Since I only use one context sentence, it's relatively easy to remember which word goes with which sentence. If I were to able try to use it in a sentence, miserable failure will follow.
 
-I should output more, use the words that I learn. Because that makes it easier to remember, and I am also practicing stringing the words into actual sentences. Plus it's a new activity to make things more fun.
-
-The problem is that I am way too lazy to do that. 30 Anki cards a day already suck what remaining energy I have left.
+I should output more, use the words that I learn. Because that makes it easier to remember, and I am also practicing stringing the words into actual sentences. Plus it's a new activity to make things more fun. The problem is that I am way too lazy to do that. 30 Anki cards a day already suck what remaining energy I have left.
 
 There's actually so much more I should be doing if I want to improve beyond building a vocab of 30 words per month...
 
-# August 2025
+# 2025년 8월 31일 
+## Consistent...but no progress
 
-## 31 - Consistent...but no progress
-
-![alt text](imgs/streak.png)
+{% include korean_img.html src="anki-streak.png" alt="Testing" %}
 
 Since I got the new job (definitely not using it as an excuse...), I haven't had any motivation to study Korean that much. But to get the bare minimum done each day, I have been studying the daily cards due on Anki. And today I completed the longest streak I had, 24 days!
 
@@ -29,29 +17,31 @@ It doesn't really call for any celebrations because in all honesty, my Korean ha
 
 Perhaps I need more context, dedicate more time to study, immerse more...just do more in general. So I'm gonna take some time to reflect and write down my new "routine" in the next update.
 
-# July 2025
-
-## 29 - A simple tracker
+# 2025년 7월 29일 
+## A simple tracker
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhnz20njajsi_1fAmHO4MRlrepxAPtOqINZVQHuRO3rI3hF1Tkf49_d85Ea3hF4DI4kPGTzwdE2BGX/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 [Link to webpage version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQhnz20njajsi_1fAmHO4MRlrepxAPtOqINZVQHuRO3rI3hF1Tkf49_d85Ea3hF4DI4kPGTzwdE2BGX/pubhtml?gid=0&single=true)
 
-## 27 - How to remember words
+# 2025년 7월 27일
+## How to remember words
 
-![alt text](imgs/image.png)
+{% include korean_img.html src="visual-cue.png" classes="float" %}
 
 The word to remember: 가르치. In other words, God and lychee. Totally pure luck that someone made this image already.
 
-## 7 - A snapshot of the setup
+# 2025년 7월 7일 
+## A snapshot of the setup
 
-![alt text](imgs/korean_study_setup.png)
+{% include korean_img.html src="study-setup.png" %}
 
 Been pretty slow. I was writing down the lines as I went and then going back to make the flashcards, but it was getting kind of annoying to do so right now I am just listening to the audio and looking at the transcript to see if I got the words right.
 
 Since there isn't necessarily an outline of vocabulary and grammar to study, I have been pretty selective with the snippets. Only if I know I won't remember it or if I want to train my ears more to recognize that word/grammar, will I add it to Anki.
 
-## 4 - Celebrating America's birthday with a korean log update
+# 2025년 7월 4일 
+## Celebrating America's birthday with a korean log update
 
 My previous approach was very flashcard-heavy. I was using the pre-made deck from the creator of the Korean Fluency blog (plus my own modifications) and it worked pretty well. All I had to do with study the cards of the day and I would be "making progress". Well, my long term memory is 💩 so I found that I was reviewing the same cards over and over again, especially after long breaks. I could not recall cards that were supposedly "mastered".
 
@@ -62,31 +52,32 @@ I am still making flashcards. First I listen, shadow and write down the line in 
 It's a slower approach in that I won't be learning new vocab frequently. Also my brain shuts down after 3-4 pages of the dialogue so I can't really "lock in". But I definitely feel my listening is getting better and it's more productive in the long run since I am hitting listening, vocabulary, grammar and repetition at the same time.
 
 
-# June 2025
-
-## 28 - MASSIVE UPDATEEEEE
+# 2025년 6월 28일 
+## MASSIVE UPDATEEEEE
 
 Guess wat? I actually didn't do anything I said I would lolol - I took a long vacation and did Anki for a few days, then just dropped everything eventually.
 
 I'm back now.
 
-# May 2025
-
-## 16 - You know what, let's just go all in
+# 2025년 5월 16일 
+## You know what, let's just go all in
 
 I'm changing my mind. Let's just do full immersion. I was thinking...at what point of my life am I going to have the most free time than now? Probably never. So why don't I give it a shot. It's not going to be 100% Korean of course, but I'm going to dedicate a considerable amount of time (like ~4-5 hours a day) studying using the activities I listed in previous entries and adding some listening practice with Cloze Master.
 
-## 16 - Not much of an update, more so a personal note to self
+# 2025년 5월 16일 
+## Not much of an update, more so a personal note to self
 
 Right now studying is pretty chill and straight forward. Do my Anki decks, get some grammar examples from the textbook, read webtoons (which I haven't got back into yet...) but I'm sparing my listening and writing a lot. One of the reasons is because those two are the hardest and I know it will take a considerable amount of energy from me. The only way is just to push, so I'll leave that after my 30 days of Anki.
 
 Otherwise it's all slowly but surely...
 
-## 14 - Looking for ways to optimize...
+# 2025년 5월 14일 
+## Looking for ways to optimize...
 
 I'm working on Anki now and it really seems like I cannot remember certain words even after seeing them 10+ times. It's always a matter of not knowing one of the characters that make up the word (e.g. 지_다 -> 지우다), or similar words with similar spelling (e.g. 뜨겁다 vs 따뜻하다). I think one factor would be inconsistency in studying. I'm going to study for one month straight everyday (one sitting everyday) and see if that fixes things. If not, then I'll probably start employing some of the templates that Fluent Forever suggested, maybe make specific hard-to-remember words analog, or some other technique. I also think I should start studying in reverse order. So far, I've only been studying with the picture and example sentence in the front. What if I try to "generate" the picture?
 
-## 8 - Resources
+# 2025년 5월 8일 
+## Resources
 
 Throughout my year of "dabbling" in Korean, I found several resources and sites. So this is for the future when I know more, or for reference:
 
@@ -106,7 +97,8 @@ Throughout my year of "dabbling" in Korean, I found several resources and sites.
 - [Beginner phrases, fill in the blank](https://drive.google.com/drive/folders/1qp8Lw6KfuZKKuB1KcoKjldajmUF01k9N
 - )
 
-## 8 - Time to lock in
+# 2025년 5월 8일 
+## Time to lock in
 
 Done with finals (and university). Cut the max reviews to 20 cards but 50 per deck is too intense getting back into it.
 
@@ -120,9 +112,8 @@ I'm going to stick with input for now.
 
 ---
 
-# April 2025
-
-## 29 - End of the semester Brief update
+# 2025년 4월 29일 
+## End of the semester Brief update
 
 Took a long break from Anki, but getting back into it now (I have 50+ reviews stacked up).
 
@@ -134,7 +125,8 @@ There are many philosophies out there about language learning. Because I have pr
 
 I'm pretty excited to get the momentum going.
 
-## 25 - Some more deep diving in to IPA
+# 2025년 4월 3일 
+## Some more deep diving in to IPA
 
 Read a bit more about Korean phonology on Wikipedia and found some interesting facts that would help with the pronunicaiton. Note I am not using the correct linguistic terms for this.
 
@@ -144,7 +136,8 @@ Read a bit more about Korean phonology on Wikipedia and found some interesting f
 
 Also because I have no sense of responsbility for my academics, I spent a good chunk of time fixing up my Anki cards. They're cleaner now, and I found a neat add-on that resizes the pictures when I paste them. So no more ugly cards! Now if I would just study them...
 
-## 23 - Fluent Forever and IPA!
+# 2025년 3월 23일 
+## Fluent Forever and IPA!
 
 Spent basically the entire day learning how to decipher IPA symbols. I think I got the basics down for consonants and vowels in terms of how the charts work. It's pretty awesome how linguists were able to compile all of this, but holy cow did they go ham. Just the amount of terminology and possible combinations and categories is mind-boggling.
 
@@ -166,20 +159,14 @@ Next is to repeat it a bunch of times until it's ingrained in my memory. I also 
 
 # Background
 
-I've been learning on and off now for about a year. Did some Billy Go videos - learned Hangul, basic phrases, vocab and grammar. Then stopped to take a more independent approach with Anki + ChatGPT. Then stopped completely. Then did some periodic readings of TTMIK's Korean reading books. In my most recent "consistent" block, I have been:
-- doing 3-5 new words on Anki
-    - currently separated words by verbs and nouns
-    - cards have informal conjugation (요), sample sentences paired with pictures, pronunciation
-- reading through a webtoon
-    - copying the sentences and asking ChatGPT to explain the grammar
-- watching videos sometimes
+I've been learning on and off now for about a year. Did some Billy Go videos - learned Hangul, basic phrases, vocab and grammar. Then stopped to take a more independent approach with Anki + ChatGPT. Then stopped completely. Then did some periodic readings of TTMIK's Korean reading books.
 
-I've started reading **Fluent Forever** by Gabriel Wyner and it has some great tips about how to make the most of your language learning. Some things I will start doing once I have more time:
-- [X] revamp my Anki cards
-    - [X] reduce the number of sentences
-    - [ ] make sure I have some personal connection to it
-    - [X] fix the layout
-    - [ ] establish a good schedule for making Anki cards
-- [X] IPA for Korean
-- [ ] Establish schedule to consume Korean content
-- [ ] Schedule for studying the grammar
+Since March 2025, my studying method has included:
+- doing 3-5 new words on Anki
+    - categorized by parts of speech, themes
+    - accompanied with example sentences, conjugation, English translation, visual cues
+- Webtoons
+    - copying the sentences and asking ChatGPT to explain the grammar
+    - putting key vocab/phrases into Anki
+- occasionally watching YouTube videos
+- beginner podcasts
