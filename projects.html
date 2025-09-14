@@ -6,27 +6,42 @@ base-info: "<a href='https://github.com/brainuser5705'>Github Profile</a>"
 styles: project
 ---
 
-<div class="project-section">
-    {% assign projects = site.projects | sort: "time" | reverse %}
-    {% for project in projects %}
-    {% unless project.hackathon %}
-    <div class="project-item">
-        <a class="name" 
-            href="{{ project.url }}">{{ project.name }}</a>
-        <div class="description">{{ project.description }}</div>
-        <!-- <div class="project-time">{{ project.time }}</div> -->
-        <div>
-            {% for tag in project.tags %}
-                <span class="tag">{{ tag }}</span>
-            {% endfor %}
-        </div>
-        <hr>
+{% assign projects = site.projects | sort: "time" | reverse %}
+    
+{% for project in projects %}
+<div class="project-item">
+    <div class="name">
+        <a href="{{ project.url }}">{{ project.name }}</a>
     </div>
-    {% endunless %}
-    {% endfor %}
+    {% if project.img %}
+    <div class="img">
+        <img src="./imgs/{{ project.name }}.png" />
+    </div>
+    {% endif %}
+    <div class="description">
+        {{ project.description }}
+    </div>
+    <div class="description-tech">
+        {{ project.description-tech }}
+    </div>
+    <div class="tech">
+        Built with 
+        {% for tag in project.tags %}
+            <span class="tag">{{ tag }}</span>
+        {% endfor %}
+    </div>
+    <div class="links">f
+        {% if project.docs %}
+            <a href="/projects/docs/{{ project.docs }}.html">Docs</a>
+        {% endif %}
+        {% if project.external %}
+            <a href="{{ external }}">Try it out!</a>
+        {% endif %}
+    </div>
 </div>
+{% endfor %}
 
-<div class="project-heading">Hackathon Projects</div>
+<!-- <div class="project-heading">Hackathon Projects</div>
 Featured projects made at Hackathons
 
 <div class="project-section">
@@ -49,4 +64,4 @@ Featured projects made at Hackathons
         <hr>
     </div>
     {% endfor %}
-</div>
+</div> -->
