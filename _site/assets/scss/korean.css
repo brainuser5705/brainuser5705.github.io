@@ -4,12 +4,19 @@ html, body, main {
 
 #main-content {
   padding: 3em;
+  font-family: "Jua", sans-serif;
+}
+#main-content h1 {
+  padding-top: 2em;
+  clear: left;
+}
+#main-content p {
+  font-size: 1em;
 }
 
-.float {
+.korean-img .float {
   float: left;
 }
-
 .korean-img img {
   max-width: 100%;
   margin-right: 1em;
@@ -18,15 +25,6 @@ html, body, main {
 iframe {
   height: 300px;
   width: 100%;
-}
-
-h1 {
-  padding-top: 2em;
-  clear: left;
-}
-
-p {
-  font-size: 1em;
 }
 
 /*# sourceMappingURL=korean.css.map */

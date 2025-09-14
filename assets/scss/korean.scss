@@ -8,13 +8,27 @@ html, body, main {
 
 #main-content {
     padding: 3em;
+    font-family: "Jua", sans-serif;
+
+    h1 {
+        // padding instead of margin because of indefinite size of include component's div
+        padding-top: 2em;
+        clear: left;
+    }
+
+    p {
+        font-size: 1em;
+    }
 }
 
-.float {
-    float: left;
-}
-
+// Refers to the include korean-img component
 .korean-img {
+
+    // Added to images as a class
+    .float {
+        float: left;
+    }
+
     img {
         max-width: 100%;
         margin-right: 1em;
@@ -22,19 +36,7 @@ html, body, main {
 
 }
 
-
 iframe {
     height: 300px;
     width: 100%;
-}
-
-h1 {
-    // padding instead of margin because of indefinite size of include component's div
-    padding-top: 2em;
-    clear: left;
-}
-
-p {
-    font-size: 1em;
-
 }
