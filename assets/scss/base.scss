@@ -29,7 +29,7 @@ html, body {
     background-color: $side-background;
 
     // dimensions
-    width: 30%;
+    flex-basis: 30%;
     min-height: 100%;
 
     // margin, padding does not expand it
@@ -98,6 +98,7 @@ main {
 
     // Set so that it will fill it the rest of the horizontal space
     // otherwise it will only stretch to fit content
-    flex-grow: 1;
+    flex-basis: 70%;
+    box-sizing: border-box;
 
 }
