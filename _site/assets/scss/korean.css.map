@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["korean.scss"],"names":[],"mappings":"AACA;EACI;;;AAGJ;EACI","sourcesContent":["// Overriding base of 100% because content is scrollable\nhtml, body, main {\n    height: fit-content;\n}\n\n#main-content {\n    padding: 3em;\n}"],"file":"korean.css"}

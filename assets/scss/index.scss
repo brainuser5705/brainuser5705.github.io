@@ -1,0 +1,32 @@
+---
+---
+
+
+
+    nav {
+
+        min-height: 100%;
+
+        ul {
+
+            list-style-type: none;
+            margin: 0;
+            padding-top: 20%;
+            text-align: right;
+
+            li {
+                font-weight: 800;
+                font-size: 2em;
+                padding: 1em;
+
+                a {
+                    text-decoration: none;
+                    color: #000000;
+
+                    &:hover {
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }

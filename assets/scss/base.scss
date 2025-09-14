@@ -21,16 +21,16 @@ $side-foreground: #C58E2F;
 html, body {
     height: 100%;
     margin: 0;
-    font-family: "JetBrains Mono", monospace;
+    font-family: "DynaPuff", monospace;
 }
 
-header {
+#side-header {
 
     background-color: $side-background;
 
     // dimensions
     width: 30%;
-    height: 100%;
+    min-height: 100%;
 
     // margin, padding does not expand it
     box-sizing: border-box;
@@ -87,27 +87,17 @@ header {
 
 main {
 
-    position: absolute;
-    right: 2em;
-    top: 20%;
-
-    nav {
-
-        ul {
-
-            list-style-type: none;
-            margin: 0;
-            text-align: right;
-
-            li {
-                font-weight: 800;
-                font-size: 2em;
-                padding: 1em;
-            }
-
-        }
-    }
-    
+    height: 100%;
+    // Set so all children will by default stretch to common height
+    // b/c setting child to 100% height will not work if the height is indefinite
+    display: flex;
 
 }
 
+#main-content {
+
+    // Set so that it will fill it the rest of the horizontal space
+    // otherwise it will only stretch to fit content
+    flex-grow: 1;
+
+}

@@ -2,59 +2,52 @@
 html, body {
   height: 100%;
   margin: 0;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "DynaPuff", monospace;
 }
 
-header {
+#side-header {
   background-color: #F0B858;
   width: 30%;
-  height: 100%;
+  min-height: 100%;
   box-sizing: border-box;
   margin: 0;
   padding: 0 2em;
   padding-top: 3em;
   float: left;
 }
-header #base-icon {
+#side-header #base-icon {
   width: 100px;
 }
-header #base-title {
+#side-header #base-title {
   color: #C58E2F;
   font-size: 2em;
   font-weight: 800;
   padding: 1em 0;
 }
-header #base-description {
+#side-header #base-description {
   color: #FFFFFF;
   font-weight: 100;
   font-style: italic;
 }
-header #base-info svg {
+#side-header #base-info svg {
   position: absolute;
   bottom: 1em;
   width: 50px;
 }
-header #base-info #base-info-light {
+#side-header #base-info #base-info-light {
   display: none;
 }
-header #base-info div {
+#side-header #base-info div {
   display: none;
 }
 
 main {
-  position: absolute;
-  right: 2em;
-  top: 20%;
+  height: 100%;
+  display: flex;
 }
-main nav ul {
-  list-style-type: none;
-  margin: 0;
-  text-align: right;
-}
-main nav ul li {
-  font-weight: 800;
-  font-size: 2em;
-  padding: 1em;
+
+#main-content {
+  flex-grow: 1;
 }
 
 /*# sourceMappingURL=base.css.map */
