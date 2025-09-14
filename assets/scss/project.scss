@@ -1,6 +1,19 @@
 ---
 ---
 
+// Overriding base of 100% because content is scrollable
+html, body, main {
+    height: fit-content;
+}
+
+#main-content {
+    padding: 3em;
+    font-family: "Jua", sans-serif;
+    font-size: 1.5em;
+}
+
+/*
+
 $tag-color: #a6a6a6;
 
 .project-section{
@@ -29,3 +42,5 @@ $tag-color: #a6a6a6;
     }
 
 }
+
+*/

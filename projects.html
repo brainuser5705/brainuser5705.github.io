@@ -1,10 +1,10 @@
 ---
-title: Projects
+base-icon-filename: poochie.png
+base-title: Projects
+base-description: Projects worthy of seeing the light of day
+base-info: "<a href='https://github.com/brainuser5705'>Github Profile</a>"
 styles: project
 ---
-
-<div class="project-heading">Some Projects</div>
-Most recent projects worthy of sharing. Ordered by date started.
 
 <div class="project-section">
     {% assign projects = site.projects | sort: "time" | reverse %}
@@ -49,9 +49,4 @@ Featured projects made at Hackathons
         <hr>
     </div>
     {% endfor %}
-</div>
-
-For a list of all the projects I worked on, check out my Github (in the about 
-page).
-    
 </div>
