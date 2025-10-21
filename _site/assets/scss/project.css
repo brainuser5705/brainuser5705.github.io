@@ -1,36 +1,43 @@
-html, body, main {
-  height: fit-content;
-}
-
 #main-content {
   padding: 3em;
-  /* font-family: "Jua", sans-serif; */
-  font-size: 1.5em;
 }
 
+.project-item {
+  display: flex;
+  margin: 2em 0;
+}
+.project-item > * {
+  flex: 1 1 0; /* all items share space equally */
+}
+.project-item .name {
+  color: #C58E2F;
+  font-size: 1.5em;
+}
+.project-item .name:hover {
+  color: #F0B858;
+}
 .project-item a {
   color: inherit;
   text-decoration: none;
 }
-.project-item .name {
-  font-size: 2em;
-  padding: 0.5em 0;
+.project-item img {
+  width: 50%;
+  border: 1px solid black;
 }
 .project-item .content {
-  display: flex;
-  height: fit-content;
-}
-.project-item .content img {
-  width: 80%;
-  height: auto;
-}
-.project-item .content .actual-content {
   padding: 0.5em 0;
 }
-.project-item .content .actual-content .tech {
+.project-item .content .links {
+  margin: 0.5em 0;
+}
+.project-item .content .links button {
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+}
+.project-item .content .tech {
   font-size: 0.8em;
 }
-.project-item .content .actual-content .tech .tag {
+.project-item .content .tech .tag {
   font-style: italic;
 }
 

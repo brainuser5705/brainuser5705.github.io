@@ -14,8 +14,12 @@ defaults:
       type: "projects"
     values:
       layout: "project-page"
+      styles: "project-page"
+      base-backlink: \projects.html
   - scope:
       path: ""
       type: "writings"
     values:
-      layout: "base writing-page"
+      layout: "writing-page"
+      styles: "writing-page"
+      base-backlink: \writings.html

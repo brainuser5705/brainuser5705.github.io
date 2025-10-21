@@ -1,4 +1,5 @@
 ---
+base-backlink: \
 base-title: Writings
 base-description: Random thoughts...
 styles: writing
@@ -8,6 +9,9 @@ styles: writing
 
 {% for writing in writings %}
 <div class="writing-item">
-    <a href="{{ writing.url }}">{{ writing.title }}</a>
+    <div class="name">
+        <a  href="{{ writing.url }}">{{ writing.base-title }}</a>
+        <span class="time">({{ writing.time }})</span>
+    </div>
 </div>
 {% endfor %}

@@ -30,14 +30,7 @@
 <body>
     <main>
         <div id="side-header">
-            {% capture base-icon-src %}
-            {% if page.base-icon-filename %}
-            "/assets/images/poochie.png"
-            {% else %}
-            {{ page.base-icon-filename | prepend: '/assets/images/'}}
-            {% endif %}
-            {% endcapture %}
-            <a href="/"><img id="base-icon" src={{ base-icon-src }} /></a>
+            <a href="{{ page.base-backlink }}"><img id="base-icon" src={{ page.base-icon-filename | default: "poochie.png" | prepend: '/assets/images/'}} /></a>
             <div id="base-title">{{ page.base-title }}</div>
             <div id="base-description">
                 {{ page.base-description }}

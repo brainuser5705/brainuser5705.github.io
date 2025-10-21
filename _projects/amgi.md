@@ -1,16 +1,18 @@
 ---
-name: 암기
-description: Chrome extension to automate flashcard creation with Anki
+base-title: 암기 (Ahmgi)
+base-description: Chrome extension to automate flashcard creation with Anki
+
 time: 2025-03
 tag: js
----
 
-# amki
-Chrome extension integrated with Anki spaced repetition app, specialized for Korean
+img:
+---
 
 <iframe src="https://www.youtube.com/embed/NQimC9HP4yE?si=7RkifT6SWLiQQquQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Description
+
+I am currently learning Korean and make vocabulary flashcards with the [Anki flashcard software](https://apps.ankiweb.net/). The problem is that making new cards is a very tedious process (need to input word, find the definition, download audio file, etc.) So I thought, why don't I **automate** it?
 
 암기 (Amgi) is a Chrome extension that integrates with the [Anki flashcard software](https://apps.ankiweb.net/). It uses an add-on called [Anki-Connect](https://git.sr.ht/~foosoft/anki-connect#note-actions) that exposes a localhost server whenever Anki is running.
 
@@ -30,10 +32,6 @@ The user **must** have a local installation of Anki with the Anki-Connect add-on
 - pure Javascript
 
 ---
-
-## Backstory
-
-I am currently learning Korean and make vocabulary flashcards with the [Anki flashcard software](https://apps.ankiweb.net/). The problem is that making new cards is a very tedious process (need to input word, find the definition, download audio file, etc.) So I thought, why don't I **automate** it?
 
 ## Future Features and Improvements
 

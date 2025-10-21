@@ -1,0 +1,24 @@
+---
+---
+
+$side-foreground: #C58E2F;
+$side-background: #F0B858;
+
+.writing-item {
+
+    .name {
+        color: $side-foreground;
+        font-size: 1.5em;
+    }
+
+    .name:hover {
+        color: $side-background;
+    }
+
+    .time {
+        color: black;
+        font-size: 0.8em;
+        font-style: italic;
+    }
+
+}

@@ -1,47 +1,41 @@
 ---
+base-backlink: \
 base-icon-filename: poochie.png
 base-title: Projects
-base-description: Projects worthy of seeing the light of day
+base-description: The projects worthy of seeing the light of day... <br> (my <a href="https://github.com/brainuser5705"
+    target="_blank">Github</a> for the rest)
 styles: project
 ---
 
 {% assign projects = site.projects | sort: "time" | reverse %}
-    
+
 {% for project in projects %}
 <div class="project-item">
-    <div class="name">{{ project.name }}</div>
-    <div class="content">
-        <div class="actual-content">
+    <div>
+        <div class="name"><a href="{{ project.url }}">{{ project.base-title }}</a></div>
+        <div class="content">
             <div class="description">
-                {{ project.description }}
+                {{ project.base-description }}
             </div>
-            <!-- <div class="description-tech">
-                {{ project.description-tech }}
-            </div> -->
             <div class="links">
-                {% if content %}
-                    <button>
-                        <a href="{{ project.url }}">Docs</a>
-                    </button>
-                {% endif %}
                 {% if project.external %}
-                    <button>
-                        <a href="{{ project.external }}" target="_blank">Try it out!</a>
-                    </button>
+                <button>
+                    <a href="{{ project.external }}" target="_blank">Try it out!</a>
+                </button>
                 {% endif %}
             </div>
             <div class="tech">
                 {% if project.tags %}
-                    Built with 
-                    {% for tag in project.tags %}
-                        <span class="tag">{{ tag }}</span>
-                    {% endfor %}
+                Built in {{ project.time }} with
+                {% for tag in project.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
                 {% endif %}
             </div>
         </div>
-        {% if project.img %}
-        <img src="./assets/images/{{ project.img }}.png" />
-        {% endif %}
     </div>
+    {% if project.img %}
+    <img src="./projects/imgs/{{ project.img }}" />
+    {% endif %}
 </div>
 {% endfor %}

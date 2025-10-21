@@ -1,57 +1,64 @@
 ---
 ---
 
-// Overriding base of 100% because content is scrollable
-html, body, main {
-    height: fit-content;
-}
+$side-foreground: #C58E2F;
+$side-background: #F0B858;
 
 #main-content {
     padding: 3em;
-    /* font-family: "Jua", sans-serif; */
-    font-size: 1.5em;
 }
 
 .project-item {
+
+    display: flex;
+    margin: 2em 0;
+
+    > * {
+        flex: 1 1 0; /* all items share space equally */
+    }
+
+    .name {
+        color: $side-foreground;
+        font-size: 1.5em;
+    }
+
+    .name:hover {
+        color: $side-background;
+    }
 
     a {
         color: inherit;
         text-decoration: none;
     }
 
-    .name {
-        font-size: 2em;
-        padding: 0.5em 0;
+    img {
+        width: 50%;
+        border: 1px solid black;
     }
 
     .content {
 
-        display: flex;
-        height: fit-content;
+        padding: 0.5em 0;
 
-        img {
-            width: 80%;
-            height: auto;
-        }
+        .links {
 
-        .actual-content {
-            padding: 0.5em 0;
+            margin: 0.5em 0;
 
-            .links button {
-                
-            }
-
-            .tech {
-
-                font-size: 0.8em;
-
-                .tag {
-                    font-style: italic;
-                }
-
+            button {
+                margin: 0;
+                font-family: "JetBrains Mono", monospace;
             }
         }
 
+        .tech {
+
+            font-size: 0.8em;
+
+            .tag {
+                font-style: italic;
+            }
+
+        }
     }
 
 }

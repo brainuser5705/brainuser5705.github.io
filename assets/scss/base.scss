@@ -5,23 +5,16 @@
 $base-color: #000000;
 $side-background: #F0B858;
 $side-foreground: #C58E2F;
-// $main-background:;
-// $main-foreground:;
 
-// <weight>: Use a value from 100 to 800
-// <uniquifier>: Use a unique and descriptive class name
-
-// .jetbrains-mono-<uniquifier> {
-//     font-family: "JetBrains Mono", monospace;
-//     font-optical-sizing: auto;
-//     font-weight: <weight>;
-//     font-style: normal;
-// }
-
-html, body {
-    height: 100%;
+html, body, main{
+    min-height: 100vh;
+    height: fit-content;
     margin: 0;
     font-family: "JetBrains Mono", monospace;
+}
+
+#main-content {
+    padding: 3em;
 }
 
 #side-header {
@@ -55,7 +48,6 @@ html, body {
 
     #base-description {
         color: #FFFFFF;
-        font-weight: 100;
         font-style: italic;
     }
 

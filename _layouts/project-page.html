@@ -2,16 +2,4 @@
 layout: base
 ---
 
-<div class="project-heading">
-    {{ page.name }}
-    <hr>
-    {{ page.description }}
-
-    {% if project.img %}
-        <img src="./assets/images/{{ project.img }}.png" />
-    {% endif %}
-</div>
-
-<div class="project-content">
-    {{ content }}
-</div>
+{{ content }}

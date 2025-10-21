@@ -1,0 +1,14 @@
+.writing-item .name {
+  color: #C58E2F;
+  font-size: 1.5em;
+}
+.writing-item .name:hover {
+  color: #F0B858;
+}
+.writing-item .time {
+  color: black;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+/*# sourceMappingURL=writing.css.map */

@@ -1,6 +1,6 @@
 ---
-name: http server from scratch (in-progress)
-description: logging my process
+base-title: (unfinished) http server from scratch
+base-description: logging my process
 time: 2024-03
 tags: c
 ---

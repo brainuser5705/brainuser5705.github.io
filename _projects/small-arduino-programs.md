@@ -1,8 +1,11 @@
 ---
-name: small arduino programs
-description: simons says, automatic dog feeder
+base-title: very basic arduino programs
+base-description: simons says, automatic dog feeder
+
 tags: arduino
 time: 2024-02
+
+img: arduino.png
 ---
 
 These are small Arduino projects to introduce me to basic electrical concepts.
@@ -36,12 +39,8 @@ These are small Arduino projects to introduce me to basic electrical concepts.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3-qOSz9pvas?si=J34xJEUi--Gsj9in" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="pic">
 <img src="https://i.imgur.com/I6re0rQ.jpeg">
 Clockwise: 1) Funnel design for box, 2) Pockets for trapped kibble leading to jam when closing, 3) Internal circutry and wiring
-</div>
-
-## [Github](https://github.com/brainuser5705/automatic-dog-feeder)
 
 ## Features
 - 3 triggers: Bluetooth, physical button, scheduled (in code)

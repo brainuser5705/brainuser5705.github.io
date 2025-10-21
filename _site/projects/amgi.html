@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/assets/scss/base.css">
 
     
+    <link rel="stylesheet" href="/assets/scss/project-page.css">
+    
 
     <!-- Font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,42 +24,27 @@
         href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inclusive+Sans&family=Workbench&display=swap"
         rel="stylesheet">
 
-    <title></title>
+    <title>암기 (Ahmgi)</title>
 </head>
 
 <body>
     <main>
         <div id="side-header">
-            
-            <a href="/"><img id="base-icon" src=
-            
-            /assets/images/
-            
-             /></a>
-            <div id="base-title"></div>
+            <a href="\projects.html"><img id="base-icon" src=/assets/images/poochie.png /></a>
+            <div id="base-title">암기 (Ahmgi)</div>
             <div id="base-description">
-                
+                Chrome extension to automate flashcard creation with Anki
             </div>
 
             
 
         </div>
         <div id="main-content">
-            <div class="project-heading">
-    암기
-    <hr>
-    Chrome extension to automate flashcard creation with Anki
-
-    
-</div>
-
-<div class="project-content">
-    <h1 id="amki">amki</h1>
-<p>Chrome extension integrated with Anki spaced repetition app, specialized for Korean</p>
-
-<iframe src="https://www.youtube.com/embed/NQimC9HP4yE?si=7RkifT6SWLiQQquQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+            <iframe src="https://www.youtube.com/embed/NQimC9HP4yE?si=7RkifT6SWLiQQquQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 
 <h2 id="description">Description</h2>
+
+<p>I am currently learning Korean and make vocabulary flashcards with the <a href="https://apps.ankiweb.net/">Anki flashcard software</a>. The problem is that making new cards is a very tedious process (need to input word, find the definition, download audio file, etc.) So I thought, why don’t I <strong>automate</strong> it?</p>
 
 <p>암기 (Amgi) is a Chrome extension that integrates with the <a href="https://apps.ankiweb.net/">Anki flashcard software</a>. It uses an add-on called <a href="https://git.sr.ht/~foosoft/anki-connect#note-actions">Anki-Connect</a> that exposes a localhost server whenever Anki is running.</p>
 
@@ -82,10 +69,6 @@
 
 <hr />
 
-<h2 id="backstory">Backstory</h2>
-
-<p>I am currently learning Korean and make vocabulary flashcards with the <a href="https://apps.ankiweb.net/">Anki flashcard software</a>. The problem is that making new cards is a very tedious process (need to input word, find the definition, download audio file, etc.) So I thought, why don’t I <strong>automate</strong> it?</p>
-
 <h2 id="future-features-and-improvements">Future Features and Improvements</h2>
 
 <ul>
@@ -95,7 +78,6 @@
   <li><strong>Better approach than using setTimeOut</strong>: Use asynchronous Promises!</li>
 </ul>
 
-</div>
         </div>
     </main>
 </body>
