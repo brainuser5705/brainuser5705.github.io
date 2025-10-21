@@ -66,17 +66,14 @@ html, body {
             width: 50px;
         }
 
-        #base-info-dark {
-
+        #base-info-icon:hover + #base-info-content {
+            opacity: 1;
         }
 
-        #base-info-light{
-            display: none;
+        #base-info-content {
+            opacity: 0;
         }
-
-        div {
-            display: none;
-        }
+        
     }
 
     // #base-signature {

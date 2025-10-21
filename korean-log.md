@@ -9,7 +9,7 @@ styles: korean
 ---
 
 <div>
-    Calendar
+    (Heatmap Calendar coming soon!)
 </div>
 
 {% include korean.md %}

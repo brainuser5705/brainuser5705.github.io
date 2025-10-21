@@ -6,19 +6,10 @@ description-tech: A Jamstack web application made with Astro (framework) and Str
 time: 2025-07
 tag: astro strapi jamstack
 
-img: true
-docs: rainy_atelier
-external: https://rainyatelier.netfliy.app
+img: poochie
+external: https://rainyatelier.netlify.app/
 ---
 
-Go to [https://rainyatelier.netlify.app](https://rainyatelier.netlify.app) (might take a while to load so Netlify wakes up the deployment instance).
+Framework:
 
-
-
-
-
-
-
-
-
-
+A Jamstack web application made with Astro (framework) and Strapi (CMS)

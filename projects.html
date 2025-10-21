@@ -2,7 +2,6 @@
 base-icon-filename: poochie.png
 base-title: Projects
 base-description: Projects worthy of seeing the light of day
-base-info: "<a href='https://github.com/brainuser5705'>Github Profile</a>"
 styles: project
 ---
 
@@ -10,58 +9,39 @@ styles: project
     
 {% for project in projects %}
 <div class="project-item">
-    <div class="name">
-        <a href="{{ project.url }}">{{ project.name }}</a>
-    </div>
-    {% if project.img %}
-    <div class="img">
-        <img src="./imgs/{{ project.name }}.png" />
-    </div>
-    {% endif %}
-    <div class="description">
-        {{ project.description }}
-    </div>
-    <div class="description-tech">
-        {{ project.description-tech }}
-    </div>
-    <div class="tech">
-        Built with 
-        {% for tag in project.tags %}
-            <span class="tag">{{ tag }}</span>
-        {% endfor %}
-    </div>
-    <div class="links">f
-        {% if project.docs %}
-            <a href="/projects/docs/{{ project.docs }}.html">Docs</a>
-        {% endif %}
-        {% if project.external %}
-            <a href="{{ external }}">Try it out!</a>
+    <div class="name">{{ project.name }}</div>
+    <div class="content">
+        <div class="actual-content">
+            <div class="description">
+                {{ project.description }}
+            </div>
+            <!-- <div class="description-tech">
+                {{ project.description-tech }}
+            </div> -->
+            <div class="links">
+                {% if content %}
+                    <button>
+                        <a href="{{ project.url }}">Docs</a>
+                    </button>
+                {% endif %}
+                {% if project.external %}
+                    <button>
+                        <a href="{{ project.external }}" target="_blank">Try it out!</a>
+                    </button>
+                {% endif %}
+            </div>
+            <div class="tech">
+                {% if project.tags %}
+                    Built with 
+                    {% for tag in project.tags %}
+                        <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        {% if project.img %}
+        <img src="./assets/images/{{ project.img }}.png" />
         {% endif %}
     </div>
 </div>
 {% endfor %}
-
-<!-- <div class="project-heading">Hackathon Projects</div>
-Featured projects made at Hackathons
-
-<div class="project-section">
-    {% assign hack_projects = site.projects | where_exp:"project", "project.hackathon" | sort: "time" | reverse %}
-    {% for hack in hack_projects %}
-    <div class="project-item">
-        {% if hack.extern %}
-        {% assign url = hack.extern %}
-        {% else %}
-        {% assign url = hack.url %}
-        {% endif %}
-        <a class="name" href="{{ url }}">{{ hack.name }}</a>
-        <div class="project-time">@ {{ hack.hackathon }}</div>
-        <div class="description">{{ hack.description }}</div>
-        <div>
-            {% for tag in hack.tags %}
-                <span class="tag">{{ tag }}</span>
-            {% endfor %}
-        </div>
-        <hr>
-    </div>
-    {% endfor %}
-</div> -->

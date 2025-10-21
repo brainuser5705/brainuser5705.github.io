@@ -1,14 +1,13 @@
 ---
 base-title: Writings
+base-description: Random thoughts...
+styles: writing
 ---
 
-<!-- <ul>
-    {% assign others = site.others | sort: "order" %}
-    {% for other in others %}
-        <li>
-            <a href="{{ other.url }}"><b>{{ other.title }}</b></a> {% if other.description %} - {% endif %} {{ other.description }}
-        </li>
-    {% endfor %}
-</ul> -->
+{% assign writings = site.writings %}
 
-Nothing here for now!
+{% for writing in writings %}
+<div class="writing-item">
+    <a href="{{ writing.url }}">{{ writing.title }}</a>
+</div>
+{% endfor %}

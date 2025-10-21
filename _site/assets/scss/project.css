@@ -4,41 +4,34 @@ html, body, main {
 
 #main-content {
   padding: 3em;
-  font-family: "Jua", sans-serif;
+  /* font-family: "Jua", sans-serif; */
   font-size: 1.5em;
 }
 
-/*
-
-$tag-color: #a6a6a6;
-
-.project-section{
-    margin: 2em 0;
+.project-item a {
+  color: inherit;
+  text-decoration: none;
 }
-
-.project-heading{
-    font-size: 2em;
+.project-item .name {
+  font-size: 2em;
+  padding: 0.5em 0;
 }
-
-.project-item{
-
-    .name{
-        font-size: 1.2em;
-    }
-
-    .description{
-        font-style: italic;
-    }
-
-    .tag{
-        color: $tag-color;
-        font-style: italic;
-        font-size: 0.7em;
-
-    }
-
+.project-item .content {
+  display: flex;
+  height: fit-content;
 }
-
-*/
+.project-item .content img {
+  width: 80%;
+  height: auto;
+}
+.project-item .content .actual-content {
+  padding: 0.5em 0;
+}
+.project-item .content .actual-content .tech {
+  font-size: 0.8em;
+}
+.project-item .content .actual-content .tech .tag {
+  font-style: italic;
+}
 
 /*# sourceMappingURL=project.css.map */

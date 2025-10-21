@@ -4,7 +4,7 @@ html, body, main {
 
 #main-content {
   padding: 3em;
-  font-family: "Jua", sans-serif;
+  /* font-family: "Jua", sans-serif; */
 }
 #main-content h1 {
   padding-top: 2em;

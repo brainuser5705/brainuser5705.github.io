@@ -1,7 +1,7 @@
 collections:
   projects:
     output: true
-  others:
+  writings:
     output: true
 
 defaults:
@@ -16,6 +16,6 @@ defaults:
       layout: "project-page"
   - scope:
       path: ""
-      type: "others"
+      type: "writings"
     values:
-      layout: "other-page"
+      layout: "base writing-page"
