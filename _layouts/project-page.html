@@ -2,4 +2,8 @@
 layout: base
 ---
 
+{% if page.draft %}
+<div class="draft-message">This page is in draft!</div>
+{% endif %}
+
 {{ content }}

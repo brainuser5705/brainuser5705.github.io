@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tech -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/scss/base.css">
+
+    
+    <link rel="stylesheet" href="/assets/scss/writing-page.css">
+    
+
+    <!-- Font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Jua&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inclusive+Sans&family=Workbench&display=swap"
+        rel="stylesheet">
+
+    <title>Setting up my Neovim configs</title>
+</head>
+
+<body>
+    <main>
+        <div id="side-header">
+            <a href="\writings.html"><img id="base-icon" src=/assets/images/poochie.png /></a>
+            <div id="base-title">Setting up my Neovim configs</div>
+            <div id="base-description">
+                Figuring out neovim, a walkthrough of what I did
+            </div>
+
+            
+
+        </div>
+        <div id="main-content">
+            <h1 id="installation">Installation</h1>
+
+<h1 id="plugins">Plugins</h1>
+
+<h2 id="step-1-plugin-manager">Step 1: Plugin Manager</h2>
+
+<p>To add plugins to Neovim, you need a plugin manager. I am using <em>lazy.nim</em>.</p>
+
+<p>Follow the installation guide, using the <em>Structured Setup</em> and set up your <code class="language-plaintext highlighter-rouge">plugins/</code> folder following <code class="language-plaintext highlighter-rouge">Usage &gt; Structuring Your Plugins</code>.</p>
+
+<h2 id="nvim-tree">nvim-tree</h2>
+
+<p>Add the plugin module to <code class="language-plaintext highlighter-rouge">plugins/</code>.</p>
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="p">{</span>
+  <span class="p">{</span>
+    <span class="s2">"nvim-tree/nvim-tree.lua"</span><span class="p">,</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="s2">"*"</span><span class="p">,</span>
+    <span class="n">lazy</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="n">dependencies</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="s2">"nvim-tree/nvim-web-devicons"</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="k">function</span> <span class="p">()</span>
+      <span class="nb">require</span><span class="p">(</span><span class="s2">"nvim-tree"</span><span class="p">).</span><span class="n">setup</span><span class="p">({</span>
+        <span class="n">sort</span> <span class="o">=</span> <span class="p">{</span> 
+          <span class="n">sorter</span> <span class="o">=</span> <span class="s2">"case_sensitive"</span> 
+        <span class="p">}</span>
+      <span class="p">})</span>
+    <span class="k">end</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Install Nerd Fonts on your system.</li>
+  <li>Change the font through the terminal.</li>
+  <li>Learn the commands.</li>
+</ol>
+
+
+        </div>
+    </main>
+</body>
+
+</html>
