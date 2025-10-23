@@ -1,3 +1,22 @@
+# 2025년 10월 23일
+## A new approach but yet to settle
+
+Following what I said in the last entry, I started creating sentences for the new words that I've learned. It has helped with remembering the grammar more than the vocabulary. First few times were a bit tedious as I didn't have a good handle on the grammar, but it started getting easier. Used ChatGPT to correct the sentences I made as well.
+
+I also found some pre-made Anki decks with audio files. Whenever I studied Anki cards before, I would look at the word/cloze and write down whatever the answer was. Good for reading/writing, but not for listening.
+
+That leads me to my *new* study routine, that I have yet to even start. But eventually. It'll happen for sure.
+
+| Day | Plan |
+| _ | _ |
+| MON | |
+| TUE | |
+| WED | |
+| THU | |
+| FRI | |
+| SAT | |
+| SUN | |
+
 # 2025년 9월 3일 
 ## Laziness
 Anki is just too easy to fallback on! I've been learning the same 20-30 words for pretty much a month now. These words were taken mostly from Choisusu's podcast and the Korean for Intermediates (not really intermediate level tho) book. Since I only use one context sentence, it's relatively easy to remember which word goes with which sentence. If I were to able try to use it in a sentence, miserable failure will follow.
@@ -77,27 +96,6 @@ Otherwise it's all slowly but surely...
 I'm working on Anki now and it really seems like I cannot remember certain words even after seeing them 10+ times. It's always a matter of not knowing one of the characters that make up the word (e.g. 지_다 -> 지우다), or similar words with similar spelling (e.g. 뜨겁다 vs 따뜻하다). I think one factor would be inconsistency in studying. I'm going to study for one month straight everyday (one sitting everyday) and see if that fixes things. If not, then I'll probably start employing some of the templates that Fluent Forever suggested, maybe make specific hard-to-remember words analog, or some other technique. I also think I should start studying in reverse order. So far, I've only been studying with the picture and example sentence in the front. What if I try to "generate" the picture?
 
 # 2025년 5월 8일 
-## Resources
-
-Throughout my year of "dabbling" in Korean, I found several resources and sites. So this is for the future when I know more, or for reference:
-
-- https://todaikorean.com/home?hl=en
-- https://kids.donga.com/
-- https://kid.chosun.com/
-- https://retrolearnskorean.blogspot.com/
-- https://unyounglearnskorean.tumblr.com/post/100930792028/childrens-books-in-korean
-- https://vk.com/wall338750403_148
-- http://www.epik.go.kr/index.do
-- https://ridibooks.com/category/free-books/100
-- http://xn--hu1b40go5ck8x.com/
-- [Intermediate Anthology](https://psv4.userapi.com/s/v1/d/HLYuVnqkrUxTrn5cedjMBM4VoQFLmI2_KUgZA1DEqEulPx2qqjGyrrpWT6BLKn1OLYEF_SX1MYc2lagwZty4L0cU_Wl7d1Ng5VaEC1jp8iW3EWex/The_Intermediate_Anthology.pdf)
-- [Once Upon A Time In Korea](https://psv4.userapi.com/s/v1/d/ai9Uwt4TCuzyMVLPc2UJ5GvDuf5JyGhzBgCZHzjbXL2U1zNpCRrIVKE_kwfzgra6vb7jwmR1q3xsO3b9GhKal6pvBvDi6qP4RtjwYzzX4_hGQQHW/Once_Upon_a_Time_in_Korea.pdf)
-- https://learning-korean.com/DL/TOPIK-I-1671.pdf
-- [TOPIK practice test](https://drive.google.com/drive/folders/1s6pjS8FS9fMJE3qSNXa3Mid2Yt9w4L4p)
-- [Beginner phrases, fill in the blank](https://drive.google.com/drive/folders/1qp8Lw6KfuZKKuB1KcoKjldajmUF01k9N
-- )
-
-# 2025년 5월 8일 
 ## Time to lock in
 
 Done with finals (and university). Cut the max reviews to 20 cards but 50 per deck is too intense getting back into it.
@@ -109,8 +107,6 @@ In the last update, I said I want to start integrating grammar and more input. I
 - Continue doing Anki since it's the "fastest" way to learn new Korean
 
 I'm going to stick with input for now.
-
----
 
 # 2025년 4월 29일 
 ## End of the semester Brief update
@@ -154,19 +150,3 @@ Still need to practice (with actual words) but now that I understand how they ac
 Next is to repeat it a bunch of times until it's ingrained in my memory. I also found an Anki deck of minimal pairs so that'll help my listening more to. But it is in practice (aka the real world) that will truly test me...
 
 > A bit of an aside...my very first introduction to Hangul was this [comic](https://www.ryanestrada.com/learntoreadkoreanin15minutes/). It is great for visual mnemonics but eventually I ended equating the English pronunication of the letters to Hangul. It also doesn't explain the difference between regular (ㄱ), aspirated (ㅋ) and tense consonants (ㄲ) that well, which I think is the hardest part about Korean phonetics for English speakers. So for newcomers, definitely use it in the beginning but once you got it down, switch over to IPA.
-
----
-
-# Background
-
-I've been learning on and off now for about a year. Did some Billy Go videos - learned Hangul, basic phrases, vocab and grammar. Then stopped to take a more independent approach with Anki + ChatGPT. Then stopped completely. Then did some periodic readings of TTMIK's Korean reading books.
-
-Since March 2025, my studying method has included:
-- doing 3-5 new words on Anki
-    - categorized by parts of speech, themes
-    - accompanied with example sentences, conjugation, English translation, visual cues
-- Webtoons
-    - copying the sentences and asking ChatGPT to explain the grammar
-    - putting key vocab/phrases into Anki
-- occasionally watching YouTube videos
-- beginner podcasts

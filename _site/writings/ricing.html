@@ -8,7 +8,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/scss/base.css">
-
+    <link rel="stylesheet" href="/assets/scss/syntax.scss">
     
     <link rel="stylesheet" href="/assets/scss/writing-page.css">
     
@@ -24,36 +24,88 @@
         href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inclusive+Sans&family=Workbench&display=swap"
         rel="stylesheet">
 
-    <title>Setting up my Neovim configs</title>
+    <title>A Ricing Coobook for MacOS</title>
 </head>
 
 <body>
     <main>
         <div id="side-header">
             <a href="\writings.html"><img id="base-icon" src=/assets/images/poochie.png /></a>
-            <div id="base-title">Setting up my Neovim configs</div>
+            <div id="base-title">A Ricing Coobook for MacOS</div>
             <div id="base-description">
-                Figuring out neovim, a walkthrough of what I did
+                neovim, oh-my-zsh
             </div>
 
             
 
         </div>
         <div id="main-content">
-            <h1 id="installation">Installation</h1>
+            
+<div class="draft-message">This page is in draft!</div>
 
-<h1 id="plugins">Plugins</h1>
 
-<h2 id="step-1-plugin-manager">Step 1: Plugin Manager</h2>
+<h2 id="how-do-i-set-up">How do I set up…</h2>
+<ul>
+  <li><a href="#neovim">barebone Neovim setup?</a></li>
+  <li><a href="#nerd-font">a Nerdfont for Terminal?</a></li>
+</ul>
 
-<p>To add plugins to Neovim, you need a plugin manager. I am using <em>lazy.nim</em>.</p>
+<hr />
+
+<p><a id="neovim"></a></p>
+<h1 id="barebone-neovim-setup">barebone Neovim setup?</h1>
+
+<p>This barebones Neovim setup has:</p>
+<ul>
+  <li><em>lazy.nim</em> plugin manager</li>
+  <li>structured <code class="language-plaintext highlighter-rouge">plugins/</code> directory setup</li>
+  <li>color scheme</li>
+  <li>nvim-tree plugin (for demo on how to install a plugin)</li>
+</ul>
+
+<h2 id="step-1-lazynim">Step 1: lazy.nim</h2>
 
 <p>Follow the installation guide, using the <em>Structured Setup</em> and set up your <code class="language-plaintext highlighter-rouge">plugins/</code> folder following <code class="language-plaintext highlighter-rouge">Usage &gt; Structuring Your Plugins</code>.</p>
 
-<h2 id="nvim-tree">nvim-tree</h2>
+<p>Your directory should look like the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/Users/ashliew/.config/nvim
+├── init.lua
+├── lazy-lock.json
+├── lua
+│   ├── brainuser5705
+│   │   ├── lazy.lua
+│   │   └── settings.lua
+│   └── plugins                 // each file in this directory is for a plugin
+│       ├── devicons.lua
+│       ├── init.lua
+│       ├── tree.lua
+│       └── treesitter.lua
+└── README.md
+</code></pre></div></div>
+
+<h2 id="step-3-nvim-tree">Step 3: nvim-tree</h2>
 
 <p>Add the plugin module to <code class="language-plaintext highlighter-rouge">plugins/</code>.</p>
-<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="p">{</span>
+
+<figure class="highlight"><pre><code class="language-lua" data-lang="lua"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="code"><pre><span class="k">return</span> <span class="p">{</span>
   <span class="p">{</span>
     <span class="s2">"nvim-tree/nvim-tree.lua"</span><span class="p">,</span>
     <span class="n">version</span> <span class="o">=</span> <span class="s2">"*"</span><span class="p">,</span>
@@ -70,13 +122,30 @@
     <span class="k">end</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>This step requires a Nerd Font in order to properly display icons. See <a href="#nerd-Font">Nerd Font</a>.</p>
+
+<hr />
+
+<p><a id="nerd-font"></a></p>
+<h1 id="a-nerdfont-for-terminal">a Nerdfont for Terminal?</h1>
+
+<p>Nerdfonts are often required for several Neovim plugins for proper display of icons.</p>
 
 <ol>
-  <li>Install Nerd Fonts on your system.</li>
-  <li>Change the font through the terminal.</li>
-  <li>Learn the commands.</li>
+  <li>Download a <a href="https://www.nerdfonts.com/font-downloads"><strong>Nerd Fonts</strong></a> on your system.
+    <ul>
+      <li>Alternatively, you can download all the fonts with <code class="language-plaintext highlighter-rouge">brew install font-hack-nerd-font</code></li>
+    </ul>
+  </li>
+  <li>Click on the downloaded font file to install it.</li>
+  <li>Go to <em>Terminal &gt; Settings &gt; Profiles &gt; Font</em> and select a Nerd Font.</li>
 </ol>
+
+<hr />
+
+<p><a href="oh-my-zsh"></a></p>
 
 
         </div>

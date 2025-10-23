@@ -10,7 +10,9 @@ draft: true
 - [barebone Neovim setup?](#neovim)
 - [a Nerdfont for Terminal?](#nerd-font)
 
-<a href="neovim"></a>
+---
+
+<a id="neovim"></a>
 # barebone Neovim setup?
 
 This barebones Neovim setup has:
@@ -24,6 +26,7 @@ This barebones Neovim setup has:
 Follow the installation guide, using the *Structured Setup* and set up your `plugins/` folder following `Usage > Structuring Your Plugins`. 
 
 Your directory should look like the following:
+
 ```
 /Users/ashliew/.config/nvim
 ├── init.lua
@@ -43,7 +46,7 @@ Your directory should look like the following:
 ## Step 3: nvim-tree
 
 Add the plugin module to `plugins/`. 
-```lua
+{% highlight lua linenos %}
 return {
   {
     "nvim-tree/nvim-tree.lua",
@@ -61,13 +64,13 @@ return {
     end
   }
 }
-```
+{% endhighlight %}
 
 This step requires a Nerd Font in order to properly display icons. See [Nerd Font](#nerd-Font).
 
 ---
 
-<a href="nerd-font"></a>
+<a id="nerd-font"></a>
 # a Nerdfont for Terminal? 
 
 Nerdfonts are often required for several Neovim plugins for proper display of icons.
