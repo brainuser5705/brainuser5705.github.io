@@ -78,11 +78,14 @@ The old version was very messy; I made it without any knowledge on how static si
 
 ## (V6) Jekyll Regression
 
+<img src="/projects/imgs/homepage.png" style="width: 70%;">
 
 I think I wanted something more simplistic-looking, and ended up with something not so pretty to look at...
 
 ---
 
 ## (V7) Jekyll Looksmaxxing
+
+(current version)
 
 We're so back.

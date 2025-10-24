@@ -14,6 +14,6 @@ I've been using Jekyll for my personal site for a few iterations now. Here are a
 
 # Code styling
 
-Jekyll uses Rogue to convert any template text wrapped around code bblocks or `{% highlight %}` into HTML tags with certain tags. But since you are starting from scratch, there is no styling provided.
+Jekyll uses Rogue to convert any template text wrapped around code bblocks or {% raw %}`{% highlight %}` {% endraw %} into HTML tags with certain tags. But since you are starting from scratch, there is no styling provided.
 
 Follow this [section](https://jekyllrb.com/docs/liquid/tags/#stylesheets-for-syntax-highlighting) to download the stylesheets and import it into your base SCSS file.
