@@ -10,6 +10,9 @@ draft: true
 - [barebone Neovim setup?](#neovim)
 - [a Nerdfont for Terminal?](#nerd-font)
 
+## What is...
+- [the difference between terminal, shell and console?](#qa-shell)
+
 ---
 
 <a id="neovim"></a>
@@ -82,4 +85,14 @@ Nerdfonts are often required for several Neovim plugins for proper display of ic
 
 ---
 
-<a href="oh-my-zsh"></a>
+<a id="qa-shell"></a>
+# the difference between terminal, shell and console?
+
+Whilst ricing, you might come across these terms..."make zsh your shell", "use iTerm as your terminal/terminal emulator"... but what is the difference?
+
+Here's how I see it:
+
+- *Shell*: the actual interpreter of your commands that you put into the terminal 
+- *Terminal*: software (these days) that takes input and displays output for the shell
+- *Terminal Emulator*: same thing as a terminal, emulator meaning software since historically terminals were physical devices
+- *Console*: a physical/virtual device that's connected to the computer at a low level (kernet, bios, system messages)
