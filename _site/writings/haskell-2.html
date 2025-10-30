@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tech -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/scss/base.css">
+    <link rel="stylesheet" href="/assets/scss/syntax.scss">
+    
+    <link rel="stylesheet" href="/assets/scss/writing-page.css">
+    
+
+    <!-- Font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Jua&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inclusive+Sans&family=Workbench&display=swap"
+        rel="stylesheet">
+
+    <title>Haskell notes (Syntax in Functions)</title>
+</head>
+
+<body>
+    <main>
+        <div id="side-header">
+            <a href="\writings.html"><img id="base-icon" src=/assets/images/poochie.png /></a>
+            <div id="base-title">Haskell notes (Syntax in Functions)</div>
+            <div id="base-description">
+                pattern matching, `where`, `let`, `case`
+            </div>
+
+            
+
+        </div>
+        <div id="main-content">
+            
+
+<h1 id="pattern-matching">Pattern Matching</h1>
+
+<ul>
+  <li>Top-to-bottom matching</li>
+  <li>catch-them-all case on the bottom</li>
+  <li>Matching with lists
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">(x:xs)</code> or <code class="language-plaintext highlighter-rouge">(x:y:xs)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">[x]</code> is syntactic sugar for <code class="language-plaintext highlighter-rouge">(x:[])</code></li>
+    </ul>
+  </li>
+  <li><em>as patterns</em></li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- captures the pattern</span>
+<span class="n">captial</span> <span class="s">""</span> <span class="o">=</span> <span class="s">"Empty string"</span>
+<span class="n">captial</span> <span class="n">all</span><span class="o">@</span><span class="p">(</span><span class="n">x</span><span class="o">:</span><span class="n">xs</span><span class="p">)</span> <span class="o">=</span> <span class="s">"The first letter of "</span> <span class="o">++</span> <span class="n">all</span> <span class="o">++</span> <span class="s">"is"</span> <span class="o">++</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span>
+</code></pre></div></div>
+
+<hr />
+
+<h1 id="guards">Guards</h1>
+
+<ul>
+  <li>Test if a property of value is true/false</li>
+  <li>Drops to next guard until the condition is True</li>
+  <li><code class="language-plaintext highlighter-rouge">otherwise</code> is a catch-all</li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">functionName</span> <span class="n">parameter</span>
+    <span class="o">|</span> <span class="n">parameter</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">=</span> <span class="s">"..."</span>
+    <span class="o">|</span> <span class="n">parameter</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">=</span> <span class="s">"..."</span>
+    <span class="o">|</span> <span class="n">otherwise</span> <span class="o">=</span> <span class="o">...</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Can <em>define</em> functions with backticks</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a `myCompare` b
+    | a &gt; b = GT
+    | a == b = EQ
+    | otherwise = LT
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Pattern guards</strong>: check if result of function satisfies the pattern</li>
+</ul>
+
+<hr />
+
+<h1 id="where"><code class="language-plaintext highlighter-rouge">where</code></h1>
+
+<ul>
+  <li>bind names to values at the end of guards</li>
+  <li>the name is then visible to all guards</li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">density</span> <span class="n">mass</span> <span class="n">volume</span>
+    <span class="o">|</span> <span class="n">density</span> <span class="o">&lt;</span> <span class="n">air</span> <span class="o">...</span>
+    <span class="o">|</span> <span class="n">density</span> <span class="o">...</span>
+    <span class="kr">where</span> <span class="n">density</span> <span class="o">=</span> <span class="n">mass</span><span class="o">/</span> <span class="n">volume</span>
+          <span class="n">air</span> <span class="o">=</span> <span class="mf">1.2</span>
+<span class="c1">-- all names must be on the same indent</span>
+</code></pre></div></div>
+
+<ul>
+  <li>can pattern match</li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">initials</span> <span class="n">firstname</span> <span class="n">lastname</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">++</span> <span class="s">"."</span> <span class="o">++</span> <span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">++</span> <span class="s">"."</span>
+    <span class="kr">where</span> <span class="p">(</span><span class="n">f</span><span class="o">:</span><span class="kr">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">firstname</span>
+          <span class="p">(</span><span class="n">l</span><span class="o">:</span><span class="kr">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">lastname</span>
+</code></pre></div></div>
+
+<ul>
+  <li>can define functions</li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">calcDensities</span> <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="n">density</span> <span class="n">m</span> <span class="n">v</span> <span class="o">|</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">xs</span><span class="p">]</span>  
+    <span class="kr">where</span> <span class="n">density</span> <span class="n">mass</span> <span class="n">volume</span> <span class="o">=</span> <span class="n">mass</span> <span class="o">/</span> <span class="n">volume</span>  
+</code></pre></div></div>
+
+<blockquote>
+  <p>IDIOM: make the helper functions in the <code class="language-plaintext highlighter-rouge">where</code> clause of a function</p>
+</blockquote>
+
+<hr />
+
+<h1 id="let"><code class="language-plaintext highlighter-rouge">let</code></h1>
+
+<ul>
+  <li>unlike <code class="language-plaintext highlighter-rouge">where</code>, it does not span across guards or the whole function
+    <ul>
+      <li>the names defined in <code class="language-plaintext highlighter-rouge">let</code> is only visible to the <code class="language-plaintext highlighter-rouge">in</code> expression</li>
+    </ul>
+  </li>
+  <li>unlike <code class="language-plaintext highlighter-rouge">where</code>, can be use as <em>expressions</em></li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="kr">let</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">9</span> <span class="kr">in</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="p">[</span><span class="kr">let</span> <span class="n">square</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="kr">in</span> <span class="p">(</span><span class="n">square</span> <span class="mi">5</span><span class="p">,</span> <span class="n">square</span> <span class="mi">3</span><span class="p">,</span> <span class="n">square</span> <span class="mi">2</span><span class="p">)]</span>
+
+<span class="c1">-- to bind names inline, use ;</span>
+<span class="p">(</span><span class="kr">let</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">300</span> <span class="kr">in</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">,</span> <span class="kr">let</span> <span class="n">foo</span><span class="o">=</span><span class="s">"Hey "</span><span class="p">;</span> <span class="n">bar</span> <span class="o">=</span> <span class="s">"there!"</span> <span class="kr">in</span> <span class="n">foo</span> <span class="o">++</span> <span class="n">bar</span><span class="p">)</span>  
+<span class="c1">-- (6000000,"Hey there!")</span>
+</code></pre></div></div>
+
+<ul>
+  <li>can be use in list comprehension, use in place of a <code class="language-plaintext highlighter-rouge">where</code> binding with a function
+    <ul>
+      <li>the bindings are visible in the output function and to predicates</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">calculateDensities</span> <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span> <span class="n">density</span> <span class="o">|</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">xs</span><span class="p">,</span> <span class="kr">let</span> <span class="n">density</span> <span class="o">=</span> <span class="n">m</span> <span class="o">/</span><span class="n">v</span><span class="p">,</span> <span class="n">density</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">]</span>
+<span class="c1">-- can't use the binding in (m,v) &lt;- xs since it defined after</span>
+</code></pre></div></div>
+
+<ul>
+  <li>if we defined the binding in the predicate, and it would only be visible to the predicate</li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">calculateDensitities</span> <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span> <span class="n">density</span> <span class="o">|</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">xs</span><span class="p">,</span> <span class="kr">let</span> <span class="n">density</span> <span class="o">=</span> <span class="n">m</span> <span class="o">/</span> <span class="n">v</span><span class="p">,</span> <span class="kr">let</span> <span class="n">diff</span> <span class="o">=</span> <span class="p">(</span><span class="n">abs</span> <span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="n">v</span><span class="p">))</span> <span class="kr">in</span> <span class="n">diff</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>If we omit the <code class="language-plaintext highlighter-rouge">in</code> part, then the binding becomes visible in the interactive session</li>
+</ul>
+
+<hr />
+
+<h1 id="case-expressions">Case expressions</h1>
+
+<ul>
+  <li>are expressions!</li>
+  <li>pattern matching on <em>function parameters</em> is syntactic sugar for case expressions</li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">head'</span> <span class="n">xs</span> <span class="o">=</span> <span class="kr">case</span> <span class="n">xs</span> <span class="kr">of</span> <span class="kt">[]</span> <span class="o">-&gt;</span> <span class="n">error</span> <span class="s">"No head for empty lists!"</span>
+                      <span class="p">(</span><span class="n">x</span><span class="o">:</span><span class="kr">_</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">x</span>
+</code></pre></div></div>
+
+<ul>
+  <li>can be used anywhere like an expression</li>
+</ul>
+
+
+        </div>
+    </main>
+</body>
+
+</html>

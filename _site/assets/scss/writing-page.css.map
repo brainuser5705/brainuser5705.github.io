@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","sourcesContent":[],"file":"writing-page.css"}
+{"version":3,"sourceRoot":"","sources":["writing-page.scss"],"names":[],"mappings":"AAAA;EACE","sourcesContent":["img {\n  max-width: 100%;\n}\n"],"file":"writing-page.css"}

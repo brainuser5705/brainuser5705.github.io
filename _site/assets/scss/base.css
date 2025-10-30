@@ -9,11 +9,12 @@ html, body, main {
 
 #main-content {
   padding: 3em;
+  max-width: 70%;
 }
 
 #side-header {
   background-color: #F0B858;
-  flex-basis: 30%;
+  max-width: 30%;
   min-height: 100%;
   box-sizing: border-box;
   margin: 0;
