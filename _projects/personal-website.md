@@ -76,7 +76,7 @@ The old version was very messy; I made it without any knowledge on how static si
 
 ---
 
-## (V6) Jekyll Regression
+## (V6) Jekyll Blunder Years 
 
 <img src="/projects/imgs/homepage.png" style="width: 70%;">
 
@@ -84,7 +84,7 @@ I think I wanted something more simplistic-looking, and ended up with something 
 
 ---
 
-## (V7) Jekyll Looksmaxxing
+## (V7) Jekyll Glowup 
 
 (current version)
 
