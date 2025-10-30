@@ -104,12 +104,13 @@ calculateDensities xs = [ density | (m, v) <- xs, let density = m /v, density > 
 -- can't use the binding in (m,v) <- xs since it defined after
 ```
 
-    - if we defined the binding in the predicate, and it would only be visible to the predicate
+- if we defined the binding in the predicate, and it would only be visible to the predicate
+
 ```haskell
 calculateDensitities xs = [ density | (m, v) <- xs, let density = m / v, let diff = (abs (m - v)) in diff > 1]
 ```
     
-    - If we omit the `in` part, then the binding becomes visible in the interactive session
+- If we omit the `in` part, then the binding becomes visible in the interactive session
 
 ---
 
