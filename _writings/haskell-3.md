@@ -238,6 +238,17 @@ sum . replicate 5 . max 6.7 $ 8.9
 
 - writing in **point free style**
 
+```haskell
+-- instead of
+sum' :: (Num a) => [a] -> a  
+sum' xs = foldl (+) 0 xs 
+-- we can write it without the xs parameter
+sum' = foldl (+) 0
 
+-- function composition works well in free point style
+
+fn x = ceiling (negate (tan (cos (max 50 x))))
+fn = ceiling . negate . tan . cos . max 50
+```
 
 
