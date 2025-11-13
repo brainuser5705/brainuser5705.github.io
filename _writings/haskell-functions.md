@@ -1,8 +1,7 @@
 ---
-base-title: Haskell (Functions in Modules)
-base-description: functions in `Data.List`, `Data.Char`, `Map`, `Set` 
+base-title: Haskell Functions
+base-description: functions in `Data.List`, `Data.Char`, `Map`, `Set`
 
-time: Nov 2, 2025
 ---
 
 # Data.List

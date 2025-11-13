@@ -5,13 +5,13 @@ base-description: Random thoughts...
 styles: writing
 ---
 
-{% assign writings = site.writings %}
+{% assign writings = site.writings | sort:"time" | reverse %}
 
 {% for writing in writings %}
 <div class="writing-item">
     <div class="name">
         <a  href="{{ writing.url }}">{{ writing.base-title }}</a>
-        <span class="time">({{ writing.time }})</span>
+        <div class="time">{{ writing.time }}</div>
     </div>
 </div>
 {% endfor %}

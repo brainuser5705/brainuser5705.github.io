@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tech -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/scss/base.css">
+    <link rel="stylesheet" href="/assets/scss/syntax.scss">
+    
+    <link rel="stylesheet" href="/assets/scss/writing-page.css">
+    
+
+    <!-- Font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Jua&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inclusive+Sans&family=Workbench&display=swap"
+        rel="stylesheet">
+
+    <title>Haskell Notes</title>
+</head>
+
+<body>
+    <main>
+        <div id="side-header">
+            <a href="\writings.html"><img id="base-icon" src=/assets/images/poochie.png /></a>
+            <div id="base-title">Haskell Notes</div>
+            <div id="base-description">
+                
+            </div>
+
+            
+
+        </div>
+        <div id="main-content">
+            
+<div class="draft-message">This page is in draft!</div>
+
+
+<h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+  <li><a href="#intro">Features of Haskell</a></li>
+  <li><a href="#list">Lists</a>
+    <ul>
+      <li>Operations</li>
+      <li>Texas Ranges</li>
+      <li>List Comprehension</li>
+      <li>Tuples</li>
+    </ul>
+  </li>
+  <li><a href="#syntax">Function Syntax</a>
+    <ul>
+      <li>Pattern Matching</li>
+      <li>Guards</li>
+      <li><code class="language-plaintext highlighter-rouge">where</code></li>
+      <li><code class="language-plaintext highlighter-rouge">let</code></li>
+    </ul>
+  </li>
+  <li><a href="#hof">Higher Order Function</a>
+    <ul>
+      <li>Maps and Filters</li>
+      <li>Lambdas</li>
+      <li>Folds</li>
+      <li>Function application</li>
+      <li>Function composition</li>
+    </ul>
+  </li>
+  <li><a href="#module">Module</a></li>
+  <li><a href="#algebra">Alegbraic Data Types</a>
+    <ul>
+      <li>Record Syntax</li>
+      <li>Type Parameters</li>
+      <li>Derived Instances</li>
+      <li>Type Synonyms</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<p><a id="intro"></a></p>
+
+<h1 id="section-1-features-of-haskell">Section 1: Features of Haskell</h1>
+
+<ul>
+  <li>Functional programming (what stuff is) vs Imperative programming (what to do)</li>
+  <li><strong>Referential transparency</strong>: function returns the same result for the same input</li>
+  <li><strong>Statically-typed</strong>: type is known as compile-time (so no runtime type errors)</li>
+  <li>Type inference</li>
+  <li><strong>Lazy</strong>: the function only runs when it needs to
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+
+  <span class="c1">-- Funtion goes through the whole list</span>
+  <span class="n">doubleMe</span> <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">|</span> <span class="n">x</span> <span class="o">&lt;-</span> <span class="n">xs</span><span class="p">]</span> 
+
+  <span class="c1">-- This will only make 1 pass through xs</span>
+  <span class="c1">-- Rather than calling it 3 times for every function call</span>
+  <span class="n">doubleMe</span><span class="p">(</span><span class="n">doubleMe</span><span class="p">(</span><span class="n">doubleMe</span><span class="p">(</span><span class="n">xs</span><span class="p">)))</span>
+</code></pre></div>    </div>
+  </li>
+  <li>infix functions (* + / -)</li>
+  <li>can use prefix functions as infix e.g. 92 <code class="language-plaintext highlighter-rouge">div</code> 10 -&gt; 9</li>
+  <li><strong>function application</strong> takes the highest precedence</li>
+  <li>functions are expressions (always return a value)</li>
+  <li><strong>definition/name</strong>: functions with no parameters</li>
+</ul>
+
+<hr />
+
+<p><a id="list"></a></p>
+
+<h1 id="section-2-lists">Section 2: Lists</h1>
+
+<ul>
+  <li>homongenous type</li>
+  <li>Strings are lists of characters e.g. ‘a’</li>
+  <li>lists can be compared with &lt;, &gt;, etc. lexiographically</li>
+</ul>
+
+<h2 id="operations">Operations</h2>
+
+<ul>
+  <li>list concatenation <code class="language-plaintext highlighter-rouge">[a] ++ [b]</code></li>
+  <li>cons <code class="language-plaintext highlighter-rouge">0:[1,2,3,4] -&gt; [0,1,2,3,4]</code>
+    <ul>
+      <li>[1,2,3] is syntactic sugar is <code class="language-plaintext highlighter-rouge">1:2:[3]</code></li>
+    </ul>
+  </li>
+  <li>indexing <code class="language-plaintext highlighter-rouge">[1,2,3] !! 1 -&gt; 2</code></li>
+  <li>head</li>
+  <li>tail</li>
+  <li>last - return last element</li>
+  <li>init - <code class="language-plaintext highlighter-rouge">[1,2,3,4] -&gt; [1,2,3]</code>
+    <ul>
+      <li>cannot perform these operations on empty lists</li>
+    </ul>
+  </li>
+  <li>length</li>
+  <li>null - returns if list is empty</li>
+  <li>reverse</li>
+  <li>take - <code class="language-plaintext highlighter-rouge">take 3 [1,2,3,4] -&gt; [1,2,3]</code>
+    <ul>
+      <li>returns whole list if the number is larger</li>
+    </ul>
+  </li>
+  <li>drop - <code class="language-plaintext highlighter-rouge">drop 2 [1,2,3,4] -&gt; [4]</code>
+    <ul>
+      <li>drops whole list if number is larger</li>
+    </ul>
+  </li>
+  <li>maximum</li>
+  <li>minimum</li>
+  <li>sum</li>
+  <li>product</li>
+  <li>4 <code class="language-plaintext highlighter-rouge">elem</code> [1,2,3,4] - return True/False</li>
+</ul>
+
+<h2 id="texas-ranges">Texas Ranges</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">[1..20]</code></li>
+  <li><code class="language-plaintext highlighter-rouge">[2,4..20]</code></li>
+  <li><code class="language-plaintext highlighter-rouge">['a'...'z']</code></li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">[20, 19..]</code></p>
+  </li>
+  <li>
+    <p>can take from infinite list <code class="language-plaintext highlighter-rouge">take 24 [13, 26..]</code></p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">cycle [1, 2, 3] -&gt; [1,2,3,1,2,3..]</code></li>
+  <li>repeat 5 - infinite list of one element</li>
+</ul>
+
+<h2 id="list-comprehension">List Comprehension</h2>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[x * 2</td>
+          <td>x &lt;- [1..10], x &gt;= 12]</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>bounding x to 1..10 with predicate</li>
+    </ul>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[x * y</td>
+          <td>x &lt;- [1..10], y &lt;- [1..10], x /= 1]</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>can bound to multiple lists</li>
+      <li>will generate all possible combinations</li>
+    </ul>
+  </li>
+  <li>nested <code class="language-plaintext highlighter-rouge">[[x | x &lt;- xs, even x ] | xs &lt;- xxs]</code></li>
+</ul>
+
+<h2 id="tuples">Tuples</h2>
+
+<ul>
+  <li>can be of different typed components</li>
+  <li><strong>pair</strong>: tuple of size 2</li>
+  <li>cannot compare tuple of different size</li>
+  <li><code class="language-plaintext highlighter-rouge">fst</code> - returns the first element of pair</li>
+  <li><code class="language-plaintext highlighter-rouge">snd</code></li>
+  <li><code class="language-plaintext highlighter-rouge">zip</code> - takes two list and zip them together into list of pairs
+    <ul>
+      <li>stops at the shorter list</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<p><a id="syntax"></a></p>
+
+<h1 id="section-3-pattern-matching">Section 3: Pattern Matching</h1>
+
+<ul>
+  <li>Top-to-bottom matching
+    <ul>
+      <li>catch-them-all case on the bottom</li>
+    </ul>
+  </li>
+  <li>Matching with lists
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">(x:xs)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">(x:y:xs)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">[x]</code> is syntactic sugar for <code class="language-plaintext highlighter-rouge">(x:[])</code></li>
+    </ul>
+  </li>
+  <li><em>as patterns</em>
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- captures the pattern</span>
+<span class="n">captial</span> <span class="s">""</span> <span class="o">=</span> <span class="s">"Empty string"</span>
+<span class="n">captial</span> <span class="n">all</span><span class="o">@</span><span class="p">(</span><span class="n">x</span><span class="o">:</span><span class="n">xs</span><span class="p">)</span> <span class="o">=</span> <span class="s">"The first letter of "</span> <span class="o">++</span> <span class="n">all</span> <span class="o">++</span> <span class="s">"is"</span> <span class="o">++</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span>
+</code></pre></div>    </div>
+    <hr />
+  </li>
+</ul>
+
+<h1 id="guards">Guards</h1>
+
+<ul>
+  <li>Test if a property of value is true/false</li>
+  <li>Drops to next guard until the condition is True</li>
+  <li><code class="language-plaintext highlighter-rouge">otherwise</code> is a catch-all
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">functionName</span> <span class="n">parameter</span>
+  <span class="o">|</span> <span class="n">parameter</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">=</span> <span class="s">"..."</span>
+  <span class="o">|</span> <span class="n">parameter</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">=</span> <span class="s">"..."</span>
+  <span class="o">|</span> <span class="n">otherwise</span> <span class="o">=</span> <span class="o">...</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Can <em>define</em> functions with backticks
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a `myCompare` b
+  | a &gt; b = GT
+  | a == b = EQ
+  | otherwise = LT
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+
+<h1 id="where"><code class="language-plaintext highlighter-rouge">where</code></h1>
+
+<ul>
+  <li>bind names to values at the end of guards</li>
+  <li>the name is then visible to all guards
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">density</span> <span class="n">mass</span> <span class="n">volume</span>
+  <span class="o">|</span> <span class="n">density</span> <span class="o">&lt;</span> <span class="n">air</span> <span class="o">...</span>
+  <span class="o">|</span> <span class="n">density</span> <span class="o">...</span>
+  <span class="kr">where</span> <span class="n">density</span> <span class="o">=</span> <span class="n">mass</span><span class="o">/</span> <span class="n">volume</span>
+        <span class="n">air</span> <span class="o">=</span> <span class="mf">1.2</span>
+<span class="c1">-- all names must be on the same indent</span>
+</code></pre></div>    </div>
+  </li>
+  <li>can pattern match
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">initials</span> <span class="n">firstname</span> <span class="n">lastname</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">++</span> <span class="s">"."</span> <span class="o">++</span> <span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">++</span> <span class="s">"."</span>
+  <span class="kr">where</span> <span class="p">(</span><span class="n">f</span><span class="o">:</span><span class="kr">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">firstname</span>
+        <span class="p">(</span><span class="n">l</span><span class="o">:</span><span class="kr">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">lastname</span>
+</code></pre></div>    </div>
+  </li>
+  <li>can define functions
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">calcDensities</span> <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="n">density</span> <span class="n">m</span> <span class="n">v</span> <span class="o">|</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">xs</span><span class="p">]</span>  
+  <span class="kr">where</span> <span class="n">density</span> <span class="n">mass</span> <span class="n">volume</span> <span class="o">=</span> <span class="n">mass</span> <span class="o">/</span> <span class="n">volume</span>  
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<blockquote>
+  <p>IDIOM: make the helper functions in the <code class="language-plaintext highlighter-rouge">where</code> clause of a function</p>
+</blockquote>
+
+<hr />
+
+<h1 id="let"><code class="language-plaintext highlighter-rouge">let</code></h1>
+
+<ul>
+  <li>unlike <code class="language-plaintext highlighter-rouge">where</code>, it does not span across guards or the whole function
+    <ul>
+      <li>the names defined in <code class="language-plaintext highlighter-rouge">let</code> is only visible to the <code class="language-plaintext highlighter-rouge">in</code> expression</li>
+    </ul>
+  </li>
+  <li>unlike <code class="language-plaintext highlighter-rouge">where</code>, it can be use as <em>expressions</em>
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="kr">let</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">9</span> <span class="kr">in</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span>
+  <span class="p">[</span><span class="kr">let</span> <span class="n">square</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="kr">in</span> <span class="p">(</span><span class="n">square</span> <span class="mi">5</span><span class="p">,</span> <span class="n">square</span> <span class="mi">3</span><span class="p">,</span> <span class="n">square</span> <span class="mi">2</span><span class="p">)]</span>
+
+  <span class="c1">-- to bind names inline, use ;</span>
+  <span class="p">(</span><span class="kr">let</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">300</span> <span class="kr">in</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">,</span> <span class="kr">let</span> <span class="n">foo</span><span class="o">=</span><span class="s">"Hey "</span><span class="p">;</span> <span class="n">bar</span> <span class="o">=</span> <span class="s">"there!"</span> <span class="kr">in</span> <span class="n">foo</span> <span class="o">++</span> <span class="n">bar</span><span class="p">)</span>  
+  <span class="c1">-- (6000000,"Hey there!")</span>
+</code></pre></div>    </div>
+  </li>
+  <li>can be use in list comprehension, use in place of a <code class="language-plaintext highlighter-rouge">where</code> binding with a function
+    <ul>
+      <li>the bindings are visible in the output function and to predicates
+        <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">calculateDensities</span> <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span> <span class="n">density</span> <span class="o">|</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">xs</span><span class="p">,</span> <span class="kr">let</span> <span class="n">density</span> <span class="o">=</span> <span class="n">m</span> <span class="o">/</span><span class="n">v</span><span class="p">,</span> <span class="n">density</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">]</span>
+  <span class="c1">-- can't use the binding in (m,v) &lt;- xs since it defined after</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>if we defined the binding in the predicate, and it would only be visible to the predicate
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">calculateDensitities</span> <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span> <span class="n">density</span> <span class="o">|</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">xs</span><span class="p">,</span> <span class="kr">let</span> <span class="n">density</span> <span class="o">=</span> <span class="n">m</span> <span class="o">/</span> <span class="n">v</span><span class="p">,</span> <span class="kr">let</span> <span class="n">diff</span> <span class="o">=</span> <span class="p">(</span><span class="n">abs</span> <span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="n">v</span><span class="p">))</span> <span class="kr">in</span> <span class="n">diff</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+</code></pre></div>    </div>
+  </li>
+  <li>If we omit the <code class="language-plaintext highlighter-rouge">in</code> part, then the binding becomes visible in the interactive session</li>
+</ul>
+
+<hr />
+
+<h1 id="case-expressions">Case expressions</h1>
+
+<ul>
+  <li>are expressions!</li>
+  <li>pattern matching on <em>function parameters</em> is syntactic sugar for case expressions
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">head'</span> <span class="n">xs</span> <span class="o">=</span> <span class="kr">case</span> <span class="n">xs</span> <span class="kr">of</span> <span class="kt">[]</span> <span class="o">-&gt;</span> <span class="n">error</span> <span class="s">"No head for empty lists!"</span>
+                      <span class="p">(</span><span class="n">x</span><span class="o">:</span><span class="kr">_</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">x</span>
+</code></pre></div>    </div>
+  </li>
+  <li>can be used anywhere like an expression</li>
+</ul>
+
+<hr />
+
+<p><a id="hof"></a></p>
+
+<h1 id="section-4-higher-order-functions">Section 4: Higher Order Functions</h1>
+
+<ul>
+  <li>every function only takes <strong>one</strong> parameter</li>
+  <li>all functions that accept multiple parameters are <strong>curried</strong> (reduced to functions taking one parameters)
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">max</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="p">(</span><span class="n">max</span> <span class="mi">4</span><span class="p">)</span> <span class="mi">5</span>
+<span class="c1">-- creates a function that takes a parameter and returns 4 or that parameter</span>
+<span class="c1">-- then we pass in 5 to that function</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>function application</strong>: <code class="language-plaintext highlighter-rouge">-&gt;</code> in the type definition, or putting a space</li>
+  <li>function application is <em>right associative</em> in the type defintion
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">max</span> <span class="o">::</span> <span class="p">(</span><span class="kt">Ord</span> <span class="n">a</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span>
+<span class="c1">-- same as</span>
+<span class="n">max</span> <span class="o">::</span> <span class="p">(</span><span class="kt">Ord</span> <span class="n">a</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>curried functions are made up of <strong>partially applied functions</strong>
+    <ul>
+      <li>function that takes in as many parameters as we left out</li>
+    </ul>
+  </li>
+  <li>infix functions are <em>partially applied</em> using <strong>sections</strong></li>
+  <li>surround with parentheses and supply parameter on one side, it will create a function that takes another parameter to apply on the other side
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">divideByTen</span> <span class="o">=</span> <span class="p">(</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>
+  <span class="c1">-- dividebyTen 200 = 200 / 10</span>
+
+  <span class="n">isUpperAlphanum</span> <span class="o">=</span> <span class="p">(`</span><span class="n">elem</span><span class="p">`</span> <span class="p">[</span><span class="sc">'A'</span><span class="o">..</span><span class="sc">'Z'</span><span class="p">])</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<blockquote>
+  <p>But sections don’t work with - since <code class="language-plaintext highlighter-rouge">(-4)</code> means negative 4. So we have to use <code class="language-plaintext highlighter-rouge">(subtract 4)</code></p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>cannot display partially applied functions since they are not part of the <code class="language-plaintext highlighter-rouge">Show</code> typeclass</p>
+  </li>
+  <li>
+    <p>functions as parameters</p>
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- require the parentheses to signify the parameter is a function</span>
+<span class="n">applyTwice</span> <span class="o">::</span> <span class="p">(</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span>
+<span class="n">applyTwice</span> <span class="n">f</span> <span class="n">x</span> <span class="o">=</span> <span class="n">f</span> <span class="p">(</span><span class="n">f</span> <span class="n">x</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">flip'</span> <span class="o">::</span> <span class="p">(</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="n">b</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">b</span> <span class="o">-&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">flip'</span> <span class="n">f</span> <span class="o">=</span> <span class="n">g</span>
+    <span class="kr">where</span> <span class="n">g</span> <span class="n">x</span> <span class="n">y</span> <span class="o">=</span> <span class="n">f</span> <span class="n">y</span> <span class="n">x</span>
+
+<span class="n">flip'</span> <span class="o">::</span> <span class="p">(</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="n">b</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">b</span> <span class="o">-&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">c</span>
+<span class="n">flip'</span> <span class="n">f</span> <span class="n">x</span> <span class="n">y</span> <span class="o">=</span> <span class="n">f</span> <span class="n">y</span> <span class="n">x</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="maps-and-filters">Maps and Filters</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">map</code> applies function to every element in the list
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">map</span> <span class="o">::</span> <span class="p">(</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">b</span><span class="p">]</span>
+<span class="n">map</span> <span class="kr">_</span> <span class="kt">[]</span> <span class="o">=</span> <span class="kt">[]</span>
+<span class="n">map</span> <span class="n">f</span> <span class="p">(</span><span class="n">x</span><span class="o">:</span><span class="n">xs</span><span class="p">)</span> <span class="o">=</span> <span class="n">f</span> <span class="n">x</span> <span class="o">:</span> <span class="n">map</span> <span class="n">f</span> <span class="n">xs</span>
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">filter</code> keeps elements only if they satisfy a predicate
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">filter</span> <span class="o">::</span> <span class="p">(</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span>
+<span class="n">filter</span> <span class="kr">_</span> <span class="kt">[]</span> <span class="o">=</span> <span class="kt">[]</span>
+<span class="n">filter</span> <span class="n">p</span> <span class="p">(</span><span class="n">x</span><span class="o">:</span><span class="n">xs</span><span class="p">)</span> <span class="o">=</span>
+  <span class="o">|</span> <span class="n">p</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">:</span> <span class="n">filter</span> <span class="n">p</span> <span class="n">xs</span>
+  <span class="o">|</span> <span class="n">otherwise</span> <span class="o">=</span> <span class="n">filter</span> <span class="n">p</span> <span class="n">xs</span>
+</code></pre></div>    </div>
+  </li>
+  <li>can use list comprehension for <code class="language-plaintext highlighter-rouge">map</code> and <code class="language-plaintext highlighter-rouge">filter</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">filter</code> with multiple predicate - use <code class="language-plaintext highlighter-rouge">&amp;&amp;</code></li>
+    </ul>
+  </li>
+  <li>Haskell’s lazy programming: mapping and filtering a list several times, will still only pass over the list once</li>
+</ul>
+
+<hr />
+
+<h2 id="lambdas">Lambdas</h2>
+
+<ul>
+  <li>are expressions</li>
+  <li>anonymous functions to be used only once</li>
+  <li>syntax: <code class="language-plaintext highlighter-rouge">(\parameters -&gt; function body)</code>
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">filter</span> <span class="p">(</span><span class="nf">\</span><span class="n">xs</span> <span class="o">-&gt;</span> <span class="n">length</span> <span class="n">xs</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">)</span> <span class="p">(</span><span class="n">map</span> <span class="n">collatzChain</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">100</span><span class="p">])</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>partial application &gt; lambdas</p>
+  </li>
+  <li>pattern match in the parameters of lambdas
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">map</span> <span class="p">(</span><span class="nf">\</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">)]</span>
+</code></pre></div>    </div>
+  </li>
+  <li>curried functions can be read easier
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">addThree</span> <span class="o">::</span> <span class="p">(</span><span class="kt">Num</span> <span class="n">a</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span>
+<span class="n">addThree</span> <span class="n">x</span> <span class="n">y</span> <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span>
+<span class="n">addThree</span> <span class="nf">\</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="nf">\</span><span class="n">y</span> <span class="o">-&gt;</span> <span class="nf">\</span><span class="n">z</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span> <span class="c1">-- illustrates currying</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="folds">Folds</h2>
+
+<ul>
+  <li>like <code class="language-plaintext highlighter-rouge">map</code> but reduces to a single value</li>
+  <li>takes:
+    <ul>
+      <li>binary function</li>
+      <li>starting value (accumulator)</li>
+      <li>list to fold up</li>
+    </ul>
+  </li>
+  <li>binary function is called with accumulator and first/last element to produce a new accumulator</li>
+  <li>good for traversing through list element by element</li>
+</ul>
+
+<h3 id="foldl"><code class="language-plaintext highlighter-rouge">foldl</code></h3>
+
+<ul>
+  <li>left fold</li>
+  <li>folds the list up from the left side (head value)
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">sum'</span> <span class="o">::</span> <span class="p">(</span><span class="kt">Num</span> <span class="n">a</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="n">a</span>  
+  <span class="n">sum'</span> <span class="n">xs</span> <span class="o">=</span> <span class="n">foldl</span> <span class="p">(</span><span class="nf">\</span><span class="n">acc</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">acc</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span> <span class="mi">0</span> <span class="n">xs</span>  
+  <span class="c1">-- x is the head of xs</span>
+
+  <span class="c1">-- using currying in mind</span>
+  <span class="n">sum'</span> <span class="o">=</span> <span class="n">foldl</span> <span class="p">(</span><span class="o">+</span><span class="p">)</span> <span class="mi">0</span> 
+</code></pre></div>    </div>
+  </li>
+  <li>currying: if you have a function like <code class="language-plaintext highlighter-rouge">foo a = bar b a</code> - can rewrite it as <code class="language-plaintext highlighter-rouge">foo = bar b</code></li>
+</ul>
+
+<h3 id="foldr"><code class="language-plaintext highlighter-rouge">foldr</code></h3>
+
+<ul>
+  <li>right fold</li>
+  <li>folds the list from the right side (tail value)</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">\x acc -&gt; ...</code></p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">foldr</code> works with infinite lists, but not <code class="language-plaintext highlighter-rouge">foldl</code></li>
+</ul>
+
+<h3 id="foldl1-and-foldr1"><code class="language-plaintext highlighter-rouge">foldl1</code> and <code class="language-plaintext highlighter-rouge">foldr1</code></h3>
+
+<ul>
+  <li>assume that first or last element of list is the starting vlaue</li>
+  <li>requires at least one element</li>
+</ul>
+
+<h3 id="scanl-and-scanr"><code class="language-plaintext highlighter-rouge">scanl</code> and <code class="language-plaintext highlighter-rouge">scanr</code></h3>
+
+<ul>
+  <li>put the intermediate accumulator values in a list</li>
+  <li><code class="language-plaintext highlighter-rouge">scanl1</code> and <code class="language-plaintext highlighter-rouge">scanr1</code>
+    <ul>
+      <li>final results is on the side of the fold</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="function-application">Function application</h2>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sum</span> <span class="p">(</span><span class="n">map</span> <span class="n">sqrt</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">130</span><span class="p">])</span>
+<span class="c1">-- vs</span>
+<span class="n">sum</span> <span class="o">$</span> <span class="n">map</span> <span class="n">sqrt</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">130</span><span class="p">]</span>
+</code></pre></div></div>
+<ul>
+  <li>with spaces, function application is left associative</li>
+  <li>with <code class="language-plaintext highlighter-rouge">$</code>, function application is right associative</li>
+  <li><strong>lowest precedence</strong> of any operator
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">-- (4+9) plus the sqrt of 3</span>
+  <span class="n">sqrt</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">9</span>
+  <span class="c1">-- vs sqrt of 3 + 4 + 9</span>
+  <span class="n">sqrt</span> <span class="o">$</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">9</span>
+
+  <span class="c1">-- save keystrokes</span>
+  <span class="n">sum</span> <span class="p">(</span><span class="n">filter</span> <span class="p">(</span><span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">(</span><span class="n">map</span> <span class="p">(</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span> <span class="p">[</span><span class="mi">2</span><span class="o">..</span><span class="mi">10</span><span class="p">]))</span>
+  <span class="c1">-- vs</span>
+  <span class="n">sum</span> <span class="o">$</span> <span class="n">filter</span> <span class="p">(</span><span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="o">$</span> <span class="n">map</span> <span class="p">(</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span> <span class="p">[</span><span class="mi">2</span><span class="o">..</span><span class="mi">10</span><span class="p">]</span>
+</code></pre></div>    </div>
+  </li>
+  <li>can map function application over a list of functions
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">map</span> <span class="p">(</span><span class="o">$</span> <span class="mi">3</span><span class="p">)</span> <span class="p">[(</span><span class="mi">4</span><span class="o">+</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="p">),</span> <span class="p">(</span><span class="o">^</span><span class="mi">2</span><span class="p">),</span> <span class="n">sqrt</span><span class="p">]</span>
+</code></pre></div>    </div>
+    <hr />
+  </li>
+</ul>
+
+<h2 id="function-composition">Function composition</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.</code> operator</li>
+  <li>right associative <code class="language-plaintext highlighter-rouge">(f (g (z x)))</code> = <code class="language-plaintext highlighter-rouge">f . g . z x</code></li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="o">.</span><span class="p">)</span> <span class="o">::</span> <span class="p">(</span><span class="n">b</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">c</span> 
+<span class="n">f</span> <span class="o">.</span> <span class="n">g</span> <span class="o">=</span> <span class="nf">\</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">f</span> <span class="p">(</span><span class="n">g</span> <span class="n">x</span><span class="p">)</span>  
+</code></pre></div></div>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">map</span> <span class="p">(</span><span class="nf">\</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">negate</span> <span class="p">(</span><span class="n">abs</span> <span class="n">x</span><span class="p">))</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">19</span><span class="p">,</span><span class="mi">24</span><span class="p">]</span>
+<span class="c1">-- vs</span>
+<span class="n">map</span> <span class="p">(</span><span class="n">negate</span> <span class="o">.</span> <span class="n">abs</span><span class="p">)</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">19</span><span class="p">,</span><span class="mi">24</span><span class="p">]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>can only take one parameter at a time, so for functions that require more than one parameter…
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">sum</span> <span class="p">(</span><span class="n">replicate</span> <span class="mi">5</span> <span class="p">(</span><span class="n">max</span> <span class="mf">6.7</span> <span class="mf">8.9</span><span class="p">))</span>
+  <span class="c1">-- need to be written as </span>
+  <span class="p">(</span><span class="n">sum</span> <span class="o">.</span> <span class="n">replicate</span> <span class="mi">5</span> <span class="o">.</span> <span class="n">max</span> <span class="mf">6.7</span><span class="p">)</span> <span class="mf">8.9</span>
+  <span class="n">sum</span> <span class="o">.</span> <span class="n">replicate</span> <span class="mi">5</span> <span class="o">.</span> <span class="n">max</span> <span class="mf">6.7</span> <span class="o">$</span> <span class="mf">8.9</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>if expression ends in 3 parentheses, then it will need 3 composition operators</p>
+  </li>
+  <li>writing in <strong>point free style</strong>
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">compareWithHundred</span> <span class="o">::</span> <span class="p">(</span><span class="kt">Num</span> <span class="n">a</span><span class="p">,</span> <span class="kt">Ord</span> <span class="n">a</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="kt">Ordering</span>
+  <span class="n">compareWithHundred</span> <span class="n">x</span> <span class="o">=</span> <span class="n">compare</span> <span class="mi">100</span> <span class="n">x</span>
+  <span class="n">compareWithHundred</span> <span class="o">=</span> <span class="n">compare</span> <span class="mi">100</span>
+
+  <span class="c1">-- instead of</span>
+  <span class="n">sum'</span> <span class="o">::</span> <span class="p">(</span><span class="kt">Num</span> <span class="n">a</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="n">a</span>  
+  <span class="n">sum'</span> <span class="n">xs</span> <span class="o">=</span> <span class="n">foldl</span> <span class="p">(</span><span class="o">+</span><span class="p">)</span> <span class="mi">0</span> <span class="n">xs</span> 
+  <span class="c1">-- we can write it without the xs parameter</span>
+  <span class="n">sum'</span> <span class="o">=</span> <span class="n">foldl</span> <span class="p">(</span><span class="o">+</span><span class="p">)</span> <span class="mi">0</span>
+
+  <span class="c1">-- function composition works well in free point style</span>
+  <span class="n">fn</span> <span class="n">x</span> <span class="o">=</span> <span class="n">ceiling</span> <span class="p">(</span><span class="n">negate</span> <span class="p">(</span><span class="n">tan</span> <span class="p">(</span><span class="n">cos</span> <span class="p">(</span><span class="n">max</span> <span class="mi">50</span> <span class="n">x</span><span class="p">))))</span>
+  <span class="n">fn</span> <span class="o">=</span> <span class="n">ceiling</span> <span class="o">.</span> <span class="n">negate</span> <span class="o">.</span> <span class="n">tan</span> <span class="o">.</span> <span class="n">cos</span> <span class="o">.</span> <span class="n">max</span> <span class="mi">50</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+
+<p><a id="module"></a></p>
+
+<h1 id="section-5-modules">Section 5: Modules</h1>
+
+<ul>
+  <li><strong>module</strong>: group functions, types, typeclasses</li>
+  <li>
+    <p><strong>program</strong>: collection of modules loaded by the main module</p>
+  </li>
+  <li>standard library split into <em>modules</em>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Prelude</code> imported by default
+  ```haskell
+  – all functions exported by Data.List are in the global namespace
+  import Data.List</li>
+    </ul>
+
+    <p>– weeds out duplicates from a list
+  numUniques :: (Eq a) =&gt; [a] -&gt; Int<br />
+  numUniques = length . nub
+  ```</p>
+  </li>
+  <li>
+    <p>in GHCi, <code class="language-plaintext highlighter-rouge">:m + Data.List Data.Map Data.Set</code></p>
+  </li>
+  <li>can select functions to import
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kr">import</span> <span class="nn">Data.List</span> <span class="p">(</span><span class="nf">nub</span><span class="p">,</span> <span class="nf">sort</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>can select all functions but not certain ones
+    <ul>
+      <li>good for name conflicts between modules</li>
+    </ul>
+
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kr">import</span> <span class="nn">Data.List</span> <span class="k">hiding</span> <span class="p">(</span><span class="nf">nub</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>qualified imports</strong> for name conflicts
+    <ul>
+      <li>requires that we call the entire module name before the function</li>
+    </ul>
+
+    <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">-- filter and null conflicts with Prelude functions</span>
+  <span class="kr">import</span> <span class="k">qualified</span> <span class="nn">Data.Map</span>
+  <span class="c1">-- can also do</span>
+  <span class="kr">import</span> <span class="k">qualified</span> <span class="nn">Data.Map</span> <span class="k">as</span> <span class="n">M</span>
+
+  <span class="n">x</span> <span class="o">=</span> <span class="kt">Data</span><span class="o">.</span><span class="kt">Map</span><span class="o">.</span><span class="n">filter</span> <span class="o">...</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="kt">M</span><span class="o">.</span><span class="n">filter</span> <span class="o">...</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+
+<p><a id="algebra"></a></p>
+
+<h1 id="section-6-algebraic-data-types">Section 6: Algebraic data types</h1>
+
+<ul>
+  <li>for defining own data types
+    <div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">data</span> <span class="kt">Shape</span> <span class="o">=</span> <span class="kt">Circle</span> <span class="kt">Float</span> <span class="kt">Float</span> <span class="kt">Float</span> <span class="o">|</span>
+  <span class="kt">Rectangle</span> <span class="kt">Float</span> <span class="kt">Float</span> <span class="kt">Float</span> <span class="kt">Float</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Circle, Rectangles are <strong>value constructors</strong>
+    <div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- value constructors are functions that return the datatype</span>
+<span class="c1">-- note: Circle is not a type, it's a value constructor</span>
+<span class="o">:</span><span class="n">t</span> <span class="kt">Circle</span> 
+<span class="kt">Circle</span> <span class="o">::</span> <span class="kt">Float</span> <span class="o">-&gt;</span> <span class="kt">Float</span> <span class="o">-&gt;</span> <span class="kt">Float</span> <span class="o">-&gt;</span> <span class="kt">Shape</span>
+<span class="kt">Circle</span> <span class="mi">10</span> <span class="mi">20</span> <span class="mi">10</span>
+</code></pre></div>    </div>
+  </li>
+  <li>we can make the datatype part of a typeclass
+    <div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Shape is part of the Show typeclass</span>
+<span class="kr">data</span> <span class="kt">Shape</span> <span class="o">=</span> <span class="o">....</span> <span class="kr">deriving</span> <span class="p">(</span><span class="kt">Show</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>nested value constructors when pattern matching
+    <div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surface</span> <span class="o">::</span> <span class="kt">Shape</span> <span class="o">-&gt;</span> <span class="kt">Float</span>
+<span class="n">surface</span> <span class="p">(</span><span class="kt">Rectangle</span> <span class="p">(</span><span class="kt">Point</span> <span class="n">x1</span> <span class="n">y1</span><span class="p">)</span> <span class="p">(</span><span class="kt">Point</span> <span class="n">x2</span> <span class="n">y2</span><span class="p">))</span> <span class="o">=</span> <span class="o">....</span>
+</code></pre></div>    </div>
+  </li>
+  <li>export data types in the module
+    <ul>
+      <li>if we don’t export the value constructors, then the type can be made only with auxiliary functions and we cannot pattern match
+        <div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">module</span> <span class="nn">Shapes</span>  
+<span class="p">(</span> <span class="kt">Point</span><span class="p">(</span><span class="o">..</span><span class="p">)</span> <span class="c1">-- the .. exports all the value constructors  </span>
+<span class="p">,</span> <span class="kt">Shape</span><span class="p">(</span><span class="o">..</span><span class="p">)</span> <span class="c1">-- or we can specify the ones we want to export</span>
+<span class="p">,</span> <span class="nf">surface</span>  
+<span class="p">,</span> <span class="nf">nudge</span>  
+<span class="p">,</span> <span class="nf">baseCircle</span>  
+<span class="p">,</span> <span class="nf">baseRect</span>  
+<span class="p">)</span> <span class="kr">where</span> 
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="record-syntax">Record syntax</h2>
+
+<ul>
+  <li>alternative way of writing data types to avoid long list of fields
+    <div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kr">data</span> <span class="kt">Person</span> <span class="o">=</span> <span class="kt">Person</span> <span class="p">{</span> <span class="n">firstName</span> <span class="o">::</span> <span class="kt">String</span>  
+                      <span class="p">,</span> <span class="n">lastName</span> <span class="o">::</span> <span class="kt">String</span>  
+                      <span class="p">,</span> <span class="n">age</span> <span class="o">::</span> <span class="kt">Int</span>  
+                      <span class="p">,</span> <span class="n">height</span> <span class="o">::</span> <span class="kt">Float</span>  
+                      <span class="p">,</span> <span class="n">phoneNumber</span> <span class="o">::</span> <span class="kt">String</span>  
+                      <span class="p">,</span> <span class="n">flavor</span> <span class="o">::</span> <span class="kt">String</span>  
+                      <span class="p">}</span> <span class="kr">deriving</span> <span class="p">(</span><span class="kt">Show</span><span class="p">)</span>  
+
+</code></pre></div>    </div>
+  </li>
+  <li>advantages of the record syntax
+    <ul>
+      <li>automatically creates functions to lookup the field e.g. <code class="language-plaintext highlighter-rouge">flavor</code>, <code class="language-plaintext highlighter-rouge">lastName</code></li>
+      <li><code class="language-plaintext highlighter-rouge">show</code> displays it with the field name and brackets</li>
+      <li>don’t have the put the fields in the proper order</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="type-parameters">Type parameters</h2>
+
+<ul>
+  <li>
+    <p><strong>type constructors</strong> takes type parameters to produce new types</p>
+
+    <div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">-- a is the type parameter, and can be any type</span>
+  <span class="c1">-- it is the type that Maybe holds like `Maybe Int`, `Maybe Car`</span>
+  <span class="o">-</span> <span class="p">`</span><span class="kt">Maybe</span><span class="p">`</span> <span class="n">is</span> <span class="n">polymoprhic</span><span class="p">,</span> <span class="n">can</span> <span class="n">act</span> <span class="n">like</span> <span class="n">a</span> <span class="p">`</span><span class="kt">Maybe</span> <span class="kt">Int</span><span class="p">`</span> <span class="n">or</span> <span class="p">`</span><span class="kt">Maybe</span> <span class="kt">Double</span><span class="p">`</span> <span class="n">or</span> <span class="p">`</span><span class="kt">Nothing</span><span class="p">`</span>
+  <span class="kr">data</span> <span class="kt">Maybe</span> <span class="n">a</span> <span class="o">=</span> <span class="kt">Nothing</span> <span class="o">|</span> <span class="kt">Just</span> <span class="n">a</span>
+
+  <span class="c1">-- explicit type definition</span>
+  <span class="kt">Just</span> <span class="mi">10</span> <span class="o">::</span> <span class="kt">Maybe</span> <span class="kt">Double</span>
+  <span class="kt">Just</span> <span class="mf">10.0</span>
+</code></pre></div>    </div>
+  </li>
+  <li>before <code class="language-plaintext highlighter-rouge">=</code> is the type constructor</li>
+  <li>
+    <p>after <code class="language-plaintext highlighter-rouge">=</code> is the value constructor</p>
+  </li>
+  <li>
+    <p>can have record syntax with type constructors</p>
+
+    <div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kr">data</span> <span class="kt">Car</span> <span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="o">=</span> <span class="kt">Car</span> <span class="p">{</span> <span class="n">company</span> <span class="o">::</span> <span class="n">a</span>  
+                      <span class="p">,</span> <span class="n">model</span> <span class="o">::</span> <span class="n">b</span>  
+                      <span class="p">,</span> <span class="n">year</span> <span class="o">::</span> <span class="n">c</span>  
+                      <span class="p">}</span> <span class="kr">deriving</span> <span class="p">(</span><span class="kt">Show</span><span class="p">)</span>
+
+  <span class="c1">-- this would require that the a type parameter is of the Show typeclass</span>
+  <span class="n">tellCar</span> <span class="o">::</span> <span class="p">(</span><span class="kt">Show</span> <span class="n">a</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="kt">Car</span> <span class="kt">String</span> <span class="kt">String</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="kt">String</span>  
+  <span class="n">tellCar</span> <span class="p">(</span><span class="kt">Car</span> <span class="p">{</span><span class="n">company</span> <span class="o">=</span> <span class="n">c</span><span class="p">,</span> <span class="n">model</span> <span class="o">=</span> <span class="n">m</span><span class="p">,</span> <span class="n">year</span> <span class="o">=</span> <span class="n">y</span><span class="p">})</span> <span class="o">=</span> <span class="s">"This "</span> <span class="o">++</span> <span class="n">c</span> <span class="o">++</span> <span class="s">" "</span> <span class="o">++</span> <span class="n">m</span> <span class="o">++</span> <span class="s">" was made in "</span> <span class="o">++</span> <span class="n">show</span> <span class="n">y</span>
+</code></pre></div>    </div>
+  </li>
+  <li>don’t put the type constraints into the data declarations
+    <ul>
+      <li>requires that the type declarations of the functions use them as well so would have to repeat them in the functions anyways</li>
+      <li>if we omit them, we can put the type declaration only on functions that uses them</li>
+    </ul>
+
+    <div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kr">data</span> <span class="p">(</span><span class="kt">Ord</span> <span class="n">k</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="kt">Map</span> <span class="n">k</span> <span class="n">v</span>
+
+  <span class="n">toList</span> <span class="o">::</span> <span class="p">(</span><span class="kt">Ord</span> <span class="n">k</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="o">....</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="derived-instances">Derived instances</h2>
+
+<ul>
+  <li>if a type can act like a certain typeclass, then we can make it an instance of the typeclass <strong>by implementing the functions defined by the typeclass</strong></li>
+  <li>derive the behavior of our types by using <code class="language-plaintext highlighter-rouge">deriving</code></li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li>deriving { <code class="language-plaintext highlighter-rouge">Eq</code> }
+    <ul>
+      <li>match the value constructors, then match the fields in the value constructors</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Show</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Read</code>
+    <ul>
+      <li>convert a string to values of the type
+        <div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- need explicit type annotation</span>
+<span class="n">ghci</span><span class="o">&gt;</span> <span class="n">read</span> <span class="s">"Person {firstName =</span><span class="se">\"</span><span class="s">Michael</span><span class="se">\"</span><span class="s">, lastName =</span><span class="se">\"</span><span class="s">Diamond</span><span class="se">\"</span><span class="s">, age = 43}"</span> <span class="o">::</span> <span class="kt">Person</span>  
+<span class="kt">Person</span> <span class="p">{</span><span class="n">firstName</span> <span class="o">=</span> <span class="s">"Michael"</span><span class="p">,</span> <span class="n">lastName</span> <span class="o">=</span> <span class="s">"Diamond"</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">43</span><span class="p">}</span> 
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Ord</code>
+    <ul>
+      <li>the values that were defined first is considered smaller</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Enum</code>
+    <ul>
+      <li>if all the value constructors are nullary (takes no fields)</li>
+      <li>for <code class="language-plaintext highlighter-rouge">succ</code> and <code class="language-plaintext highlighter-rouge">pred</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Bounded</code>
+    <ul>
+      <li>has a lowest and highest possible value
+  ```hs
+  data Day = Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday<br />
+         deriving (Eq, Ord, Show, Read, Bounded, Enum)</li>
+    </ul>
+
+    <p>minBound :: Day</p>
+    <blockquote>
+      <blockquote>
+        <p>Monday
+  maxBound :: Day
+Sunday</p>
+      </blockquote>
+    </blockquote>
+
+    <p>[minBound .. maxBound] :: [Day]<br />
+  [Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday]
+  ```</p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="type-synonyms">Type Synonyms</h2>
+
+<ul>
+  <li>e.g. <code class="language-plaintext highlighter-rouge">[Char]</code> is synonmous with <code class="language-plaintext highlighter-rouge">String</code>
+    <div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">type</span> <span class="kt">String</span> <span class="o">=</span> <span class="p">[</span><span class="kt">Char</span><span class="p">]</span>
+</code></pre></div>    </div>
+  </li>
+  <li>types can be parameterized (represented a type but is general)
+    <div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">type</span> <span class="kt">AssocList</span> <span class="n">k</span> <span class="n">v</span> <span class="o">=</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)]</span>
+<span class="c1">-- type constructor is AssocList</span>
+<span class="c1">-- concrete type is AssocList Int String</span>
+</code></pre></div>    </div>
+  </li>
+  <li>can have partially applied type parameters to get type constructors
+    <div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">type</span> <span class="kt">IntMap</span> <span class="n">v</span> <span class="o">=</span> <span class="kt">Map</span> <span class="kt">Int</span> <span class="n">v</span>
+<span class="c1">-- same thing as </span>
+<span class="kr">type</span> <span class="kt">IntMap</span> <span class="o">=</span> <span class="kt">Map</span> <span class="kt">Int</span>
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">data Either a b = Left a | Right b ...</code>
+    <ul>
+      <li>can be either value of Left type a or value of Right type b</li>
+      <li>good for when errors are Left value, results are Right value</li>
+    </ul>
+  </li>
+</ul>
+
+
+        </div>
+    </main>
+</body>
+
+</html>

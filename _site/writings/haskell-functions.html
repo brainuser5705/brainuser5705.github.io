@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tech -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/scss/base.css">
+    <link rel="stylesheet" href="/assets/scss/syntax.scss">
+    
+    <link rel="stylesheet" href="/assets/scss/writing-page.css">
+    
+
+    <!-- Font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Jua&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inclusive+Sans&family=Workbench&display=swap"
+        rel="stylesheet">
+
+    <title>Haskell Functions</title>
+</head>
+
+<body>
+    <main>
+        <div id="side-header">
+            <a href="\writings.html"><img id="base-icon" src=/assets/images/poochie.png /></a>
+            <div id="base-title">Haskell Functions</div>
+            <div id="base-description">
+                functions in `Data.List`, `Data.Char`, `Map`, `Set`
+            </div>
+
+            
+
+        </div>
+        <div id="main-content">
+            
+
+<h1 id="datalist">Data.List</h1>
+
+<ul>
+  <li>
+    <p>no need for qualified imports</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">intersperse</code></p>
+  </li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">intersperse</span> <span class="sc">'.'</span> <span class="s">"monkey"</span>
+<span class="o">&gt;</span> <span class="s">"m.o.n.k.e.y"</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">intercalate</code>
+    <ul>
+      <li>insert element between the list and flattens</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">intercalate</span> <span class="s">" "</span> <span class="p">[</span><span class="s">"hello"</span><span class="p">,</span> <span class="s">"there"</span><span class="p">,</span> <span class="s">"world"</span><span class="p">]</span>
+<span class="o">&gt;</span> <span class="s">"hello there world"</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">transpose</code>
+    <ul>
+      <li>convert collect to rows, and vice versa</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">foldl'</code>, <code class="language-plaintext highlighter-rouge">foldl1'</code>
+    <ul>
+      <li>regular folds are lazy and will not calculate the intermediate accumulator value</li>
+      <li>instead it will make a promise and put it on the stack as a <strong>thunk</strong> and the stack can overflow</li>
+      <li>these stricter folds will calculate it right away</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">concat</code>
+    <ul>
+      <li>flattens the list of lists</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">concat</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
+<span class="o">&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">concatMap</code>
+    <ul>
+      <li>map function to list and concatenating results</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">and</code>
+    <ul>
+      <li>takes list of boolean values and returns True only if all elems are True</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">and</span> <span class="o">$</span> <span class="n">map</span> <span class="p">(</span><span class="o">&gt;</span><span class="mi">4</span><span class="p">)</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+<span class="o">&gt;</span> <span class="kt">True</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">or</code>
+    <ul>
+      <li>at least one True</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">any</code>, <code class="language-plaintext highlighter-rouge">all</code>
+    <ul>
+      <li>takes predicate and check if any or</li>
+      <li>same as mapping over list and doing <code class="language-plaintext highlighter-rouge">and</code>, <code class="language-plaintext highlighter-rouge">or</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">iterate</code>
+    <ul>
+      <li>keeping applying function to value and the results into an infinite list</li>
+    </ul>
+  </li>
+</ul>
+
+<pre><code class="language-haskel">take 10 $ iterate (*2) 1
+</code></pre>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">splitAt</code>
+    <ul>
+      <li>split list at # of elements and returns the two parts in two lists</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">splitAt</span> <span class="mi">3</span> <span class="s">"heyman"</span>
+<span class="o">&gt;</span> <span class="p">(</span><span class="s">"hey"</span><span class="p">,</span> <span class="s">"man"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">takeWhile</code></li>
+  <li><code class="language-plaintext highlighter-rouge">dropWhile</code>
+    <ul>
+      <li>like <code class="language-plaintext highlighter-rouge">takeWhile</code> but drops the elements until predicate is <code class="language-plaintext highlighter-rouge">False</code> and return the rest of the list</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">span</code>
+    <ul>
+      <li>like <code class="language-plaintext highlighter-rouge">takeWhile</code> but returns the two halves in a tuple</li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">break</code></p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">sort</code></li>
+  <li><code class="language-plaintext highlighter-rouge">group</code></li>
+  <li><code class="language-plaintext highlighter-rouge">inits</code></li>
+  <li><code class="language-plaintext highlighter-rouge">tails</code></li>
+  <li><code class="language-plaintext highlighter-rouge">isInfixOf</code></li>
+  <li><code class="language-plaintext highlighter-rouge">isPrefixOf</code></li>
+  <li><code class="language-plaintext highlighter-rouge">isSuffixOf</code></li>
+  <li><code class="language-plaintext highlighter-rouge">elem</code></li>
+  <li><code class="language-plaintext highlighter-rouge">notElem</code></li>
+  <li><code class="language-plaintext highlighter-rouge">partition</code></li>
+  <li><code class="language-plaintext highlighter-rouge">find</code></li>
+  <li><code class="language-plaintext highlighter-rouge">elemIndex</code></li>
+  <li><code class="language-plaintext highlighter-rouge">elemIndices</code></li>
+  <li><code class="language-plaintext highlighter-rouge">findIndex</code></li>
+  <li><code class="language-plaintext highlighter-rouge">findIndices</code></li>
+  <li><code class="language-plaintext highlighter-rouge">zip3, zip4, zipWith3, zipWith4</code></li>
+  <li><code class="language-plaintext highlighter-rouge">lines</code></li>
+  <li><code class="language-plaintext highlighter-rouge">unlines</code></li>
+  <li><code class="language-plaintext highlighter-rouge">words</code></li>
+  <li><code class="language-plaintext highlighter-rouge">unwords</code></li>
+  <li><code class="language-plaintext highlighter-rouge">nub</code></li>
+  <li><code class="language-plaintext highlighter-rouge">delete</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\\</code></li>
+  <li><code class="language-plaintext highlighter-rouge">union</code></li>
+  <li><code class="language-plaintext highlighter-rouge">intersect</code></li>
+  <li><code class="language-plaintext highlighter-rouge">insert</code></li>
+  <li><code class="language-plaintext highlighter-rouge">genericLength</code></li>
+  <li><code class="language-plaintext highlighter-rouge">genericTake</code></li>
+  <li><code class="language-plaintext highlighter-rouge">genericDrop</code></li>
+  <li><code class="language-plaintext highlighter-rouge">genericSplitAt</code></li>
+  <li><code class="language-plaintext highlighter-rouge">genericIndex</code></li>
+  <li><code class="language-plaintext highlighter-rouge">genericReplicate</code></li>
+  <li><code class="language-plaintext highlighter-rouge">nubBy</code></li>
+  <li><code class="language-plaintext highlighter-rouge">deleteBy</code></li>
+  <li><code class="language-plaintext highlighter-rouge">unionBy</code></li>
+  <li><code class="language-plaintext highlighter-rouge">intersectBy</code></li>
+  <li><code class="language-plaintext highlighter-rouge">groupBy</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sortBy</code></li>
+  <li><code class="language-plaintext highlighter-rouge">insertBy</code></li>
+  <li><code class="language-plaintext highlighter-rouge">maximumBy</code></li>
+  <li><code class="language-plaintext highlighter-rouge">minimumBy</code></li>
+  <li>
+    <h2 id="datachar">Data.Char</h2>
+  </li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">isControl</code>
+<code class="language-plaintext highlighter-rouge">isSpace</code>
+<code class="language-plaintext highlighter-rouge">isLower</code>
+<code class="language-plaintext highlighter-rouge">isUpper</code>
+<code class="language-plaintext highlighter-rouge">isAlpha</code>
+<code class="language-plaintext highlighter-rouge">isAlphaNum</code>
+<code class="language-plaintext highlighter-rouge">isPrint</code>
+<code class="language-plaintext highlighter-rouge">isDigit</code>
+<code class="language-plaintext highlighter-rouge">isOctDigit</code>
+<code class="language-plaintext highlighter-rouge">isHexDigit</code>
+<code class="language-plaintext highlighter-rouge">isLetter</code>
+<code class="language-plaintext highlighter-rouge">isMark</code>
+<code class="language-plaintext highlighter-rouge">isNumber</code>
+<code class="language-plaintext highlighter-rouge">isPunctuation</code>
+<code class="language-plaintext highlighter-rouge">isSymbol</code>
+<code class="language-plaintext highlighter-rouge">isSeparator</code>
+<code class="language-plaintext highlighter-rouge">isAscii</code>
+<code class="language-plaintext highlighter-rouge">isLatin1</code>
+<code class="language-plaintext highlighter-rouge">isAsciiUpper</code>
+<code class="language-plaintext highlighter-rouge">isAsciiLower</code>
+`
+<code class="language-plaintext highlighter-rouge">toUpper</code>
+<code class="language-plaintext highlighter-rouge">toLower</code>
+<code class="language-plaintext highlighter-rouge">toTitle</code>
+<code class="language-plaintext highlighter-rouge">digitToInt</code>
+<code class="language-plaintext highlighter-rouge">intToDigit</code>
+<code class="language-plaintext highlighter-rouge">ord</code></p>
+
+<h2 id="datamap">Data.Map</h2>
+
+<p><code class="language-plaintext highlighter-rouge">fromList</code>
+<code class="language-plaintext highlighter-rouge">empty</code>
+<code class="language-plaintext highlighter-rouge">insert</code>
+<code class="language-plaintext highlighter-rouge">null</code>
+<code class="language-plaintext highlighter-rouge">size</code>
+<code class="language-plaintext highlighter-rouge">singleton</code>
+<code class="language-plaintext highlighter-rouge">lookup</code>
+<code class="language-plaintext highlighter-rouge">member</code>
+<code class="language-plaintext highlighter-rouge">map</code>
+<code class="language-plaintext highlighter-rouge">filter</code>
+<code class="language-plaintext highlighter-rouge">toList</code>
+<code class="language-plaintext highlighter-rouge">keys</code>
+<code class="language-plaintext highlighter-rouge">elems</code>
+<code class="language-plaintext highlighter-rouge">fromListWith</code>
+<code class="language-plaintext highlighter-rouge">insertWith</code></p>
+
+<h2 id="dataset">Data.Set</h2>
+
+<p><code class="language-plaintext highlighter-rouge">fromList</code>
+<code class="language-plaintext highlighter-rouge">intersection</code>
+<code class="language-plaintext highlighter-rouge">difference</code>
+<code class="language-plaintext highlighter-rouge">union</code></p>
+
+
+
+        </div>
+    </main>
+</body>
+
+</html>
