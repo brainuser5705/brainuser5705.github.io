@@ -108,3 +108,24 @@ elementAt_w'pf = (last .) . take . (+1)
 -- instead it returns a function that returns a list
 -- hence when we can compose it with last . since that is looking for a function that returns a list
 ```
+
+# Problem 4 - Find number of elements in the list
+
+```hs
+myLength = foldr (const (+1)) 0 xs
+```
+
+- `const (+1) 3 4` returns 5. Since the function application is left associative - `const (+1) 3` returns `(+1)` which 4 is then applied to.
+- In other words, the (+1) is applied to the "second" argument passed
+- The second argument when using `foldr` is the accumulator/length.
+
+
+```hs
+-- 1 is added first to the accumulator then const against the next value
+foldl (const . (+1)) 0 x
+
+-- note that
+foldl (const (+1)) 0 xs
+-- returns last element + 1
+-- (+1) is returned and applied to the next value
+```
