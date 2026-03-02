@@ -1,21 +1,6 @@
-# 2025년 10월 23일
-## A new approach but yet to settle
+# 2026년 3월 1일
 
-Following what I said in the last entry, I started creating sentences for the new words that I've learned. It has helped with remembering the grammar more than the vocabulary. First few times were a bit tedious as I didn't have a good handle on the grammar, but it started getting easier. Used ChatGPT to correct the sentences I made as well.
-
-I also found some pre-made Anki decks with audio files. Whenever I studied Anki cards before, I would look at the word/cloze and write down whatever the answer was. Good for reading/writing, but not for listening.
-
-That leads me to my *new* study routine, that I have yet to even start. But eventually. It'll happen for sure.
-
-| Day | Plan |
-| _ | _ |
-| MON | |
-| TUE | |
-| WED | |
-| THU | |
-| FRI | |
-| SAT | |
-| SUN | |
+I registered for the TOPIK I exam!
 
 # 2025년 9월 3일 
 ## Laziness
@@ -42,13 +27,6 @@ Perhaps I need more context, dedicate more time to study, immerse more...just do
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhnz20njajsi_1fAmHO4MRlrepxAPtOqINZVQHuRO3rI3hF1Tkf49_d85Ea3hF4DI4kPGTzwdE2BGX/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 [Link to webpage version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQhnz20njajsi_1fAmHO4MRlrepxAPtOqINZVQHuRO3rI3hF1Tkf49_d85Ea3hF4DI4kPGTzwdE2BGX/pubhtml?gid=0&single=true)
-
-# 2025년 7월 27일
-## How to remember words
-
-{% include korean_img.html src="visual-cue.png" classes="float" %}
-
-The word to remember: 가르치. In other words, God and lychee. Totally pure luck that someone made this image already.
 
 # 2025년 7월 7일 
 ## A snapshot of the setup
