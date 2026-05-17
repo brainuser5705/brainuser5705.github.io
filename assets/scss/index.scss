@@ -1,8 +1,8 @@
 ---
 ---
 
-@import 'project.scss';
-@import 'writing.scss';
+@use 'project';
+@use 'writing';
 
 h2 {
     margin-top: 2em;
