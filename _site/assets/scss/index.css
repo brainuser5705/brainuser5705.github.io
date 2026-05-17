@@ -1,4 +1,4 @@
---- --- #main-content {
+#main-content {
   padding: 2em;
 }
 
@@ -123,7 +123,7 @@ h2:first-of-type {
     margin-top: 1.5em;
   }
 }
---- --- h2 {
+h2 {
   margin-top: 2em;
   margin-bottom: 1em;
   font-size: 1.5em;
