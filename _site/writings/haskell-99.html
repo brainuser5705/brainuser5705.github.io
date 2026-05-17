@@ -17,11 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Jua&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inclusive+Sans&family=Workbench&display=swap"
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap"
         rel="stylesheet">
 
     <title>99 problems in Haskell</title>
@@ -29,20 +25,157 @@
 
 <body>
     <main>
-        <div id="side-header">
-            <a href="\writings.html"><img id="base-icon" src=/assets/images/poochie.png /></a>
-            <div id="base-title">99 problems in Haskell</div>
-            <div id="base-description">
-                explanations to the solutions of 99 problems in Haskell
+        <div id="header">
+            <div id="header-top">
+                <!-- depending on the page yaml, link back to projects or writings -->
+                <a href="/#writings" id="header-link"><img id="base-icon" src=/assets/images/poochie.png /></a>
+                <nav id="header-nav">
+                    <ul>
+                        <li><a href="/#projects">Code Projects</a></li>
+                        <li><a href="/#writings">Writings</a></li>
+                        <li><a href="/korean-log.html">Learning Korean Log</a></li>
+                    </ul>
+                </nav>
             </div>
-
-            
-
+            <div id="header-container">
+                <div id="base-title">99 problems in Haskell</div>
+                <div id="base-description">
+                    explanations to the solutions of 99 problems in Haskell
+                </div>
+            </div>
         </div>
         <div id="main-content">
             
 
+<h1 id="problem-1---find-last-element">Problem 1 - Find Last Element</h1>
 
+<div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myLast</span> <span class="o">=</span> <span class="n">foldr1</span> <span class="p">(</span><span class="n">const</span> <span class="n">id</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>goal is to return the second argument, which is the next element</li>
+  <li>point-free form (can omit <code class="language-plaintext highlighter-rouge">xs</code> parameter)</li>
+  <li><code class="language-plaintext highlighter-rouge">:t const :: a -&gt; b -&gt; a</code></li>
+  <li><code class="language-plaintext highlighter-rouge">:t id :: c -&gt; c</code></li>
+  <li><code class="language-plaintext highlighter-rouge">:t const id :: b -&gt; (c -&gt; c)</code> (the first parmater is already partially applied) which becomes <code class="language-plaintext highlighter-rouge">:t const id :: b -&gt; a -&gt; a</code> because of currying</li>
+</ul>
+
+<div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myLast</span> <span class="o">=</span> <span class="n">foldr1</span> <span class="p">(</span><span class="n">flip</span> <span class="n">id</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myLast</span> <span class="o">=</span> <span class="n">foldl1</span> <span class="p">(</span><span class="n">curry</span> <span class="n">snd</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">:t curry :: ((a, b) -&gt; c) -&gt; a -&gt; b -&gt; c</code></li>
+  <li><code class="language-plaintext highlighter-rouge">:t snd :: (a, b) -&gt; b</code></li>
+  <li><code class="language-plaintext highlighter-rouge">:t curry snd :: a -&gt; b -&gt; c</code> (partially applied the first parameter)</li>
+</ul>
+
+<h1 id="problem-2---find-last-but-one-element">Problem 2 - Find Last but One Element</h1>
+
+<div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myButLast</span> <span class="p">(</span><span class="n">x</span><span class="o">:</span><span class="p">(</span><span class="kr">_</span><span class="o">:</span><span class="kt">[]</span><span class="p">))</span> <span class="o">=</span> <span class="n">x</span>
+<span class="n">myButLast</span> <span class="p">(</span><span class="kr">_</span><span class="o">:</span><span class="n">xs</span><span class="p">)</span> <span class="o">=</span> <span class="n">myButLast</span> <span class="n">xs</span>
+</code></pre></div></div>
+
+<ul>
+  <li>recursive solution, but with cons for pattern matching</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>myButLast = (!! 1) . reverse
+</code></pre></div></div>
+
+<ul>
+  <li>point-free form</li>
+  <li>function composition f(g(x)) where g is <code class="language-plaintext highlighter-rouge">reverse</code> and f is <code class="language-plaintext highlighter-rouge">(!! 1)</code></li>
+</ul>
+
+<div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lastbut1</span> <span class="o">::</span> <span class="kt">Foldable</span> <span class="n">f</span> <span class="o">=&gt;</span> <span class="n">f</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">a</span>
+<span class="n">lastbut1</span> <span class="o">=</span> <span class="n">fst</span> <span class="o">.</span> <span class="n">foldl</span> <span class="p">(</span><span class="nf">\</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">x</span><span class="p">))</span> <span class="p">(</span><span class="n">err1</span><span class="p">,</span><span class="n">err2</span><span class="p">)</span>
+  <span class="kr">where</span>
+    <span class="n">err1</span> <span class="o">=</span> <span class="n">error</span> <span class="s">"lastbut1: Empty list"</span>
+    <span class="n">err2</span> <span class="o">=</span> <span class="n">error</span> <span class="s">"lastbut1: Singleton"</span>
+</code></pre></div></div>
+
+<ul>
+  <li>requires the type annotation otherwise it is not known what type the parameter being passed in is</li>
+  <li>says that the parameter <code class="language-plaintext highlighter-rouge">a</code> is <code class="language-plaintext highlighter-rouge">Foldable</code></li>
+</ul>
+
+<h1 id="problem-3---find-the-kth-element-of-a-list">Problem 3 - Find the kth element of a list</h1>
+
+<div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">elementAt</span> <span class="n">xs</span> <span class="n">n</span> 
+  <span class="o">|</span> <span class="n">length</span> <span class="n">xs</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">=</span> <span class="n">error</span> <span class="s">"Index out of bounds"</span>
+  <span class="o">|</span> <span class="n">otherwise</span> <span class="o">=</span> <span class="n">fst</span> <span class="o">.</span> <span class="n">last</span> <span class="o">$</span> <span class="n">zip</span> <span class="n">xs</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="n">n</span><span class="p">]</span> 
+</code></pre></div></div>
+
+<ul>
+  <li>zip up to the kth index</li>
+  <li>note that it is not <code class="language-plaintext highlighter-rouge">last . zip xs [1..n]</code> because <code class="language-plaintext highlighter-rouge">zip</code> already has all the parameters applied, and <code class="language-plaintext highlighter-rouge">.</code> is expecting two functions as parameters</li>
+</ul>
+
+<div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">elementAt</span> <span class="n">xs</span> <span class="n">n</span> <span class="o">=</span> <span class="n">head</span> <span class="o">$</span> <span class="n">foldr</span> <span class="p">(</span><span class="o">$</span><span class="p">)</span> <span class="n">xs</span> 
+                         <span class="o">$</span> <span class="n">replicate</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="n">tail</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">replicate (n-1) tail</code> creates a list of the tail function i.e. <code class="language-plaintext highlighter-rouge">[tail, tail, tail, ...]</code></li>
+  <li>the accumulator starts out as the original list, subsequent folds will take the tail of the accumulators</li>
+</ul>
+
+<div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">elementAt</span> <span class="n">xs</span> <span class="n">n</span> 
+  <span class="o">|</span> <span class="n">length</span> <span class="n">xs</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">=</span> <span class="n">error</span> <span class="s">"Index out of bounds"</span>
+  <span class="o">|</span> <span class="n">otherwise</span> <span class="o">=</span> <span class="n">head</span> <span class="o">$</span> <span class="n">drop</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="n">xs</span>
+</code></pre></div></div>
+
+<div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">elementAt_w'pf</span> <span class="o">=</span> <span class="p">(</span><span class="n">last</span> <span class="o">.</span><span class="p">)</span> <span class="o">.</span> <span class="n">take</span> <span class="o">.</span> <span class="p">(</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="o">:</span><span class="n">t</span> <span class="p">(</span><span class="o">.</span><span class="p">)</span> <span class="o">::</span> <span class="p">(</span><span class="n">b</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">c</span>
+
+<span class="o">:</span><span class="n">t</span> <span class="p">(</span><span class="n">take</span> <span class="o">.</span> <span class="p">(</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="o">::</span> <span class="kt">Int</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span>
+<span class="o">:</span><span class="n">t</span> <span class="p">(</span><span class="n">last</span> <span class="o">.</span><span class="p">)</span> <span class="o">::</span> <span class="p">(</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">c</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">c</span>
+<span class="c1">-- :t last :: [c] -&gt; c</span>
+<span class="c1">-- looking for a function that takes in a list and returns the last element</span>
+
+<span class="c1">-- take . (+1) being the second function composed</span>
+<span class="c1">-- returns a function that takes a list and returns a list</span>
+<span class="c1">-- curried function</span>
+<span class="c1">-- (a -&gt; b) = Int -&gt; ([a] -&gt; [a])</span>
+
+<span class="c1">-- last . being the first function composed</span>
+<span class="c1">-- takes from the second function that type parameter a is [a] and c is a</span>
+<span class="c1">-- takes in a second function, takes in a list and returns the last emement</span>
+<span class="c1">-- curried function again</span>
+<span class="c1">-- (b -&gt; c) = ([a] -&gt; [a]) -&gt; ([a] -&gt; a)</span>
+
+<span class="c1">-- a -&gt; c = Int -&gt; ([a] -&gt; a)</span>
+
+<span class="o">:</span><span class="n">t</span> <span class="p">(</span><span class="n">last</span> <span class="o">.</span><span class="p">)</span> <span class="o">.</span> <span class="p">(</span><span class="n">take</span> <span class="o">.</span> <span class="p">(</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="o">::</span> <span class="kt">Int</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="n">a</span>
+
+<span class="c1">-- (take . (+1)) doesn't return a list so we cannot compose it was last directly</span>
+<span class="c1">-- instead it returns a function that returns a list</span>
+<span class="c1">-- hence when we can compose it with last . since that is looking for a function that returns a list</span>
+</code></pre></div></div>
+
+<h1 id="problem-4---find-number-of-elements-in-the-list">Problem 4 - Find number of elements in the list</h1>
+
+<div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myLength</span> <span class="o">=</span> <span class="n">foldr</span> <span class="p">(</span><span class="n">const</span> <span class="p">(</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="mi">0</span> <span class="n">xs</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">const (+1) 3 4</code> returns 5. Since the function application is left associative - <code class="language-plaintext highlighter-rouge">const (+1) 3</code> returns <code class="language-plaintext highlighter-rouge">(+1)</code> which 4 is then applied to.</li>
+  <li>In other words, the (+1) is applied to the “second” argument passed</li>
+  <li>The second argument when using <code class="language-plaintext highlighter-rouge">foldr</code> is the accumulator/length.</li>
+</ul>
+
+<div class="language-hs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 1 is added first to the accumulator then const against the next value</span>
+<span class="n">foldl</span> <span class="p">(</span><span class="n">const</span> <span class="o">.</span> <span class="p">(</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="mi">0</span> <span class="n">x</span>
+
+<span class="c1">-- note that</span>
+<span class="n">foldl</span> <span class="p">(</span><span class="n">const</span> <span class="p">(</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="mi">0</span> <span class="n">xs</span>
+<span class="c1">-- returns last element + 1</span>
+<span class="c1">-- (+1) is returned and applied to the next value</span>
+</code></pre></div></div>
 
 
         </div>

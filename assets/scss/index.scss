@@ -1,30 +1,35 @@
 ---
 ---
 
-nav {
-    
-    min-height: 100%;
+@use 'project.scss' as *;
+@use 'writing.scss' as *;
 
-    ul {
+h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #000000;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 0.5em;
+    font-family: "JetBrains Mono", monospace;
+    text-align: center;
+}
 
-        list-style-type: none;
-        margin: 0;
-        padding-top: 20%;
-        text-align: right;
+h2:first-of-type {
+    margin-top: 0;
+}
 
-        li {
-            font-weight: 800;
-            font-size: 2em;
-            padding: 1em;
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.3em;
+    }
+}
 
-            a {
-                text-decoration: none;
-                color: #000000;
-
-                &:hover {
-                    color: gray;
-                }
-            }
-        }
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.1em;
+        margin-top: 1.5em;
+        margin-bottom: 0.75em;
     }
 }

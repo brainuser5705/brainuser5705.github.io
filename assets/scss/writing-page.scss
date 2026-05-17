@@ -1,6 +1,31 @@
 ---
 ---
 
+#main-content {
+    max-width: 800px !important;
+    margin: 0 auto;
+    padding: 2em;
+}
+
 img {
-  max-width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+    margin: 1em 0;
+}
+
+@media (max-width: 768px) {
+    #main-content {
+        padding: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    #main-content {
+        padding: 1em;
+    }
+
+    img {
+        margin: 0.75em 0;
+    }
 }

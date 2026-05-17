@@ -1,23 +1,228 @@
-nav {
-  min-height: 100%;
+--- --- #main-content {
+  padding: 2em;
 }
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding-top: 20%;
-  text-align: right;
+
+h2 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 0.5em;
 }
-nav ul li {
-  font-weight: 800;
-  font-size: 2em;
-  padding: 1em;
+
+h2:first-of-type {
+  margin-top: 0;
 }
-nav ul li a {
+
+.project-item {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  margin: 2em 0;
+  align-items: flex-start;
+}
+.project-item > * {
+  flex: 1 1 0;
+}
+.project-item .name {
+  color: #000000;
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.project-item .name:hover {
+  color: gray;
+}
+.project-item a {
+  color: inherit;
   text-decoration: none;
+  border-bottom: 1px solid #000000;
+  transition: all 0.2s ease;
+}
+.project-item a:hover {
+  color: gray;
+  border-bottom-color: gray;
+}
+.project-item img {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #000000;
+}
+.project-item .content {
+  padding: 0.5em 0;
+}
+.project-item .content .description {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+.project-item .content .links {
+  margin: 1em 0;
+}
+.project-item .content .links button {
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  padding: 0.5em 1em;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 1px solid #000000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.project-item .content .links button:hover {
+  background-color: #FFFFFF;
   color: #000000;
 }
-nav ul li a:hover {
+.project-item .content .links button a {
+  color: inherit;
+  text-decoration: none;
+  border: none;
+}
+.project-item .content .links button a:hover {
+  color: inherit;
+  border: none;
+}
+.project-item .content .tech {
+  font-size: 0.85em;
   color: gray;
+  margin-top: 0.75em;
+}
+.project-item .content .tech .tag {
+  font-style: italic;
+  margin-right: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .project-item {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .project-item img {
+    max-width: 100%;
+  }
+  #main-content {
+    padding: 1.5em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+}
+@media (max-width: 480px) {
+  .project-item {
+    margin: 1.5em 0;
+  }
+  .project-item .name {
+    font-size: 1.1em;
+  }
+  #main-content {
+    padding: 1em;
+  }
+  h2 {
+    font-size: 1.1em;
+    margin-top: 1.5em;
+  }
+}
+--- --- h2 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 0.5em;
+}
+
+h2:first-of-type {
+  margin-top: 0;
+}
+
+.writing-item a {
+  color: #000000;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  text-decoration: none;
+  border-bottom: 1px solid #000000;
+  transition: all 0.2s ease;
+}
+.writing-item a:hover {
+  color: gray;
+  border-bottom-color: gray;
+}
+.writing-item .content {
+  padding: 0.5em 0;
+}
+.writing-item .content .description {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+.writing-item .content .time {
+  color: gray;
+  font-size: 0.85em;
+  font-style: italic;
+}
+.writing-item {
+  margin: 1.5em 0;
+  padding: 0.75em 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.writing-item:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.3em;
+  }
+  .writing-item .name {
+    font-size: 1.1em;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.1em;
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+  }
+  .writing-item {
+    margin: 1.25em 0;
+    padding: 0.5em 0;
+  }
+  .writing-item .name {
+    font-size: 1em;
+  }
+  .writing-item .time {
+    font-size: 0.8em;
+  }
+}
+h2 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 0.5em;
+  font-family: "JetBrains Mono", monospace;
+  text-align: center;
+}
+
+h2:first-of-type {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.3em;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.1em;
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

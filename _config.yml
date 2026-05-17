@@ -15,11 +15,11 @@ defaults:
     values:
       layout: "project-page"
       styles: "project-page"
-      base-backlink: \projects.html
+      base-backlink: "/#projects"
   - scope:
       path: ""
       type: "writings"
     values:
       layout: "writing-page"
       styles: "writing-page"
-      base-backlink: \writings.html
+      base-backlink: "/#writings"

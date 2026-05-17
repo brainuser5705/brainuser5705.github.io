@@ -1,18 +1,21 @@
 ---
 # Base layout
-base-backlink: \
+base-backlink: /
 base-icon-filename: poochie.png
 base-title: Hi, it's Ashley!
-base-info: info.html
-base-description: I’m from Brooklyn, studied CS at RIT in Rochester, and currently working in Orlando! This website is my little dump of projects and other stuff.
+base-description: I'm from Brooklyn, studied CS at RIT in Rochester, and currently working in Orlando! This website is my little dump of projects and other stuff.
 
 styles: index
 ---
 
-<nav>
-    <ul>
-        <li><a href="./korean-log.html">Learning Korean Log</a></li>
-        <li><a href="./projects.html">Code Projects</a></li>
-        <li><a href="./writings.html">Writings</a></li>
-    </ul>
-</nav>
+## Code Projects
+{: #projects}
+
+The projects worthy of seeing the light of day... ([my Github](https://github.com/brainuser5705) for the rest)
+
+{% include projects.html %}
+
+## Writings
+{: #writings}
+
+{% include writings.html %}
