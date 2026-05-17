@@ -1,6 +1,6 @@
 ---
 base-title: Haskell Notes
-description:
+base-description: Notes from the book "Learn You a Haskell for Great Good!" by Miran Lipovača.
 
 draft: true
 ---

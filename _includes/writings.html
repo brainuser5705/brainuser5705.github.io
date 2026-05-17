@@ -1,0 +1,17 @@
+{% assign writings = site.writings | sort:"time" | reverse %}
+
+{% for writing in writings %}
+<div class="writing-item">
+    <div class="content">
+        <a href="{{ writing.url }}">
+            {{ writing.base-title }}
+        </a>
+        <div class="description">
+            {{ writing.base-description }}
+        </div>
+        <div class="time">
+            {{ writing.time }}
+        </div>
+    </div>
+</div>
+{% endfor %}

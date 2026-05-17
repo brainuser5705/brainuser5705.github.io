@@ -17,11 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Jua&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inclusive+Sans&family=Workbench&display=swap"
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap"
         rel="stylesheet">
 
     <title>Hi, it's Ashley!</title>
@@ -29,34 +25,331 @@
 
 <body>
     <main>
-        <div id="side-header">
-            <a href="\"><img id="base-icon" src=/assets/images/poochie.png /></a>
-            <div id="base-title">Hi, it's Ashley!</div>
-            <div id="base-description">
-                I’m from Brooklyn, studied CS at RIT in Rochester, and currently working in Orlando! This website is my little dump of projects and other stuff.
+        <div id="header">
+            <div id="header-top">
+                <!-- depending on the page yaml, link back to projects or writings -->
+                <a href="/" id="header-link"><img id="base-icon" src=/assets/images/poochie.png /></a>
+                <nav id="header-nav">
+                    <ul>
+                        <li><a href="/#projects">Code Projects</a></li>
+                        <li><a href="/#writings">Writings</a></li>
+                        <li><a href="/korean-log.html">Learning Korean Log</a></li>
+                    </ul>
+                </nav>
             </div>
+            <div id="header-container">
+                <div id="base-title">Hi, it's Ashley!</div>
+                <div id="base-description">
+                    I'm from Brooklyn, studied CS at RIT in Rochester, and currently working in Orlando! This website is my little dump of projects and other stuff.
+                </div>
+            </div>
+        </div>
+        <div id="main-content">
+            <h2 id="projects">Code Projects</h2>
 
-            
-                <div id="base-info">
-    <svg id="base-info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM320 240C302.3 240 288 254.3 288 272C288 285.3 277.3 296 264 296C250.7 296 240 285.3 240 272C240 227.8 275.8 192 320 192C364.2 192 400 227.8 400 272C400 319.2 364 339.2 344 346.5L344 350.3C344 363.6 333.3 374.3 320 374.3C306.7 374.3 296 363.6 296 350.3L296 342.2C296 321.7 310.8 307 326.1 302C332.5 299.9 339.3 296.5 344.3 291.7C348.6 287.5 352 281.7 352 272.1C352 254.4 337.7 240.1 320 240.1zM288 432C288 414.3 302.3 400 320 400C337.7 400 352 414.3 352 432C352 449.7 337.7 464 320 464C302.3 464 288 449.7 288 432z"/></svg>
-    <div id="base-info-content">
-        <ul><li>Framework: <i>Jekyll</i></li>
-        <li>Font: <i>JetBrains Mono</i></li>
-        <li>Hosting: <i>Github Pages</i></li></ul>
+<p>The projects worthy of seeing the light of day… (<a href="https://github.com/brainuser5705">my Github</a> for the rest)</p>
+
+<div class="project-item">
+    <div>
+        <div class="name"><a href="/projects/haskell.html">99 Problems in Haskell</a></div>
+        <div class="content">
+            <div class="description">
+                functional programming practice
+            </div>
+            <div class="links">
+                
+            </div>
+            <div class="tech">
+                
+                Built in 2025-11 with
+                
+                <span class="tag">haskell</span>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="project-item">
+    <div>
+        <div class="name"><a href="/projects/rainy_atelier.html">Rainy Atelier</a></div>
+        <div class="content">
+            <div class="description">
+                An art portfolio showcasing the work of Jenny Lin
+            </div>
+            <div class="links">
+                
+                <button>
+                    <a href="https://rainyatelier.netlify.app/" target="_blank">Try it out!</a>
+                </button>
+                
+            </div>
+            <div class="tech">
+                
+                Built in 2025-07 with
+                
+                <span class="tag">astro strapi jamstack</span>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <img src="./projects/imgs/rainy_atelier.png" />
+    
+</div>
+
+<div class="project-item">
+    <div>
+        <div class="name"><a href="/projects/amgi.html">암기 (Ahmgi)</a></div>
+        <div class="content">
+            <div class="description">
+                Chrome extension to automate flashcard creation with Anki
+            </div>
+            <div class="links">
+                
+            </div>
+            <div class="tech">
+                
+                Built in 2025-03 with
+                
+                <span class="tag">js</span>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="project-item">
+    <div>
+        <div class="name"><a href="/projects/http-server-from-scratch.html">(unfinished) http server from scratch</a></div>
+        <div class="content">
+            <div class="description">
+                logging my process
+            </div>
+            <div class="links">
+                
+            </div>
+            <div class="tech">
+                
+                Built in 2024-03 with
+                
+                <span class="tag">c</span>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="project-item">
+    <div>
+        <div class="name"><a href="/projects/small-arduino-programs.html">very basic arduino programs</a></div>
+        <div class="content">
+            <div class="description">
+                simons says, automatic dog feeder
+            </div>
+            <div class="links">
+                
+            </div>
+            <div class="tech">
+                
+                Built in 2024-02 with
+                
+                <span class="tag">arduino</span>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <img src="./projects/imgs/arduino.png" />
+    
+</div>
+
+<div class="project-item">
+    <div>
+        <div class="name"><a href="/projects/spotify-music-visualization.html">Spotify Discography Breakdown</a></div>
+        <div class="content">
+            <div class="description">
+                MERN web application to see the trends of your favorite artist's songs using Spotify analysis features
+            </div>
+            <div class="links">
+                
+            </div>
+            <div class="tech">
+                
+                Built in 2023-07 with
+                
+                <span class="tag">nodejs</span>
+                
+                <span class="tag">mongodb</span>
+                
+                <span class="tag">react</span>
+                
+                <span class="tag">expressjs</span>
+                
+                <span class="tag">d3</span>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <img src="./projects/imgs/spotify.png" />
+    
+</div>
+
+<div class="project-item">
+    <div>
+        <div class="name"><a href="/projects/interactive-country-name.html">Interactive Country Name</a></div>
+        <div class="content">
+            <div class="description">
+                interactive map for country names in different languages with grammatical genders
+            </div>
+            <div class="links">
+                
+                <button>
+                    <a href="/interaktiv-landernamen" target="_blank">Try it out!</a>
+                </button>
+                
+            </div>
+            <div class="tech">
+                
+                Built in 2023-05 with
+                
+                <span class="tag">js</span>
+                
+                <span class="tag">d3</span>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <img src="./projects/imgs/country.png" />
+    
+</div>
+
+<div class="project-item">
+    <div>
+        <div class="name"><a href="/personal-website">Personal Website</a></div>
+        <div class="content">
+            <div class="description">
+                Development timeline of my personal website
+            </div>
+            <div class="links">
+                
+            </div>
+            <div class="tech">
+                
+                Built in 2021-05 with
+                
+                <span class="tag">html/css</span>
+                
+                <span class="tag">php</span>
+                
+                <span class="tag">jekyll</span>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <img src="./projects/imgs/website.png" />
+    
+</div>
+
+<h2 id="writings">Writings</h2>
+
+<div class="writing-item">
+    <div class="content">
+        <a href="/writings/custom-jekyll.html">
+            Customizing your Jekyll site
+        </a>
+        <div class="description">
+            what to know when creating your Jekyll site
+        </div>
+        <div class="time">
+            Oct 23, 2025
+        </div>
     </div>
 </div>
 
-            
-
+<div class="writing-item">
+    <div class="content">
+        <a href="/writings/ricing.html">
+            A Ricing Coobook for MacOS
+        </a>
+        <div class="description">
+            neovim, oh-my-zsh
         </div>
-        <div id="main-content">
-            <nav>
-    <ul>
-        <li><a href="./korean-log.html">Learning Korean Log</a></li>
-        <li><a href="./projects.html">Code Projects</a></li>
-        <li><a href="./writings.html">Writings</a></li>
-    </ul>
-</nav>
+        <div class="time">
+            Oct 22, 2025
+        </div>
+    </div>
+</div>
+
+<div class="writing-item">
+    <div class="content">
+        <a href="/writings/kr-shortcuts.html">
+            Apple Shortcuts for Korean learning
+        </a>
+        <div class="description">
+            Playing around with Shortcuts
+        </div>
+        <div class="time">
+            Oct 21, 2025
+        </div>
+    </div>
+</div>
+
+<div class="writing-item">
+    <div class="content">
+        <a href="/writings/haskell-tutorial.html">
+            Haskell Notes
+        </a>
+        <div class="description">
+            Notes from the book "Learn You a Haskell for Great Good!" by Miran Lipovača.
+        </div>
+        <div class="time">
+            
+        </div>
+    </div>
+</div>
+
+<div class="writing-item">
+    <div class="content">
+        <a href="/writings/haskell-functions.html">
+            Haskell Functions
+        </a>
+        <div class="description">
+            functions in `Data.List`, `Data.Char`, `Map`, `Set`
+        </div>
+        <div class="time">
+            
+        </div>
+    </div>
+</div>
+
+<div class="writing-item">
+    <div class="content">
+        <a href="/writings/haskell-99.html">
+            99 problems in Haskell
+        </a>
+        <div class="description">
+            explanations to the solutions of 99 problems in Haskell
+        </div>
+        <div class="time">
+            
+        </div>
+    </div>
+</div>
 
         </div>
     </main>

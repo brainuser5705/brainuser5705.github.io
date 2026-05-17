@@ -3,14 +3,36 @@
 
 #main-content {
     max-width: 800px !important;
-    margin: 1em auto;
+    margin: 0 auto;
+    padding: 2em;
 }
 
 img {
-    max-width: 500px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+    margin: 1em 0;
 }
 
 iframe {
-    aspect-ratio: 1 / 0.5; /* width : height */
+    aspect-ratio: 1 / 0.5;
     width: 100%;
+    border: 1px solid #000000;
+    margin: 1em 0;
+}
+
+@media (max-width: 768px) {
+    #main-content {
+        padding: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    #main-content {
+        padding: 1em;
+    }
+
+    img, iframe {
+        margin: 0.75em 0;
+    }
 }

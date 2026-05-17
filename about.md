@@ -25,4 +25,4 @@ styles: about
 ### Website Specs:
 - Hosting: Github Pages
 - Framework: Jekyll
-- Typeface: Fira Code
+- Typeface: Noto Sans
