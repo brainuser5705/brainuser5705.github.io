@@ -1,3 +1,28 @@
+#2026 년 5월 19일
+
+Well I got an injury the day before the exam...so I did not take it.
+
+My TOPIK I study routine consisted of going through the practice exams (listening and reading) and Anki decks for 500 most common words and TOPIK I vocabulary. It yielded some noticeable progress; I could understand more words and my listening improved. But towards the end, it started getting boring and I slowly dropped off. It's been two months since I was stopped studying and coming back to it now, I want my approach this time to be fun. At least, more fun than my previous studying strategies.
+
+First, let's identify what made my old routine boring:
+- 80% Anki memorization
+- Creating Anki cards for every unknown word
+- Consuming uninteresting content
+- Faltering intrinsic motivation
+
+What's the new plan then?
+- 80% immersion
+- Selective Anki card making (only for words that are useful/interesting)
+- Consuming native content that I am genuinely interested in (specifically YouTube videos)
+- Ad-hoc grammar learning, similar to Anki cards for vocabulary
+
+It's better to do it than not, so a daily schedule is the most beneficial for me. But it's not a strict requirement.
+
+**The goal of this new routine is to learn/"pick up" Korean naturally in a fun and immersive way.** Some things I might change up depending on how it goes might be:
+- setting a criteria for what makes a word useful or interesting
+- doing pure Anki from premade decks as a supplement
+- resorting to beginner content if native content is too hard
+
 # 2026년 3월 1일
 
 I registered for the TOPIK I exam!
